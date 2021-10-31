@@ -370,33 +370,31 @@
 
         private void SetCulture()
         {
-            CultureInfo cul = CultureInfo.CreateSpecificCulture("en-US");
-
             if (this.JsonObjSettings.AppParam[0].Language == "en-US")
             {
-                cul = CultureInfo.CreateSpecificCulture("en-US");
+                TdCulture.Cul = CultureInfo.CreateSpecificCulture("en-US");
 
                 this.ToolStripMenuItemLanguageDutch.Checked = false;
                 this.ToolStripMenuItemLanguageEnglish.Checked = true;
             }
             else if (this.JsonObjSettings.AppParam[0].Language == "nl-NL")
             {
-                cul = CultureInfo.CreateSpecificCulture("nl-NL");
+                TdCulture.Cul = CultureInfo.CreateSpecificCulture("nl-NL");
 
                 this.ToolStripMenuItemLanguageDutch.Checked = true;
                 this.ToolStripMenuItemLanguageEnglish.Checked = false;
             }
 
-            MB_Title.Cul = cul;
-            MB_Text.Cul = cul;
-            TdLogging_Resources.Cul = cul;
+            MB_Title.Cul = TdCulture.Cul;
+            MB_Text.Cul = TdCulture.Cul;
+            TdLogging_Resources.Cul = TdCulture.Cul;
 
             MB_Title.RmMb = new ResourceManager("TopData.Resource.Res_Messagebox", typeof(FormMain).Assembly);
             MB_Text.RmMb = new ResourceManager("TopData.Resource.Res_Messagebox", typeof(FormMain).Assembly);
             TdLogging_Resources.RmLog = new ResourceManager("TopData.Resource.Res_Log", typeof(FormMain).Assembly);
 
-            TdSwitchLanguage sl = new(this, cul);
-            sl.SetLanguage();
+            TdSwitchLanguage sl = new(this, TdCulture.Cul);
+            sl.SetLanguageMainForm();
         }
 
         private void StartLogging()
@@ -1071,48 +1069,46 @@
         #region Switch language
         private void SetLanguageMenuItem()
         {
-            CultureInfo cul = CultureInfo.CreateSpecificCulture("en-US");
+            TdCulture.Cul = CultureInfo.CreateSpecificCulture("en-US");
 
             if (this.JsonObjSettings.AppParam[0].Language == "en-US")
             {
                 this.ToolStripMenuItemLanguageEnglish.Checked = true;
                 this.ToolStripMenuItemLanguageDutch.Checked = false;
 
-                cul = CultureInfo.CreateSpecificCulture("en-US");
+                TdCulture.Cul = CultureInfo.CreateSpecificCulture("en-US");
 
-                MB_Title.Cul = cul;
-                MB_Text.Cul = cul;
-                TdLogging_Resources.Cul = cul;
+                MB_Title.Cul = TdCulture.Cul;
+                MB_Text.Cul = TdCulture.Cul;
+                TdLogging_Resources.Cul = TdCulture.Cul;
             }
             else if (this.JsonObjSettings.AppParam[0].Language == "nl-NL")
             {
                 this.ToolStripMenuItemLanguageEnglish.Checked = false;
                 this.ToolStripMenuItemLanguageDutch.Checked = true;
 
-                cul = CultureInfo.CreateSpecificCulture("nl-NL");
+                TdCulture.Cul = CultureInfo.CreateSpecificCulture("nl-NL");
 
-                MB_Title.Cul = cul;
-                MB_Text.Cul = cul;
-                TdLogging_Resources.Cul = cul;
+                MB_Title.Cul = TdCulture.Cul;
+                MB_Text.Cul = TdCulture.Cul;
+                TdLogging_Resources.Cul = TdCulture.Cul;
             }
 
-            TdSwitchLanguage sl = new (this, cul);
-            sl.SetLanguage();
+            TdSwitchLanguage sl = new (this, TdCulture.Cul);
+            sl.SetLanguageMainForm();
         }
 
         private void ToolStripMenuItemLanguageEnglish_Click(object sender, EventArgs e)
         {
-            CultureInfo cul;
-
             if (this.ToolStripMenuItemLanguageEnglish.Checked == true)
             {
                 this.ToolStripMenuItemLanguageDutch.Checked = true;
                 this.ToolStripMenuItemLanguageEnglish.Checked = false;
                 this.JsonObjSettings.AppParam[0].Language = "nl-NL";
 
-                cul = CultureInfo.CreateSpecificCulture("nl-NL");
-                MB_Title.Cul = cul;
-                MB_Text.Cul = cul;
+                TdCulture.Cul = CultureInfo.CreateSpecificCulture("nl-NL");
+                MB_Title.Cul = TdCulture.Cul;
+                MB_Text.Cul = TdCulture.Cul;
             }
             else
             {
@@ -1120,30 +1116,28 @@
                 this.ToolStripMenuItemLanguageEnglish.Checked = true;
                 this.JsonObjSettings.AppParam[0].Language = "en-US";
 
-                cul = CultureInfo.CreateSpecificCulture("en-US");
+                TdCulture.Cul = CultureInfo.CreateSpecificCulture("en-US");
 
-                MB_Title.Cul = cul;
-                MB_Text.Cul = cul;
+                MB_Title.Cul = TdCulture.Cul;
+                MB_Text.Cul = TdCulture.Cul;
             }
 
-            TdSwitchLanguage sl = new (this, cul);
-            sl.SetLanguage();
+            TdSwitchLanguage sl = new (this, TdCulture.Cul);
+            sl.SetLanguageMainForm();
         }
 
         private void ToolStripMenuItemLanguageDutch_Click(object sender, EventArgs e)
         {
-            CultureInfo cul;
-
             if (this.ToolStripMenuItemLanguageDutch.Checked == true)
             {
                 this.ToolStripMenuItemLanguageDutch.Checked = false;
                 this.ToolStripMenuItemLanguageEnglish.Checked = true;
                 this.JsonObjSettings.AppParam[0].Language = "en-US";
 
-                cul = CultureInfo.CreateSpecificCulture("en-US");
+                TdCulture.Cul = CultureInfo.CreateSpecificCulture("en-US");
 
-                MB_Title.Cul = cul;
-                MB_Text.Cul = cul;
+                MB_Title.Cul = TdCulture.Cul;
+                MB_Text.Cul = TdCulture.Cul;
             }
             else
             {
@@ -1151,15 +1145,16 @@
                 this.ToolStripMenuItemLanguageEnglish.Checked = false;
                 this.JsonObjSettings.AppParam[0].Language = "nl-NL";
 
-                cul = CultureInfo.CreateSpecificCulture("nl-NL");
+                TdCulture.Cul = CultureInfo.CreateSpecificCulture("nl-NL");
 
-                MB_Title.Cul = cul;
-                MB_Text.Cul = cul;
+                MB_Title.Cul = TdCulture.Cul;
+                MB_Text.Cul = TdCulture.Cul;
             }
 
-            TdSwitchLanguage sl = new (this, cul);
-            sl.SetLanguage();
+            TdSwitchLanguage sl = new (this, TdCulture.Cul);
+            sl.SetLanguageMainForm();
         }
+
         #endregion Switch language
 
         #region Get Oracle connections

@@ -17,11 +17,15 @@
         /// </summary>
         public FormMain ParentFormMain { get; set; }
 
+        /// <summary>
+        /// Gets or sets an instance of form about.
+        /// </summary>
         public FormAbout ParentFormAbout { get; set; }
+
         #endregion Fields
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SwitchLanguage"/> class.
+        /// Initializes a new instance of the <see cref="TdSwitchLanguage"/> class.
         /// Switch between languages.
         /// </summary>
         /// <param name="parent">Instance of of form main.</param>
@@ -48,7 +52,7 @@
         /// <summary>
         /// Set the language for component texts or labels.
         /// </summary>
-        public void SetLanguage()
+        public void SetLanguageMainForm()
         {
             System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.WaitCursor;
 
@@ -76,7 +80,10 @@
             System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.Default;
         }
 
-        public void SetLanguage_AboutForm()
+        /// <summary>
+        /// Set the language for component texts or labels.
+        /// </summary>
+        public void SetLanguageAboutForm()
         {
             this.ParentFormAbout.LabelVersion.Text = this.resMan.GetString("AboutForm_VersionLabel", this.cul);
         }

@@ -118,54 +118,71 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutForm_VersionLabel" xml:space="preserve">
-    <value>Versie 0</value>
+    <value>Versie : </value>
+    <comment>Label</comment>
   </data>
   <data name="MainForm_Menu_Manage" xml:space="preserve">
     <value>&amp;Beheren</value>
+    <comment>Menu</comment>
   </data>
   <data name="MainForm_Menu_Manage_Connections" xml:space="preserve">
     <value>C&amp;onnecties...</value>
+    <comment>Menu</comment>
   </data>
   <data name="MainForm_Menu_Manage_Queries" xml:space="preserve">
     <value>&amp;Query's...</value>
+    <comment>Menu</comment>
   </data>
   <data name="MainForm_Menu_Manage_QueryGroups" xml:space="preserve">
     <value>Query &amp;groepen...</value>
+    <comment>Menu</comment>
   </data>
   <data name="MainForm_Menu_Manage_Users" xml:space="preserve">
     <value>Gebr&amp;uikers...</value>
+    <comment>Menu</comment>
   </data>
   <data name="MainForm_Menu_Options" xml:space="preserve">
     <value>&amp;Opties</value>
+    <comment>Menu</comment>
   </data>
   <data name="MainForm_Menu_Options_Info" xml:space="preserve">
     <value>&amp;Informatie</value>
+    <comment>Menu</comment>
   </data>
   <data name="MainForm_Menu_Options_Language" xml:space="preserve">
     <value>&amp;Taal</value>
+    <comment>Menu</comment>
   </data>
   <data name="MainForm_Menu_Options_Language_EN" xml:space="preserve">
     <value>&amp;Engels</value>
+    <comment>Menu</comment>
   </data>
   <data name="MainForm_Menu_Options_Language_NL" xml:space="preserve">
     <value>&amp;Nederlands</value>
+    <comment>Menu</comment>
   </data>
   <data name="MainForm_Menu_Options_Settings" xml:space="preserve">
     <value>&amp;Instellingen...</value>
+    <comment>Menu</comment>
   </data>
   <data name="MainForm_Menu_Program" xml:space="preserve">
     <value>&amp;Programma</value>
+    <comment>Menu</comment>
   </data>
   <data name="MainForm_Menu_Program_DatabaseConnections" xml:space="preserve">
     <value>Database connectie(s)</value>
+    <comment>Menu</comment>
   </data>
   <data name="MainForm_Menu_Program_Disconnect_Database" xml:space="preserve">
     <value>Verbreek database connectie</value>
+    <comment>Menu</comment>
   </data>
   <data name="MainForm_Menu_Program_Exit" xml:space="preserve">
     <value>Afsluiten</value>
+    <comment>Menu</comment>
   </data>
   <data name="MainForm_Menu_Program_Switch_user" xml:space="preserve">
     <value>&amp;Wissel van gebruiker</value>
+    <comment>Menu</comment>
   </data>
 </root>
