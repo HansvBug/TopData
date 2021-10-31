@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Text_App_Database_Changed" xml:space="preserve">
+    <value>De Applicatie database is gewijzigd.</value>
+    <comment>Messagebox text; Applicationdatabase</comment>
+  </data>
+  <data name="Text_App_Database_Changed_No_Location" xml:space="preserve">
+    <value>De Applicatie database is niet aangemaakt omdat de locatie of de database naam ontbreekt.</value>
+    <comment>Messagebox text; Applicationdatabase</comment>
+  </data>
+  <data name="Text_App_Database_Compressed" xml:space="preserve">
+    <value>De applicatie database is succesvol gecomprimeerd.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_App_Database_Copy_Failed" xml:space="preserve">
+    <value>Het kopiëren van de applicatie database is mislukt.</value>
+    <comment>Messagebox text; Applicationdatabase</comment>
+  </data>
+  <data name="Text_App_Database_Created" xml:space="preserve">
+    <value>De Applicatie database is aangemaakt.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_App_Database_Create_Failed" xml:space="preserve">
+    <value>Het aanmaken van een leeg database bestand is mislukt.</value>
+    <comment>Messagebox text; Applicationdatabase</comment>
+  </data>
+  <data name="Text_Authentication_Name" xml:space="preserve">
+    <value>Vul een authenticatie naam in.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Column_Is_Empty" xml:space="preserve">
+    <value>Een verplichte kolom in de tabel is leeg.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Continue_Without_Saving" xml:space="preserve">
+    <value>Doorgaan zonder op te slaan?</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Copy_DatabaseFile_Completed" xml:space="preserve">
+    <value>Het kopiëren van het database bestand is gereed.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Cre_new_Ora_Conn" xml:space="preserve">
+    <value>Nieuwe Oracle database connectie maken.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Database_Copy_Failed" xml:space="preserve">
+    <value>Het kopiëren van het database bestand is mislukt.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Data_User_Not_Changed" xml:space="preserve">
+    <value>De gegevens van de geselecteerde gebruiker zijn niet gewijzigd.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Drop_Query_On_Folder" xml:space="preserve">
+    <value>Een query kunt u alleen op een Map droppen.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Duplicate_Databae_Conn" xml:space="preserve">
+    <value>De connectie gegevens komen reeds voor. Dubbele connectie gegevens worden niet opgeslagen.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Enter_Authentiction_Name" xml:space="preserve">
+    <value>Vul een authentication naam in.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Error_Ora_Conn" xml:space="preserve">
+    <value>Onverwachte fout bij het maken van de oracle connectie. Controleer het log bestand.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_File_Exist_Overwrite" xml:space="preserve">
+    <value>Het bestand bestaat al. Wilt u het bestand overschrijven?</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Max_100" xml:space="preserve">
+    <value>Maximaal 100 tekens toegestaan.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Max_10000" xml:space="preserve">
+    <value>Maximaal 10000 tekens toegestaan.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Max_200" xml:space="preserve">
+    <value>Maximaal 200 tekens toegestaan.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Max_255" xml:space="preserve">
+    <value>Maximaal 255 tekens toegestaan.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Max_31_Chars_Excel" xml:space="preserve">
+    <value>Een Excel werkmap naam mag maximaal 31 tekens bevatten.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Max_50" xml:space="preserve">
+    <value>Maximaal 50 tekens toegestaan.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Max_900000" xml:space="preserve">
+    <value>Maximaal 900000 tekens toegestaan.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_New_User" xml:space="preserve">
+    <value>De nieuwe gebruiker is toegevoegd.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Not_Allowd_Change_Other_User" xml:space="preserve">
+    <value>U bent niet gerechtigd om andere gebruikers te wijzigen.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Not_Allowd_Change_Other_User_With_Role" xml:space="preserve">
+    <value>U bent niet gerechtigd om gebruikers te wijzigen met de Rol System of Administrator.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Not_Allowd_Change_Other_User_With_Role_1" xml:space="preserve">
+    <value>U bent niet gerechtigd om gebruikers te wijzigen met de Rol System.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Not_Allowd_Change_User" xml:space="preserve">
+    <value>U bent niet gerechtigd om gebruikers te wijzigen.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Not_Allowed_Deleted_Any_User" xml:space="preserve">
+    <value>U bent niet gerechtigd om gebruikers te verwijderen.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Not_Allowed_Deleted_User" xml:space="preserve">
+    <value>U bent niet gerechtigd om gebruikers te verwijderen met de rol System of Administrator.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Not_All_Fields_Filled" xml:space="preserve">
+    <value>Niet alle invoer velden zijn gevuld.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Ora_Account_Expired" xml:space="preserve">
+    <value>Het gebruikersaccount (Oracle user) is verlopen, verander het wachtwoord.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Password_Repeat" xml:space="preserve">
+    <value>Wachtwoord en herhaal wachtwoord zijn niet gelijk.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Query_Not_Exported" xml:space="preserve">
+    <value>Een query is niet geëxporteerd. In de logfile staat betreffende de Query naam.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Query_Not_Saved_No_Ora_Conn" xml:space="preserve">
+    <value>Query is nog niet opgeslagen. De query moet eerst opgeslagen worden voordat deze gerelateerd wordt aan een connectie.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Ready_Saving_Connection" xml:space="preserve">
+    <value>De connectie gegevens zijn opgeslagen.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Selected__User_Not_Deleted" xml:space="preserve">
+    <value>De geselecteerde gebruiker is niet verwijderd.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Settings_File_Not_Found" xml:space="preserve">
+    <value>Het settingsbestand is niet gevonden (of ingelezen). Default settings worden toegepast.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_User_Data_Changed" xml:space="preserve">
+    <value>De gegevens van de geselecteerde gebruiker zijn gewijzigd.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_User_Data_Does_not_Exist" xml:space="preserve">
+    <value>De gebruikergegevens komen niet voor.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_User_Data_Exist" xml:space="preserve">
+    <value>De Gebruikernaam of de Authenticatie naam komt reeds voor. Kies een andere gebruikers- of authenticatienaam.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_User_Gets_deleted" xml:space="preserve">
+    <value>De gebruiker wordt definitief verwijderd. Weet u dit zeker?</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_User_Is_Deleted" xml:space="preserve">
+    <value>De gebruiker is verwijderd.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_User_Role_Not_In_Sync" xml:space="preserve">
+    <value>De gebruiker en rol van de gebruiker komen niet (meer) met elkaar overeen.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Tilte_Create_New_User" xml:space="preserve">
+    <value>Aanmaken nieuwe gebruiker.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Attention" xml:space="preserve">
+    <value>Let op.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Change_data" xml:space="preserve">
+    <value>Wijzigen gegevens.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Continue" xml:space="preserve">
+    <value>Doorgaan?</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Cre_New_DB_Connection" xml:space="preserve">
+    <value>Nieuwe database connectie maken.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Drag_Query" xml:space="preserve">
+    <value>Slepen query.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Error" xml:space="preserve">
+    <value>Fout.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Information" xml:space="preserve">
+    <value>Informatie.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Ready" xml:space="preserve">
+    <value>Gereed.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Remove" xml:space="preserve">
+    <value>Verwijderen.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Save" xml:space="preserve">
+    <value>Opslaan.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Warning" xml:space="preserve">
+    <value>Waarschuwing.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Titlte_File_Copy" xml:space="preserve">
+    <value>Kopiëren bestand.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Under construction" xml:space="preserve">
+    <value>Wordt nog aan gewerkt.</value>
+  </data>
+</root>

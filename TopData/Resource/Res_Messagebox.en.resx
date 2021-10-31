@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Text_App_Database_Changed" xml:space="preserve">
+    <value>The Application database has been changed.</value>
+    <comment>Messagebox text; Applicationdatabase</comment>
+  </data>
+  <data name="Text_App_Database_Changed_No_Location" xml:space="preserve">
+    <value>The Application database has not been created because the location or database name is missing.</value>
+    <comment>Messagebox text; Applicationdatabase</comment>
+  </data>
+  <data name="Text_App_Database_Compressed" xml:space="preserve">
+    <value>The application database has been successfully compressed.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_App_Database_Copy_Failed" xml:space="preserve">
+    <value>Copying of the application database failed.</value>
+    <comment>Messagebox text; Applicationdatabase</comment>
+  </data>
+  <data name="Text_App_Database_Created" xml:space="preserve">
+    <value>The Application database has been created.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_App_Database_Create_Failed" xml:space="preserve">
+    <value>Failed to create an empty database file.</value>
+    <comment>Messagebox text; Applicationdatabase</comment>
+  </data>
+  <data name="Text_Authentication_Name" xml:space="preserve">
+    <value>Enter an authentication name.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Column_Is_Empty" xml:space="preserve">
+    <value>A mandatory column in the table is empty.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Continue_Without_Saving" xml:space="preserve">
+    <value>Continue without saving?</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Copy_DatabaseFile_Completed" xml:space="preserve">
+    <value>The copying of the database file is complete.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Cre_new_Ora_Conn" xml:space="preserve">
+    <value>Create new Oracle database connection.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Database_Copy_Failed" xml:space="preserve">
+    <value>Copying of the database file failed.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Data_User_Not_Changed" xml:space="preserve">
+    <value>The data of the selected user has not been changed.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Drop_Query_On_Folder" xml:space="preserve">
+    <value>You can only drop a query on a Folder.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Duplicate_Databae_Conn" xml:space="preserve">
+    <value>The connection data already exists. Duplicate connection data is not saved.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Enter_Authentiction_Name" xml:space="preserve">
+    <value>Enter an authentication name.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Error_Ora_Conn" xml:space="preserve">
+    <value>Unexpected error making oracle connection. Check the log file.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_File_Exist_Overwrite" xml:space="preserve">
+    <value>The file already exists. Do you want to overwrite the file?</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Max_100" xml:space="preserve">
+    <value>Maximum 100 characters allowed.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Max_10000" xml:space="preserve">
+    <value>Maximum 10000 characters allowed.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Max_200" xml:space="preserve">
+    <value>Maximum 200 characters allowed.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Max_255" xml:space="preserve">
+    <value>Maximum 255 characters allowed.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Max_31_Chars_Excel" xml:space="preserve">
+    <value>An Excel workbook name can contain a maximum of 31 characters.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Max_50" xml:space="preserve">
+    <value>Maximum 50 characters allowed.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Max_900000" xml:space="preserve">
+    <value>Maximum 900000 characters allowed.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_New_User" xml:space="preserve">
+    <value>The new user has been added.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Not_Allowd_Change_Other_User" xml:space="preserve">
+    <value>You are not entitled to change other users.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Not_Allowd_Change_Other_User_With_Role" xml:space="preserve">
+    <value>You are not allowed to change users with the System or Administrator Role.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Not_Allowd_Change_Other_User_With_Role_1" xml:space="preserve">
+    <value>You are not allowed to change users with the Role System.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Not_Allowd_Change_User" xml:space="preserve">
+    <value>You are not entitled to change users.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Not_Allowed_Deleted_Any_User" xml:space="preserve">
+    <value>You are not entitled to delete users.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Not_Allowed_Deleted_User" xml:space="preserve">
+    <value>You are not allowed to delete users with the System or Administrator role.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Not_All_Fields_Filled" xml:space="preserve">
+    <value>Not all input fields are filled.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Ora_Account_Expired" xml:space="preserve">
+    <value>The user account (Oracle user) has expired, please change the password.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Password_Repeat" xml:space="preserve">
+    <value>Password and repeat password are not the same.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Query_Not_Exported" xml:space="preserve">
+    <value>A query has not been exported. The log file contains information about the Query name.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Query_Not_Saved_No_Ora_Conn" xml:space="preserve">
+    <value>Query has not yet been saved. The query must be saved before it is related to a connection.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Ready_Saving_Connection" xml:space="preserve">
+    <value>The connection data is saved</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Selected__User_Not_Deleted" xml:space="preserve">
+    <value>The selected user has not been deleted.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_Settings_File_Not_Found" xml:space="preserve">
+    <value>The settings file was not found (or read). Default settings are applied.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_User_Data_Changed" xml:space="preserve">
+    <value>The information of the selected user has been changed.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_User_Data_Does_not_Exist" xml:space="preserve">
+    <value>The user data does not exist.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_User_Data_Exist" xml:space="preserve">
+    <value>The User name or Authentication name already exists. Please choose a different user or authentication name.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_User_Gets_deleted" xml:space="preserve">
+    <value>The user is permanently deleted. Are you sure about this?</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_User_Is_Deleted" xml:space="preserve">
+    <value>The user has been deleted.</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Text_User_Role_Not_In_Sync" xml:space="preserve">
+    <value>The user and the role of the user do not correspond (anymore).</value>
+    <comment>Messagebox text</comment>
+  </data>
+  <data name="Tilte_Create_New_User" xml:space="preserve">
+    <value>Create new user.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Attention" xml:space="preserve">
+    <value>Attention.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Change_data" xml:space="preserve">
+    <value>Change data.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Continue" xml:space="preserve">
+    <value>Continue?</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Cre_New_DB_Connection" xml:space="preserve">
+    <value>Create new database connection.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Delete_Folder" xml:space="preserve">
+    <value>Delete folder.</value>
+  </data>
+  <data name="Title_Drag_Query" xml:space="preserve">
+    <value>Drag query.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Error" xml:space="preserve">
+    <value>Error.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Information" xml:space="preserve">
+    <value>Information.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Ready" xml:space="preserve">
+    <value>Ready.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Save" xml:space="preserve">
+    <value>Save.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Title_Warning" xml:space="preserve">
+    <value>Warning.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Titlte_File_Copy" xml:space="preserve">
+    <value>File copy.</value>
+    <comment>Messagebox title</comment>
+  </data>
+  <data name="Under construction" xml:space="preserve">
+    <value>Under construction</value>
+    <comment>Messagebox title</comment>
+  </data>
+</root>

@@ -1,0 +1,273 @@
+--Topdata 0.0.0.1------------------------------------------------------------------------------------------------------
+Settings o.b.v. json																				Gereed: 25-09-2020
+Logging																								Gereed: 25-09-2020
+
+--Topdata 0.0.0.2------------------------------------------------------------------------------------------------------
+Scherm positie 																						Gereed: 27-09-2020
+add 2 regels aan het main form system menu															Gereed: 27-09-2020
+Settingsmanager IDisposable gemaakt																	Gereed: 27-09-2020
+
+--Topdata 0.0.0.3------------------------------------------------------------------------------------------------------
+Maak de applicatie database (SQLite), class herschreven, circa 500 regels minder.					Gereed: 01-10-2020
+
+--Topdata 0.0.0.4------------------------------------------------------------------------------------------------------
+.net core 3.1 gewijzigd in .net 5
+FormAbout																							Gereed: 01-10-2020
+TextBox / combobox focus dan kleuren (optie)														Gereed: 03-10-2020 Opzet gemaakt. bijhouden bij nieuwe text en comboboxen
+Compress database en db kopie na elke xx keer starten												Gereed: 11-10-2020
+Gebruiker inlog / wissel gebruiker																	Gereed: 17-10-2020
+
+--Topdata 0.0.0.5------------------------------------------------------------------------------------------------------
+-	maak Oracle connecties en sla deze op															Gereed: 20-02-2021
+-	Oracle password wordt nu zo veel mogelijk als secure string behandeld							Gereed: 06-03-2021
+
+BUG in de after select connections treeview. 
+--Topdata 0.0.0.6------------------------------------------------------------------------------------------------------
+-	Connectie met de database maken (main menu)														Gereed: 21-03-2021
+-	Disconnect Oracle connection																	Gereed: 21-03-2021
+-	Optiemenu Kopieer app database																	Gereed: 27-03-2021
+-	Optiemenu exporteer alle query's. Er worden géén dubbelen nameer geaccepteerd.					Gereed: 27-03-2021
+-	Optiemenu exporteer alle querynamen en mapnamen													Gereed: 28-03-2021
+
+
+--Topdata 0.0.0.7------------------------------------------------------------------------------------------------------
+-	Query Groups																					Gereed: 05-04-2021
+-	laden querygroupnamen in query form																Gereed: 04-04-2021
+-	Querygroup form: nieuwe rij met CTRL N															Gereed: 04-04-2021
+		Er moet een verbinding met de active conectie worden gelegd									Gereed: 05-04-2021
+
+		
+
+https://docs.microsoft.com/en-us/answers/questions/343466/change-datagridview-cell-entyre-column-to-combobox.html		
+
+--Topdata 0.0.0.8------------------------------------------------------------------------------------------------------
+-	UItvoeren (en opslaan naar xlsx) meerdere query's												Gereed: 03-05-2021
+-	Filteren query resultaat																		Gereed: 09-05-2021
+
+--Topdata 0.0.0.9------------------------------------------------------------------------------------------------------
+-	.net 6 van gemaakt																				Gereed: 10-09-2021
+-	Kleine aanpassing. User naam mag niet gelijk zijn aan wachtwoord								Gereed: 10-09-2021
+-	Reset sqlite sequence. Zie lazarus TopData														Gereed: 10-09-2021
+-	Inlezen nieuwe System en Owner record in de gebruiker tabel. 									Gereed: 10-09-2021 (Let op als system of Of Owner er nog in zitten werkt dit niet. Kan alleen als ze zijn verwijderd).
+-	Locatie database instelbaar maken																Gereed: 10-09-2021 (beetje vreemd. kan alleen werken als je opnieuw start. Je wisselt terwijl de database open is).
+-	hottracking Users datagrid																		Gereed: 13-09-2021	http://csharphelper.com/blog/2017/03/highlight-the-datagridview-row-that-is-under-the-mouse-in-c/
+-	uitvoeren meerdere query's zonder bestandsnaam werkt nu niet.									Gereed: 16-09-2021	beter dan vorige versie. Nu wordt bij elk bestand voor overschrijven gevraagd als het bestand al bestaat
+-	Zoek in treeview in main form werkt																Gereed: 19-09-2021
+-	configure form, datagridview odd color, highlight en no color radio buttons toegevoegd. 		Gereed: 28-09-2021
+-	treeview toon omschrijving																		Gereed: 24-10-2021
+-	SQlite user_version toekennen en uitlezen														Gereed: 24-10-2021 (new)
+-	Config form metadata version en user version tonen.												Gereed: 24-10-2021 (new)
+-	Alle classes omgezet naar Td<Name>																Gereed: 24-10-2021
+-	create, update en maintain tables moet uit elkaar.												Gereed: 30-10-2021
+-	update db moet automatisch. Alleen Install moet handmatig!!!!									Gereed: 30-10-2021
+-	Query parameter form onthoud scherm positie														Gereed: 30-10-2021 (new)
+-	Als er geen dbase connecties zijn dan moet het menu dbconnecties grijs zijn						Gereed: 30-10-2021 (new)
+
+
+-	query groepen																					Gereed: 
+-	key container																					Gereed:
+-	SQLite optimize uitzoeken. 																		Gereed:
+-	Splash screen																					Gereed: 
+-	Controle op META_settings version moet gelijk zijn aan de de user_version						Gereed: 
+-	SQLite user version uitlezen is gereed. zetten nog nogmaken
+-	TODO; een connectie weggooien die door een ander actief is gaat nu wel. Tabel maken die actieve connecies bij houdt. Gereed: 
+-	Maintain query's moet opslaan activeren bij text change. (Werkt nu alleen bij leave)			Gereed: 
+
+-	Paspoort controle (zie oude topdata)															Gereed: 
+
+-FORM MAIN : DisableApplication(); BEKIJKEN
+
+-	toolstrip treeview hoofd scherm
+-	SQLlite database versie meegeven (Zie Lazarus TopData)											Gereed: 
+-	Taal verbeteren	!!! en default in eng starten	
+-	SQL informatie naar logging zetten																Gereed: (new)
+
+
+
+-	Test Query Query form)																			Gereed: 
+		loopt vast op sdo geometry. bevat functies die nog niet ondersteund owrden
+
+
+
+
+-	maak gebruik van een key container voor de encryptie sleutel									Gereed:
+		Nieuwe parameter: UseKeyContainer
+		maak een keycontainer aan en zet de sleutel vanuit de xml erin
+		verwijder de xml
+		get key functie voor de encryptie
+		
+		xml goed bewaren!!!! key container ook kopieren
+		
+
+
+OUDE:
+"DefaultDatabaseLocation": "G:\\Development\\VS2019_64\\TopData\\TopData\\bin\\Debug\\TopData.db",
+
+
+--Topdata 0.0.0.9------------------------------------------------------------------------------------------------------
+-	engels - Nederlands																				Gereed: 
+
+
+
+
+-	Plaats op Github																				Gereed:  (Zet query form dan nog even uit!!!
+
+
+
+1.0.0.0
+
+
+1.4.0.0
+-	Query moet een naam hebben in het query form													Gereed: 
+-	Disable functies als er nog geen user is ingelogd												gereed: Doorlopend
+-	Log user uit (new)																				Gereed:
+-	StyleCop opmerkingen verder oplossen... (moet onder de 1000 blijven)
+-	Tabel maken die bij houd wie en hoe lang iemand is ingelogd										Gereed: (wie, tijdsduur, welke connectie)
+-	Tabel maken die de active database connecties bevat (nodig bij verwijderen van een connectie	Gereed:
+-	Folders in maintain query scherm kunnen verslepen drag/drop of waarschuwen dat het niet kan		Gereed:
+-	bij zoeken in treeview krijgt het result eerst een blauwe kleur. Deze handhaven als je op de zoekknop drukt om naar het volgende zoekresultaat te gaan.
+
+==>>>
+-	2 soorten query groupen. de huidige waarmee je een aatnal q's kunt draaien = Quergroup Manual
+		een nieuw type dat in een argument mee kan. = Querygroup Automatic
+	Dan kan de tool in een ETL mee draaien
+
+--------------
+key container
+C:\ProgramData\Microsoft\Crypto
+C:\ProgramData\Microsoft\Crypto\RSA\MachineKeys
+genereer key: <RSAKeyValue><Modulus>rpYwtX+qbEfnNtXkfq5J6h7sHsivhdGGpdWANj+DJAmi/qLJ/j/YLA7kSDW5QGRYYwZBI/ShF3CyIZt8Vn2smnsLILpc4wsk/Zuimxq/IdiF8ciiAxoP+AHc++8xNKBDWWIgAUbSQY1C8yeqwCIXLzbZOde0CXDKsd1J6x5OiPE=</Modulus><Exponent>AQAB</Exponent><P>5/bACmrxr3WednhLibbeNF/M5OpUuIbuLUQe440S/lU7cX+CgOaoQubpnHquqn6Q3KV8dY2GncHr36S+1B8MMQ==</P><Q>wK1oxBNLY8LkzGB/l9Rc0cji94eLyf8XmZjES/vnP8+VQLiOEQVkl+G9qikom00Ro/ZCga2Cqt0v1aUwnC3YwQ==</Q><DP>gMSktOPLSOjVT9TVshxW2+I2nvlKkKkuvOgs8YsV+SQdfJMZQi9JRuJi2t/r6G+cQTCIl8U57oeBRkRxPtYBcQ==</DP><DQ>GZeu/8RUUjbz7xWuPPuPLKpTQ2+0qKsCdnttL26RQ8+N0p/w9t/Rgb8RU0XOR/qPqkiugs0KOynQDb+4WjZYwQ==</DQ><InverseQ>FfkHD3j2xex/VNoen/DKE9Pl4ZsdxNqKDn+dl/CUFM5/iub+Z/Jkxrg+5KBiZVDrU2sMUveya3GMukz3Odka1A==</InverseQ><D>dHTy4N7cC4abENT0qhwQaf9eedpcWuM88fnMoGMVU0CqXTixjMuBo0H7vL85Z16IJuXRJe7UVhJygEB7XCZQr1AKJ25LAmKyd5oqZHRSzrGcS5EFOs3i0pXQprGRwgAZZgwQp1vEA3raYSsltMbeDmqx7/k0PYqOKIdeFcAokAE=</D></RSAKeyValue>
+get key: 
+<RSAKeyValue><Modulus>rpYwtX+qbEfnNtXkfq5J6h7sHsivhdGGpdWANj+DJAmi/qLJ/j/YLA7kSDW5QGRYYwZBI/ShF3CyIZt8Vn2smnsLILpc4wsk/Zuimxq/IdiF8ciiAxoP+AHc++8xNKBDWWIgAUbSQY1C8yeqwCIXLzbZOde0CXDKsd1J6x5OiPE=</Modulus><Exponent>AQAB</Exponent><P>5/bACmrxr3WednhLibbeNF/M5OpUuIbuLUQe440S/lU7cX+CgOaoQubpnHquqn6Q3KV8dY2GncHr36S+1B8MMQ==</P><Q>wK1oxBNLY8LkzGB/l9Rc0cji94eLyf8XmZjES/vnP8+VQLiOEQVkl+G9qikom00Ro/ZCga2Cqt0v1aUwnC3YwQ==</Q><DP>gMSktOPLSOjVT9TVshxW2+I2nvlKkKkuvOgs8YsV+SQdfJMZQi9JRuJi2t/r6G+cQTCIl8U57oeBRkRxPtYBcQ==</DP><DQ>GZeu/8RUUjbz7xWuPPuPLKpTQ2+0qKsCdnttL26RQ8+N0p/w9t/Rgb8RU0XOR/qPqkiugs0KOynQDb+4WjZYwQ==</DQ><InverseQ>FfkHD3j2xex/VNoen/DKE9Pl4ZsdxNqKDn+dl/CUFM5/iub+Z/Jkxrg+5KBiZVDrU2sMUveya3GMukz3Odka1A==</InverseQ><D>dHTy4N7cC4abENT0qhwQaf9eedpcWuM88fnMoGMVU0CqXTixjMuBo0H7vL85Z16IJuXRJe7UVhJygEB7XCZQr1AKJ25LAmKyd5oqZHRSzrGcS5EFOs3i0pXQprGRwgAZZgwQp1vEA3raYSsltMbeDmqx7/k0PYqOKIdeFcAokAE=</D></RSAKeyValue>
+<RSAKeyValue><Modulus>rpYwtX+qbEfnNtXkfq5J6h7sHsivhdGGpdWANj+DJAmi/qLJ/j/YLA7kSDW5QGRYYwZBI/ShF3CyIZt8Vn2smnsLILpc4wsk/Zuimxq/IdiF8ciiAxoP+AHc++8xNKBDWWIgAUbSQY1C8yeqwCIXLzbZOde0CXDKsd1J6x5OiPE=</Modulus><Exponent>AQAB</Exponent><P>5/bACmrxr3WednhLibbeNF/M5OpUuIbuLUQe440S/lU7cX+CgOaoQubpnHquqn6Q3KV8dY2GncHr36S+1B8MMQ==</P><Q>wK1oxBNLY8LkzGB/l9Rc0cji94eLyf8XmZjES/vnP8+VQLiOEQVkl+G9qikom00Ro/ZCga2Cqt0v1aUwnC3YwQ==</Q><DP>gMSktOPLSOjVT9TVshxW2+I2nvlKkKkuvOgs8YsV+SQdfJMZQi9JRuJi2t/r6G+cQTCIl8U57oeBRkRxPtYBcQ==</DP><DQ>GZeu/8RUUjbz7xWuPPuPLKpTQ2+0qKsCdnttL26RQ8+N0p/w9t/Rgb8RU0XOR/qPqkiugs0KOynQDb+4WjZYwQ==</DQ><InverseQ>FfkHD3j2xex/VNoen/DKE9Pl4ZsdxNqKDn+dl/CUFM5/iub+Z/Jkxrg+5KBiZVDrU2sMUveya3GMukz3Odka1A==</InverseQ><D>dHTy4N7cC4abENT0qhwQaf9eedpcWuM88fnMoGMVU0CqXTixjMuBo0H7vL85Z16IJuXRJe7UVhJygEB7XCZQr1AKJ25LAmKyd5oqZHRSzrGcS5EFOs3i0pXQprGRwgAZZgwQp1vEA3raYSsltMbeDmqx7/k0PYqOKIdeFcAokAE=</D></RSAKeyValue>
+
+locatie: C:\ProgramData\Microsoft\Crypto\RSA\MachineKeys\a6356ecc6025d4d797fc752f6fd045e2_d76b28b3-8562-431f-b727-e191efc242ef
+
+dus...
+een key container maken
+de key container plaatsen 
+
+
+--Topdata 0.0.0.7------------------------------------------------------------------------------------------------------
+Maintain query scherm																				Gereed:
+	-	Save connectie werkt 15-02-2020
+>>>> alleen verwijdere schemanaam nog testen
+
+
+	-	databasenaam en schema naam moeten versleuteld opgeslagen gaan worden						Gereed: 
+	
+
+	TestQuery kan pas als de Oracle connectie werkt	--> 15-02-2020, nuget package is beschikbaar!!!!!!! test connectie werkt!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	Query conneecties kan pas als Oracle werkt
+	Query group kan pas als Oracle werkt
+	
+	preview 3: winforms werkt niet meer
+	https://developercommunity.visualtsudio.com/content/problem/1317180/winforms-editor-not-working-after-updating-to-prev.html
+	
+	
+	https://docs.microsoft.com/en-us/answers/questions/250976/winforms-designer-does-not-work-after-update-to-pr.html
+	
+	
+	
+Query deel moet een tekst bestand kunnen openen en droppen											Gereed:
+changed line color moet een optie worden
+
+fastcolored textbox --> download en kijk of die in .net5 compiled: https://www.codeproject.com/Articles/161871/Fast-Colored-TextBox-for-syntax-highlighting-2
+	Zelfde maaar nieuwer:: https://github.com/PavelTorgashov/FastColoredTextBox
+
+maak query, maak map, verwijder map en verwijder query werken.......!
+standaard tekst scherm is gereed
+Querygroep scherm:
+	positie --> gereed
+	inladen gegevens  
+	opslaan gegevens
+
+contole bij afsluiten en er zijn niet opgeslagen wijzigingen
+lock query testen (system)
+
+
+-	public void DeleteQuerGroupIDs(string DeleteType) = fout. Verwijdeerd alles voor iederen. Userid moet erbij komen
+
+
+https://github.com/karenpayneoregon/code-samples-csharp		--> country iterator laat zien hoe je in onload een database kan uitlezen terwijl de ui verdeer gaat.
+
+
+
+
+
+-	Encryptie sleutel in een key containder !!!!!!
+	--> https://docs.microsoft.com/en-us/answers/questions/250922/windows-key-container.html
+
+
+
+
+
+
+sqlplus AWGBIBASIS/AWGBIBASIS@localhost:1521/XEPDB1
+
+Controleer of er schrijfrechten zijn in de folder bij hat aanmaken van de map settings				Gereed: (form main)
+
+
+--
+-	optie maken, vragen of database overschreven mag worden na xx keer starten. (nu default=yes)	Gereed: 
+
+1.4
+-	Controle op dubbele schema en databasenaam bij connectie scherm (inlezen comboboxen)			Gereed:
+-	Delete alle lege regels in Ora_schema_database_name (ONDERHOUD)									Gereed:
+-	Connectie onderhoud cherm.  data adaptor (zie planten) gebruiken. 								Gereed:
+		--> maakt scherm overzichtelijker. datagridview met comboxen gebruiken
+-	Button in text box (Show/hide pasword)															Gereed:
+-	Save settngs naast de exe zodat het op een usb kan draaien zonder sporen achter te laten
+-	Query form: Change connection-query wordt nu direct opgeslagen. wellicht een_notsaved variant maken
+-	Query toegevoegd = selectie in treeview blijft niet blauw.... (new)
+														Gereed:
+-	TrvFoundQuerySearchColor: kleur al optie kunnen kiezen
+-	HighLightDataGridColor : kleur al optie kunnen kiezen
+-	main form toon omschrijving van query als popup als muis boven de treenode hangt
+
+TODO:
+Zou het opslaan van query's sneller kunnen maken:
+	//TODO; create HERE a dbconnection, so that only 1 connection is needed. Now there is a connection for every query that will be saved
+	//TODO; nakijken/gebruiken
+	//TODO; NAKIJKEN, wordt dit gebruikt?
+
+
+--nuget installed------------------------------------------------------------------------------------------------------
+removed  --> StyleCop.MSBuild		:	Check naming convention
+System.Management (MS)				:	Wordt gebruikt in de logging class
+System.Data.Sqlite					:	Sqlite voor de applicatie database
+Oracle.ManagedDataAccess			;	Nodig om een connectie met Oracle te kunnen maken. (Zou zonder client moeten werken).
+
+--Naming conventions---------------------------------------------------------------------------------------------------
+Constants	:	PascalCasing
+
+
+--web sites
+Coding conventions:	https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions
+extension methods: https://dotnetcodr.com/2014/03/06/extension-methods-part-1-the-basics/
+
+
+TopData wordt een tool waarmee je connectie maakt met een Oracle database. Vervolgens kun je (controle) query's uitvoeren en eventuele resultaten opslaan in een csv of xlsx formaat.
+De query's kun je 1 voor 1 uitvoeren maar ook meerder query's achter elkaar. Het is mogelijk om query's te groeperen en een groep query's in één keer uit te voeren. 
+De tool was oorspronkelijk gemaakt in .net 4.8 en wordt nu langzaam opnieuw opgebouwd met .net 5.0. 
+
+De eerste keer moet de tool met het volgende commando worden gestart:
+Topdata.exe Install
+
+De eerste keer inloggen kan met: System Welkom.
+Ga daarna naar: Manage; Users...
+
+
+Hete meeste is nog in het Nerderlands. Engels wordt langzaam aan ingebouwd.
+
+
+De tool is nog lang niet klaar voor gebruik maar het navolgende werkt al:
+- Query's opslaan.
+- Oracle connecties opslaan.
+- Aanmaken gebruikers.
+- Inloggen.
+
+Let op, query's worden versleuteld opgeslagen. De sleutel staat nu in de code. Het is de bedoeling dat er gewerkt gaat worden met een rsa key container. (En dus een andere sleutel).
+
+
+C:\Users\Hans en Cindy\AppData\Local\Programs\Microsoft VS Code

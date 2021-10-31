@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "TopData": {
+      "commandName": "Project",
+      "commandLineArgs": "Install DebugMode=On DefaultSystem DefaultOwner",
+      "nativeDebugging": false
+    }
+  }
+}
