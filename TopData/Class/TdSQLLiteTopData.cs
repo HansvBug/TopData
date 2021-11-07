@@ -1351,27 +1351,27 @@
 
                 if (TdUserData.UserRole == TdRoleTypes.Owner)
                 {
-                    selectSql += "WHERE (QUERY_AUTORISATION in ('" + TdRoleTypes.Owner + "', '" + TdRoleTypes.System + "', '" + TdRoleTypes.Administrator + "', '" + TdRoleTypes.Muteren + "', '" + TdRoleTypes.Raadplegen + "', '') or QUERY_AUTORISATION is null ) ";
+                    selectSql += "WHERE (QUERY_AUTORISATION in ('" + TdRoleTypes.Owner + "', '" + TdRoleTypes.System + "', '" + TdRoleTypes.Administrator + "', '" + TdRoleTypes.Editor + "', '" + TdRoleTypes.Viewer + "', '') or QUERY_AUTORISATION is null ) ";
                 }
                 else if (TdUserData.UserRole == TdRoleTypes.System)
                 {
-                    selectSql += "WHERE (QUERY_AUTORISATION in ('" + TdRoleTypes.System + "', '" + TdRoleTypes.Administrator + "', '" + TdRoleTypes.Muteren + "', '" + TdRoleTypes.Raadplegen + "', '') or QUERY_AUTORISATION is null ) ";
+                    selectSql += "WHERE (QUERY_AUTORISATION in ('" + TdRoleTypes.System + "', '" + TdRoleTypes.Administrator + "', '" + TdRoleTypes.Editor + "', '" + TdRoleTypes.Viewer + "', '') or QUERY_AUTORISATION is null ) ";
                 }
                 else if (TdUserData.UserRole == TdRoleTypes.Administrator)
                 {
-                    selectSql += "WHERE (QUERY_AUTORISATION in ('" + TdRoleTypes.Administrator + "', '" + TdRoleTypes.Muteren + "', '" + TdRoleTypes.Raadplegen + "', '') or QUERY_AUTORISATION is null ) ";
+                    selectSql += "WHERE (QUERY_AUTORISATION in ('" + TdRoleTypes.Administrator + "', '" + TdRoleTypes.Editor + "', '" + TdRoleTypes.Viewer + "', '') or QUERY_AUTORISATION is null ) ";
                 }
-                else if (TdUserData.UserRole == TdRoleTypes.Muteren)
+                else if (TdUserData.UserRole == TdRoleTypes.Editor)
                 {
-                    selectSql += "WHERE QUERY_AUTORISATION in ('" + TdRoleTypes.Muteren + "', '" + TdRoleTypes.Raadplegen + "') ";
+                    selectSql += "WHERE QUERY_AUTORISATION in ('" + TdRoleTypes.Editor + "', '" + TdRoleTypes.Viewer + "') ";
                 }
-                else if (TdUserData.UserRole == TdRoleTypes.Raadplegen)
+                else if (TdUserData.UserRole == TdRoleTypes.Viewer)
                 {
-                    selectSql += "WHERE QUERY_AUTORISATION = '" + TdRoleTypes.Raadplegen + "' ";
+                    selectSql += "WHERE QUERY_AUTORISATION = '" + TdRoleTypes.Viewer + "' ";
                 }
                 else
                 {
-                    selectSql += "WHERE QUERY_AUTORISATION = '" + TdRoleTypes.Raadplegen + "' ";
+                    selectSql += "WHERE QUERY_AUTORISATION = '" + TdRoleTypes.Viewer + "' ";
                 }
 
                 if (!string.IsNullOrEmpty(whereClause))

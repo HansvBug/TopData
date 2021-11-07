@@ -32,17 +32,17 @@
         /// <summary>
         /// Gets the role type: Muteren.
         /// </summary>
-        public static string Muteren
+        public static string Editor
         {
-            get { return "Muteren"; }
+            get { return "Editor"; }
         }
 
         /// <summary>
-        /// Gets the role type: Raadplegen.
+        /// Gets the role type: Viewer.
         /// </summary>
-        public static string Raadplegen
+        public static string Viewer
         {
-            get { return "Raadplegen"; }
+            get { return "Viewer"; }
         }
     }
 }

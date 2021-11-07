@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutForm_BuildDateLabel" xml:space="preserve">
+    <value>Bouwdatum : </value>
+    <comment>Label</comment>
+  </data>
   <data name="AboutForm_VersionLabel" xml:space="preserve">
     <value>Versie : </value>
     <comment>Label</comment>
@@ -184,5 +188,63 @@
   <data name="MainForm_Menu_Program_Switch_user" xml:space="preserve">
     <value>&amp;Wissel van gebruiker</value>
     <comment>Menu</comment>
+  </data>
+  <data name="MantainUserForm_AuthenticationLabel" xml:space="preserve">
+    <value>Authenticatie :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_AuthenticationNameLabel" xml:space="preserve">
+    <value>Authenticatie naam :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_CancelUser" xml:space="preserve">
+    <value>&amp;Opnieuw</value>
+  </data>
+  <data name="MantainUserForm_Close" xml:space="preserve">
+    <value>S&amp;luiten</value>
+  </data>
+  <data name="MantainUserForm_DeleteUser" xml:space="preserve">
+    <value>&amp;Verwijder</value>
+  </data>
+  <data name="MantainUserForm_FullNameLabel" xml:space="preserve">
+    <value>Volledige naam :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_GroupBoxLoggedInAsUser" xml:space="preserve">
+    <value>Ingelogd als</value>
+    <comment>Groupbox caption</comment>
+  </data>
+  <data name="MantainUserForm_GroupBoxUserData" xml:space="preserve">
+    <value>Gegevens</value>
+    <comment>Groupbox caption</comment>
+  </data>
+  <data name="MantainUserForm_GroupLabel" xml:space="preserve">
+    <value>Groep :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_NameLabel" xml:space="preserve">
+    <value>Naam :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_NewUser" xml:space="preserve">
+    <value>&amp;Nieuw</value>
+  </data>
+  <data name="MantainUserForm_PasswordLabel" xml:space="preserve">
+    <value>Wachtwoord :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_RepeatPasswordLabel" xml:space="preserve">
+    <value>Herhaal wachtwoord :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_RoleLabel" xml:space="preserve">
+    <value>Rol :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_Text" xml:space="preserve">
+    <value>Gebruiker(s) beheer</value>
+  </data>
+  <data name="MantainUserForm_UpdateUser" xml:space="preserve">
+    <value>&amp;Muteer</value>
   </data>
 </root>

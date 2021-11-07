@@ -22,8 +22,14 @@
         /// </summary>
         public FormAbout ParentFormAbout { get; set; }
 
+        /// <summary>
+        /// Gets or sets an instance of form maintain users.
+        /// </summary>
+        public FormMaintainUsers ParentFormMaintainUsers { get; set; }
+
         #endregion Fields
 
+        #region Constructor
         /// <summary>
         /// Initializes a new instance of the <see cref="TdSwitchLanguage"/> class.
         /// Switch between languages.
@@ -49,6 +55,20 @@
             this.ParentFormAbout = parent;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TdSwitchLanguage"/> class.
+        /// </summary>
+        /// <param name="parent">Instance of of form maintain users.</param>
+        /// <param name="cul">holds the culture info.</param>
+        public TdSwitchLanguage(FormMaintainUsers parent, CultureInfo cul)
+        {
+            this.resMan = new ResourceManager("TopData.Resource.Res_Controls", typeof(FormMaintainUsers).Assembly);
+            this.cul = cul;
+            this.ParentFormMaintainUsers = parent;
+        }
+        #endregion Constructor
+
+        #region Form main
         /// <summary>
         /// Set the language for component texts or labels.
         /// </summary>
@@ -79,13 +99,48 @@
 
             System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.Default;
         }
+        #endregion Form main
 
+        #region Form About
         /// <summary>
         /// Set the language for component texts or labels.
         /// </summary>
         public void SetLanguageAboutForm()
         {
             this.ParentFormAbout.LabelVersion.Text = this.resMan.GetString("AboutForm_VersionLabel", this.cul);
+            this.ParentFormAbout.LabelBuilddate.Text = this.resMan.GetString("AboutForm_BuildDateLabel", this.cul);
+        }
+        #endregion Form About
+
+        /// <summary>
+        /// Set the language for component texts or labels.
+        /// </summary>
+        public void SetLanguageMaintainUsers()
+        {
+            this.ParentFormMaintainUsers.LabelName.Text = this.resMan.GetString("MantainUserForm_NameLabel", this.cul);
+            this.ParentFormMaintainUsers.LabelFullName.Text = this.resMan.GetString("MantainUserForm_FullNameLabel", this.cul);
+            this.ParentFormMaintainUsers.LabelPassword.Text = this.resMan.GetString("MantainUserForm_PasswordLabel", this.cul);
+            this.ParentFormMaintainUsers.LabelRepeatPassword.Text = this.resMan.GetString("MantainUserForm_RepeatPasswordLabel", this.cul);
+            this.ParentFormMaintainUsers.LabelRole.Text = this.resMan.GetString("MantainUserForm_RoleLabel", this.cul);
+            this.ParentFormMaintainUsers.LabelAuthencation.Text = this.resMan.GetString("MantainUserForm_AuthenticationLabel", this.cul);
+            this.ParentFormMaintainUsers.LabelAuthencationName.Text = this.resMan.GetString("MantainUserForm_AuthenticationNameLabel", this.cul);
+            this.ParentFormMaintainUsers.LabelGroup.Text = this.resMan.GetString("MantainUserForm_GroupLabel", this.cul);
+
+            this.ParentFormMaintainUsers.LoggedInNameLabel.Text = this.resMan.GetString("MantainUserForm_NameLabel", this.cul);
+            this.ParentFormMaintainUsers.LoggedInRoleLabel.Text = this.resMan.GetString("MantainUserForm_RoleLabel", this.cul);
+            this.ParentFormMaintainUsers.LoggedInAuthenticationLabel.Text = this.resMan.GetString("MantainUserForm_AuthenticationLabel", this.cul);
+
+            this.ParentFormMaintainUsers.GroupBoxUserData.Text = this.resMan.GetString("MantainUserForm_GroupBoxUserData", this.cul);
+            this.ParentFormMaintainUsers.GroupBoxLoggedInAsUser.Text = this.resMan.GetString("MantainUserForm_GroupBoxLoggedInAsUser", this.cul);
+
+            this.ParentFormMaintainUsers.ButtonCreateUser.Text = this.resMan.GetString("MantainUserForm_NewUser", this.cul);
+            this.ParentFormMaintainUsers.ButtonDeleteUser.Text = this.resMan.GetString("MantainUserForm_DeleteUser", this.cul);
+            this.ParentFormMaintainUsers.ButtonAlterUser.Text = this.resMan.GetString("MantainUserForm_UpdateUser", this.cul);
+            this.ParentFormMaintainUsers.ButtonCancel.Text = this.resMan.GetString("MantainUserForm_CancelUser", this.cul);
+            this.ParentFormMaintainUsers.ButtonClose.Text = this.resMan.GetString("MantainUserForm_Close", this.cul);
+
+            this.ParentFormMaintainUsers.Text = this.resMan.GetString("MantainUserForm_Text", this.cul);
+
         }
     }
 

@@ -115,7 +115,7 @@
         #region constructor
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MaintainUsers"/> class.
+        /// Initializes a new instance of the <see cref="TdMaintainUsers"/> class.
         /// </summary>
         public TdMaintainUsers()
         {
@@ -123,7 +123,7 @@
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MaintainUsers"/> class.
+        /// Initializes a new instance of the <see cref="TdMaintainUsers"/> class.
         /// </summary>
         /// <param name="id">The id of the user.</param>
         public TdMaintainUsers(int id)
@@ -138,8 +138,8 @@
             this.userParam.Add(TdRoleTypes.Owner, 0);
             this.userParam.Add(TdRoleTypes.System, 1);
             this.userParam.Add(TdRoleTypes.Administrator, 2);
-            this.userParam.Add(TdRoleTypes.Muteren, 3);
-            this.userParam.Add(TdRoleTypes.Raadplegen, 4);
+            this.userParam.Add(TdRoleTypes.Editor, 3);
+            this.userParam.Add(TdRoleTypes.Viewer, 4);
         }
         #endregion constructor
 
@@ -272,12 +272,12 @@
                 command.Parameters.Add(new SQLiteParameter("@ROLE_ID", this.userParam[this.UserRole]));
                 command.Parameters.Add(new SQLiteParameter("@USERNAME_FULL", this.UserFullName));
 
-                if (this.Authentication.ToUpperInvariant() == "NEE" || this.Authentication.ToUpperInvariant() == "FALSE")
+                if (this.Authentication == TdResText.No || this.Authentication.ToUpperInvariant() == "FALSE")
                 {
                     command.Parameters.Add(new SQLiteParameter("@AUTHENTICATION", false));
                 }
 
-                if (this.Authentication.ToUpperInvariant() == "JA" || this.Authentication.ToUpperInvariant() == "TRUE")
+                if (this.Authentication == TdResText.Yes || this.Authentication.ToUpperInvariant() == "TRUE")
                 {
                     command.Parameters.Add(new SQLiteParameter("@AUTHENTICATION", true));
                 }
@@ -424,22 +424,22 @@
 
             if (this.UserRoleActive == TdRoleTypes.System)
             {
-                selectSql = string.Format("SELECT ID, GUID, USERNAME, USERNAME_FULL, PASSWORD, ROLE_ID, ROLE_NAME, GROUP_ID, GROUP_NAME, AUTHENTICATION, USER_AUTHENTICATION FROM {0} WHERE ROLE_NAME in ('{1}', '{2}', '{3}', '{4}')", TdTableName.USER_LIST, TdRoleTypes.System, TdRoleTypes.Administrator, TdRoleTypes.Muteren, TdRoleTypes.Raadplegen); // Get all the users  (as Administrator)
+                selectSql = string.Format("SELECT ID, GUID, USERNAME, USERNAME_FULL, PASSWORD, ROLE_ID, ROLE_NAME, GROUP_ID, GROUP_NAME, AUTHENTICATION, USER_AUTHENTICATION FROM {0} WHERE ROLE_NAME in ('{1}', '{2}', '{3}', '{4}')", TdTableName.USER_LIST, TdRoleTypes.System, TdRoleTypes.Administrator, TdRoleTypes.Editor, TdRoleTypes.Viewer); // Get all the users  (as Administrator)
             }
 
             if (this.UserRoleActive == TdRoleTypes.Administrator)
             {
-                selectSql = string.Format("SELECT ID, GUID, USERNAME, USERNAME_FULL, PASSWORD, ROLE_ID, ROLE_NAME, GROUP_ID, GROUP_NAME, AUTHENTICATION, USER_AUTHENTICATION FROM {0} WHERE ROLE_NAME in ('{1}', '{2}', '{3}')", TdTableName.USER_LIST, TdRoleTypes.Administrator, TdRoleTypes.Muteren, TdRoleTypes.Raadplegen);
+                selectSql = string.Format("SELECT ID, GUID, USERNAME, USERNAME_FULL, PASSWORD, ROLE_ID, ROLE_NAME, GROUP_ID, GROUP_NAME, AUTHENTICATION, USER_AUTHENTICATION FROM {0} WHERE ROLE_NAME in ('{1}', '{2}', '{3}')", TdTableName.USER_LIST, TdRoleTypes.Administrator, TdRoleTypes.Editor, TdRoleTypes.Viewer);
             }
 
-            if (this.UserRoleActive == TdRoleTypes.Muteren)
+            if (this.UserRoleActive == TdRoleTypes.Editor)
             {
-                selectSql = string.Format("SELECT ID, GUID, USERNAME, USERNAME_FULL, PASSWORD, ROLE_ID, ROLE_NAME, GROUP_ID, GROUP_NAME, AUTHENTICATION, USER_AUTHENTICATION FROM {0} WHERE ROLE_NAME in ('{1}', '{2}')", TdTableName.USER_LIST, TdRoleTypes.Muteren, TdRoleTypes.Raadplegen);
+                selectSql = string.Format("SELECT ID, GUID, USERNAME, USERNAME_FULL, PASSWORD, ROLE_ID, ROLE_NAME, GROUP_ID, GROUP_NAME, AUTHENTICATION, USER_AUTHENTICATION FROM {0} WHERE ROLE_NAME in ('{1}', '{2}')", TdTableName.USER_LIST, TdRoleTypes.Editor, TdRoleTypes.Viewer);
             }
 
-            if (this.UserRoleActive == TdRoleTypes.Raadplegen)
+            if (this.UserRoleActive == TdRoleTypes.Viewer)
             {
-                selectSql = string.Format("SELECT ID, GUID, USERNAME, USERNAME_FULL, PASSWORD, ROLE_ID, ROLE_NAME, GROUP_ID, GROUP_NAME, AUTHENTICATION, USER_AUTHENTICATION FROM {0} WHERE ROLE_NAME = '{1}'", TdTableName.USER_LIST, TdRoleTypes.Raadplegen);
+                selectSql = string.Format("SELECT ID, GUID, USERNAME, USERNAME_FULL, PASSWORD, ROLE_ID, ROLE_NAME, GROUP_ID, GROUP_NAME, AUTHENTICATION, USER_AUTHENTICATION FROM {0} WHERE ROLE_NAME = '{1}'", TdTableName.USER_LIST, TdRoleTypes.Viewer);
             }
 
             this.DbConnection.Open();
@@ -630,12 +630,12 @@
             command.Parameters.Add(new SQLiteParameter("@USER_VALIDATE", Convert.ToBase64String(usereroleHash)));
             command.Parameters.Add(new SQLiteParameter("@ROLE_ID", this.userParam[this.UserRole]));
 
-            if (this.Authentication == "Ja" || this.Authentication == "True")
+            if (this.Authentication == TdResText.Yes || this.Authentication == "True")
             {
                 command.Parameters.Add(new SQLiteParameter("@AUTHENTICATION", true));
             }
 
-            if (this.Authentication == "Nee" || this.Authentication == "False")
+            if (this.Authentication == TdResText.No || this.Authentication == "False")
             {
                 command.Parameters.Add(new SQLiteParameter("@AUTHENTICATION", false));
             }

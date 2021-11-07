@@ -489,7 +489,7 @@
                 MessageBox.Show(
                     "Bepalen grootte log bestand is mislukt." + Environment.NewLine +
                     Environment.NewLine +
-                    "Fout" + ex.Message + Environment.NewLine +
+                    MB_Title.Error + ex.Message + Environment.NewLine +
                     "Logging wordt uitgeschakelt.",
                     MB_Title.Information,
                     MessageBoxButtons.OK,

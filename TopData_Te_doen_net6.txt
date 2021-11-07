@@ -62,7 +62,8 @@ https://docs.microsoft.com/en-us/answers/questions/343466/change-datagridview-ce
 -	update db moet automatisch. Alleen Install moet handmatig!!!!									Gereed: 30-10-2021
 -	Query parameter form onthoud scherm positie														Gereed: 30-10-2021 (new)
 -	Als er geen dbase connecties zijn dan moet het menu dbconnecties grijs zijn						Gereed: 30-10-2021 (new)
-
+-	Op GITHUB gezet																					Gereed: 31-10-2021
+-	Engels : maintain user form zichtbare deel is engels. rest mmoet nog.......
 
 -	query groepen																					Gereed: 
 -	key container																					Gereed:

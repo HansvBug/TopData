@@ -70,7 +70,8 @@
 
         private void FormMaintainUsers_Load(object sender, EventArgs e)
         {
-            this.Text = ResourceText.FrmUserMaintenance;
+            TdSwitchLanguage sl = new(this, TdCulture.Cul);
+            sl.SetLanguageMaintainUsers();
 
             this.TextBoxWindowsAuthencation.Text = Environment.UserName;
             this.FillComboboxRole();
@@ -86,55 +87,55 @@
 
         private void FillComboboxRole()
         {
-            if (TdUserData.UserRole == TdRoleTypes.Owner)
+            if (TdUserData.UserRole == TdResText.Owner)
             {
                 this.ComboBoxRole.Items.Clear();
-                this.ComboBoxRole.Items.Add(TdRoleTypes.Owner);
-                this.ComboBoxRole.Items.Add(TdRoleTypes.System);
-                this.ComboBoxRole.Items.Add(TdRoleTypes.Administrator);
-                this.ComboBoxRole.Items.Add(TdRoleTypes.Muteren);
-                this.ComboBoxRole.Items.Add(TdRoleTypes.Raadplegen);
+                this.ComboBoxRole.Items.Add(TdResText.Owner);
+                this.ComboBoxRole.Items.Add(TdResText.System);
+                this.ComboBoxRole.Items.Add(TdResText.Administrator);
+                this.ComboBoxRole.Items.Add(TdResText.Editor);
+                this.ComboBoxRole.Items.Add(TdResText.Viewer);
                 this.ComboBoxRole.Sorted = true;
                 this.ComboBoxRole.SelectedIndex = 1;
             }
-            else if (TdUserData.UserRole == TdRoleTypes.System)
+            else if (TdUserData.UserRole == TdResText.System)
             {
                 this.ComboBoxRole.Items.Clear();
-                this.ComboBoxRole.Items.Add(TdRoleTypes.Administrator);
-                this.ComboBoxRole.Items.Add(TdRoleTypes.Muteren);
-                this.ComboBoxRole.Items.Add(TdRoleTypes.Raadplegen);
-                this.ComboBoxRole.Items.Add(TdRoleTypes.System);
+                this.ComboBoxRole.Items.Add(TdResText.Administrator);
+                this.ComboBoxRole.Items.Add(TdResText.Editor);
+                this.ComboBoxRole.Items.Add(TdResText.Viewer);
+                this.ComboBoxRole.Items.Add(TdResText.System);
                 this.ComboBoxRole.Sorted = true;
                 this.ComboBoxRole.SelectedIndex = 2;
             }
-            else if (TdUserData.UserRole == TdRoleTypes.Administrator)
+            else if (TdUserData.UserRole == TdResText.Administrator)
             {
                 this.ComboBoxRole.Items.Clear();
-                this.ComboBoxRole.Items.Add(TdRoleTypes.Administrator);
-                this.ComboBoxRole.Items.Add(TdRoleTypes.Muteren);
-                this.ComboBoxRole.Items.Add(TdRoleTypes.Raadplegen);
+                this.ComboBoxRole.Items.Add(TdResText.Administrator);
+                this.ComboBoxRole.Items.Add(TdResText.Editor);
+                this.ComboBoxRole.Items.Add(TdResText.Viewer);
                 this.ComboBoxRole.Sorted = true;
                 this.ComboBoxRole.SelectedIndex = 2;
             }
-            else if (TdUserData.UserRole == TdRoleTypes.Muteren)
+            else if (TdUserData.UserRole == TdResText.Editor)
             {
                 this.ComboBoxRole.Items.Clear();
-                this.ComboBoxRole.Items.Add(TdRoleTypes.Muteren);
-                this.ComboBoxRole.Items.Add(TdRoleTypes.Raadplegen);
+                this.ComboBoxRole.Items.Add(TdResText.Editor);
+                this.ComboBoxRole.Items.Add(TdResText.Viewer);
                 this.ComboBoxRole.Sorted = true;
                 this.ComboBoxRole.SelectedIndex = 1;
             }
-            else if (TdUserData.UserRole == TdRoleTypes.Raadplegen)
+            else if (TdUserData.UserRole == TdResText.Viewer)
             {
                 this.ComboBoxRole.Items.Clear();
-                this.ComboBoxRole.Items.Add(TdRoleTypes.Raadplegen);
+                this.ComboBoxRole.Items.Add(TdResText.Viewer);
                 this.ComboBoxRole.Sorted = true;
                 this.ComboBoxRole.SelectedIndex = 0;
             }
             else
             {
                 this.ComboBoxRole.Items.Clear();
-                this.ComboBoxRole.Items.Add(TdRoleTypes.Raadplegen);
+                this.ComboBoxRole.Items.Add(TdResText.Viewer);
                 this.ComboBoxRole.Sorted = true;
                 this.ComboBoxRole.SelectedIndex = 0;
             }
@@ -143,8 +144,8 @@
         private void FillComboBoxAuthentication()
         {
             this.ComboBoxAuthentication.Items.Clear();
-            this.ComboBoxAuthentication.Items.Add("Ja");
-            this.ComboBoxAuthentication.Items.Add("Nee");
+            this.ComboBoxAuthentication.Items.Add(TdResText.Yes);
+            this.ComboBoxAuthentication.Items.Add(TdResText.No);
             this.ComboBoxAuthentication.SelectedIndex = 1;
         }
 
@@ -188,7 +189,7 @@
             this.DataGridViewUsers.Columns[7].Visible = false;  // GROUP_ID
             this.DataGridViewUsers.Columns[8].Visible = false;  // GROUP_NAME
             this.DataGridViewUsers.Columns[9].Visible = false;  // AUTHENTICATION
-            this.DataGridViewUsers.Columns[10].Visible = true; // USER_AUTHENTICATION
+            this.DataGridViewUsers.Columns[10].Visible = true;  // USER_AUTHENTICATION
 
             this.ActiveControl = this.TextBoxName;
         }
@@ -225,8 +226,8 @@
             else if (!string.IsNullOrEmpty(this.TextBoxName.Text) && !string.IsNullOrEmpty(this.TextBoxPassword.Text))
             {
                 MessageBox.Show(
-                    "Wachtwoord mag niet gelijk zijn aan de naam.",
-                    "Fout.",
+                    MB_Text.PasswordnotEqualName,
+                    MB_Title.Error,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
 
@@ -400,16 +401,16 @@
 
         private void ComboBoxAuthentication_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this.ComboBoxAuthentication.Text == "Ja")
+            if (this.ComboBoxAuthentication.Text == TdResText.Yes)
             {
                 this.TextBoxAuthencationName.Enabled = true;
-                this.Authentication = "Ja";
+                this.Authentication = TdResText.Yes;
             }
             else
             {
                 this.TextBoxAuthencationName.Enabled = false;
                 this.TextBoxAuthencationName.Text = string.Empty;
-                this.Authentication = "Nee";
+                this.Authentication = TdResText.No;
             }
 
             this.EnableButtons();
@@ -547,7 +548,7 @@
             if (!string.IsNullOrEmpty(this.TextBoxName.Text) && !string.IsNullOrEmpty(this.TextBoxPassword.Text) && !string.IsNullOrEmpty(this.TextBoxRepeatPassword.Text) &&
                 !string.IsNullOrEmpty(this.ComboBoxRole.Text) && !string.IsNullOrEmpty(this.ComboBoxGroup.Text) && !string.IsNullOrEmpty(this.ComboBoxAuthentication.Text))
             {
-                if (this.ComboBoxAuthentication.Text == "Ja" && string.IsNullOrEmpty(this.TextBoxAuthencationName.Text))
+                if (this.ComboBoxAuthentication.Text == TdResText.Yes && string.IsNullOrEmpty(this.TextBoxAuthencationName.Text))
                 {
                     MessageBox.Show(MB_Text.Authentication_Name, MB_Title.Information, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
@@ -631,17 +632,17 @@
                 this.selectedUser == null)
                 {
                     if (this.ComboBoxRole.Text == TdRoleTypes.Owner || this.ComboBoxRole.Text == TdRoleTypes.System ||
-                        this.ComboBoxRole.Text == TdRoleTypes.Administrator || this.ComboBoxRole.Text == TdRoleTypes.Muteren ||
-                        this.ComboBoxRole.Text == TdRoleTypes.Raadplegen)
+                        this.ComboBoxRole.Text == TdRoleTypes.Administrator || this.ComboBoxRole.Text == TdRoleTypes.Editor ||
+                        this.ComboBoxRole.Text == TdRoleTypes.Viewer)
                     {
-                        if (this.ComboBoxAuthentication.Text == "Nee")
+                        if (this.ComboBoxAuthentication.Text == TdResText.No)
                         {
                             this.ButtonCreateUser.Enabled = true;
                             this.ButtonDeleteUser.Enabled = false;
                             this.ButtonAlterUser.Enabled = false;
                             this.ButtonCancel.Enabled = true;
                         }
-                        else if (this.ComboBoxAuthentication.Text == "Ja" && !string.IsNullOrEmpty(this.TextBoxAuthencationName.Text))
+                        else if (this.ComboBoxAuthentication.Text == TdResText.Yes && !string.IsNullOrEmpty(this.TextBoxAuthencationName.Text))
                         {
                             this.ButtonCreateUser.Enabled = true;
                             this.ButtonDeleteUser.Enabled = false;
@@ -691,17 +692,17 @@
                 this.selectedUser != null)
                 {
                     if (this.ComboBoxRole.Text == TdRoleTypes.Owner || this.ComboBoxRole.Text == TdRoleTypes.System ||
-                        this.ComboBoxRole.Text == TdRoleTypes.Administrator || this.ComboBoxRole.Text == TdRoleTypes.Muteren ||
-                        this.ComboBoxRole.Text == TdRoleTypes.Raadplegen)
+                        this.ComboBoxRole.Text == TdRoleTypes.Administrator || this.ComboBoxRole.Text == TdRoleTypes.Editor ||
+                        this.ComboBoxRole.Text == TdRoleTypes.Viewer)
                     {
-                        if (this.ComboBoxAuthentication.Text == "Nee")
+                        if (this.ComboBoxAuthentication.Text == TdResText.No)
                         {
                             this.ButtonCreateUser.Enabled = false;
                             this.ButtonDeleteUser.Enabled = true;
                             this.ButtonAlterUser.Enabled = true;
                             this.ButtonCancel.Enabled = true;
                         }
-                        else if (this.ComboBoxAuthentication.Text == "Ja" && !string.IsNullOrEmpty(this.TextBoxAuthencationName.Text))
+                        else if (this.ComboBoxAuthentication.Text == TdResText.Yes && !string.IsNullOrEmpty(this.TextBoxAuthencationName.Text))
                         {
                             this.ButtonCreateUser.Enabled = false;
                             this.ButtonDeleteUser.Enabled = true;
@@ -739,8 +740,8 @@
             this.TextBoxFullName.Text = string.Empty;
             this.TextBoxPassword.Text = string.Empty;
             this.TextBoxRepeatPassword.Text = string.Empty;
-            this.ComboBoxRole.Text = TdRoleTypes.Raadplegen;
-            this.ComboBoxAuthentication.Text = "Nee";
+            this.ComboBoxRole.Text = TdRoleTypes.Viewer;
+            this.ComboBoxAuthentication.Text = TdResText.No;
             this.TextBoxAuthencationName.Text = string.Empty;
             this.ActiveControl = this.TextBoxName;
             this.selectedUser = null;
@@ -773,7 +774,7 @@
                             this.DeleteUser();  // Administrator can remove all users except System or Owner
                         }
                     }
-                    else if (TdUserData.UserRole == TdRoleTypes.Muteren)
+                    else if (TdUserData.UserRole == TdRoleTypes.Editor)
                     {
                         if (this.UserRole == TdRoleTypes.Owner || this.UserRole == TdRoleTypes.System || this.UserRole == TdRoleTypes.Administrator)
                         {
@@ -784,7 +785,7 @@
                             this.DeleteUser();
                         }
                     }
-                    else if (TdUserData.UserRole == TdRoleTypes.Raadplegen)
+                    else if (TdUserData.UserRole == TdRoleTypes.Viewer)
                     {
                         MessageBox.Show(MB_Text.Not_Allowed_Deleted_Any_User, MB_Title.Attention, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -877,7 +878,7 @@
                         loadData = true;
                     }
                 }
-                else if (TdUserData.UserRole == TdRoleTypes.Muteren)
+                else if (TdUserData.UserRole == TdRoleTypes.Editor)
                 {
                     if (this.UserRole == "Owner" || this.UserRole == "System" || this.UserRole == "Administrator")
                     {
@@ -889,7 +890,7 @@
                         loadData = true;
                     }
                 }
-                else if (TdUserData.UserRole == TdRoleTypes.Raadplegen)
+                else if (TdUserData.UserRole == TdRoleTypes.Viewer)
                 {
                     if (this.UserName == TdUserData.UserName)
                     {
@@ -932,7 +933,7 @@
                     !string.IsNullOrEmpty(this.UserGroup) &&
                     !string.IsNullOrEmpty(this.Authentication))
             {
-                if (this.ComboBoxAuthentication.Text == "Ja" && string.IsNullOrEmpty(this.TextBoxAuthencationName.Text))
+                if (this.ComboBoxAuthentication.Text == TdResText.Yes && string.IsNullOrEmpty(this.TextBoxAuthencationName.Text))
                 {
                     MessageBox.Show(MB_Text.Enter_Authentiction_Name, MB_Title.Information, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
@@ -1148,16 +1149,16 @@
 
         private void ComboBoxAuthentication_TextChanged(object sender, EventArgs e)
         {
-            if (this.ComboBoxAuthentication.Text == "Ja")
+            if (this.ComboBoxAuthentication.Text == TdResText.Yes)
             {
                 this.TextBoxAuthencationName.Enabled = true;
-                this.Authentication = "Ja";
+                this.Authentication = TdResText.Yes;
             }
             else
             {
                 this.TextBoxAuthencationName.Enabled = false;
                 this.TextBoxAuthencationName.Text = string.Empty;
-                this.Authentication = "Nee";
+                this.Authentication = TdResText.No;
             }
 
             this.EnableButtons();

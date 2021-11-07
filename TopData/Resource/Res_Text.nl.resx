@@ -117,129 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="1004" xml:space="preserve">
-    <value>Welkom.</value>
-    <comment>MainForm Toolstrip text</comment>
-  </data>
-  <data name="1005" xml:space="preserve">
+  <data name="No" xml:space="preserve">
     <value>Nee</value>
   </data>
-  <data name="1006" xml:space="preserve">
-    <value>Ja</value>
+  <data name="UserRoleAdministrator" xml:space="preserve">
+    <value>Administrator</value>
   </data>
-  <data name="1100" xml:space="preserve">
-    <value>Het database bestand is niet gevonden.</value>
-    <comment>Exception</comment>
+  <data name="UserRoleEditor" xml:space="preserve">
+    <value>Muteren</value>
   </data>
-  <data name="2000" xml:space="preserve">
-    <value>Deze connectie komt reeds voor en is niet opgeslagen.</value>
-    <comment>LabelText</comment>
+  <data name="UserRoleOwner" xml:space="preserve">
+    <value>Eigenaar</value>
   </data>
-  <data name="2001" xml:space="preserve">
-    <value>Bezig met het maken van een connectie...</value>
-    <comment>Label text</comment>
+  <data name="UserRoleSystem" xml:space="preserve">
+    <value>System</value>
   </data>
-  <data name="2002" xml:space="preserve">
-    <value>Het aanmaken van de connectie is mislukt.</value>
-    <comment>Label text</comment>
-  </data>
-  <data name="2003" xml:space="preserve">
-    <value>Aanmaken connectie is geslaagd.</value>
-    <comment>Label text</comment>
-  </data>
-  <data name="2004" xml:space="preserve">
-    <value>Het muteren van de gegevens is mislukt.</value>
-    <comment>LabelText</comment>
-  </data>
-  <data name="2005" xml:space="preserve">
-    <value>De database connectie is gewijzigd.</value>
-    <comment>LabelText</comment>
-  </data>
-  <data name="2006" xml:space="preserve">
-    <value>De database connectie is verwijderd.</value>
-    <comment>LabelText</comment>
-  </data>
-  <data name="2007" xml:space="preserve">
-    <value>Controleer de connectie gegevens.</value>
-    <comment>LabelText</comment>
-  </data>
-  <data name="2008" xml:space="preserve">
-    <value>Connectie is geslaagd.</value>
-    <comment>LabelText</comment>
-  </data>
-  <data name="2009" xml:space="preserve">
-    <value>De Query's en de connecties worden opgehaald...</value>
-    <comment>LabelText</comment>
-  </data>
-  <data name="2010" xml:space="preserve">
-    <value>Ophalen query's is gereed.</value>
-    <comment>LabelText</comment>
-  </data>
-  <data name="2013" xml:space="preserve">
-    <value>Database = Geen verbinding</value>
-    <comment>LabelText</comment>
-  </data>
-  <data name="2074" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="2074a" xml:space="preserve">
-    <value>100</value>
-  </data>
-  <data name="2075" xml:space="preserve">
-    <value>200</value>
-  </data>
-  <data name="2079" xml:space="preserve">
-    <value>Nieuwe map</value>
-    <comment>Text when new folder is created</comment>
-  </data>
-  <data name="2080" xml:space="preserve">
-    <value>Nieuw SQL-Statement</value>
-  </data>
-  <data name="2081" xml:space="preserve">
-    <value>Een query kan alleen onder een map worden toegevoegd.</value>
-  </data>
-  <data name="2082" xml:space="preserve">
+  <data name="UserRoleViewer" xml:space="preserve">
     <value>Raadplegen</value>
-    <comment>LabelText</comment>
   </data>
-  <data name="2100" xml:space="preserve">
-    <value>Wijzigen connectie gegevens...</value>
-    <comment>LabelText</comment>
-  </data>
-  <data name="2101" xml:space="preserve">
-    <value>De connectiegegevens worden getest...</value>
-    <comment>LabelText</comment>
-  </data>
-  <data name="2105" xml:space="preserve">
-    <value>Het verwijderen van de connectie is mislukt.</value>
-    <comment>LabelText</comment>
-  </data>
-  <data name="3000" xml:space="preserve">
-    <value>Excel bestanden (*.xlsx)|*.xlsx|Komma gescheiden bestanden (*.csv)|*.csv|Tekst bestanden (*.txt)|*.txt|Alle formaten (*.*)|*.*"</value>
-    <comment>DialogFilter</comment>
-  </data>
-  <data name="3001" xml:space="preserve">
-    <value>Geef locatie en naam nieuw database bestand.</value>
-    <comment>DialogFilter Title</comment>
-  </data>
-  <data name="3002" xml:space="preserve">
-    <value>Applicatie database|*.db</value>
-    <comment>DialogFilter</comment>
-  </data>
-  <data name="FrmmaintainDatabseConections" xml:space="preserve">
-    <value>Beheer Databaseconnectie(s)</value>
-    <comment>Form Text</comment>
-  </data>
-  <data name="FrmmaintainQueries" xml:space="preserve">
-    <value>Query beheer</value>
-    <comment>Form caption</comment>
-  </data>
-  <data name="FrmMaintainQueriesText" xml:space="preserve">
-    <value>Standaard query tekst</value>
-    <comment>Form caption</comment>
-  </data>
-  <data name="FrmUserLoginInText" xml:space="preserve">
-    <value>Log in</value>
-    <comment>Form caption</comment>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
   </data>
 </root>

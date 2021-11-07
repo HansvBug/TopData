@@ -127,7 +127,7 @@
         private void FormMaintainQueries_Load(object sender, EventArgs e)
         {
             this.ButtonSave.Enabled = false;
-            if (TdUserData.UserRole != TdRoleTypes.Raadplegen)
+            if (TdUserData.UserRole != TdRoleTypes.Viewer)
             {
                 this.ToolStripMenuItemCopyDatabase.Enabled = true;
                 if (TdUserData.ConnectionId > 0)
@@ -220,39 +220,39 @@
                 this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Owner);
                 this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.System);
                 this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Administrator);
-                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Muteren);
-                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Raadplegen);
+                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Editor);
+                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Viewer);
             }
             else if (TdUserData.UserRole == TdRoleTypes.System)
             {
                 this.ComboBoxQueryAutorisation.Items.Clear();
                 this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.System);
                 this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Administrator);
-                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Muteren);
-                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Raadplegen);
+                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Editor);
+                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Viewer);
             }
             else if (TdUserData.UserRole == TdRoleTypes.Administrator)
             {
                 this.ComboBoxQueryAutorisation.Items.Clear();
                 this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Administrator);
-                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Muteren);
-                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Raadplegen);
+                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Editor);
+                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Viewer);
             }
-            else if (TdUserData.UserRole == TdRoleTypes.Muteren)
+            else if (TdUserData.UserRole == TdRoleTypes.Editor)
             {
                 this.ComboBoxQueryAutorisation.Items.Clear();
-                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Muteren);
-                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Raadplegen);
+                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Editor);
+                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Viewer);
             }
-            else if (TdUserData.UserRole == TdRoleTypes.Raadplegen)
+            else if (TdUserData.UserRole == TdRoleTypes.Viewer)
             {
                 this.ComboBoxQueryAutorisation.Items.Clear();
-                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Raadplegen);
+                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Viewer);
             }
             else
             {
                 this.ComboBoxQueryAutorisation.Items.Clear();
-                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Raadplegen);
+                this.ComboBoxQueryAutorisation.Items.Add(TdRoleTypes.Viewer);
             }
 
             this.ComboBoxQueryAutorisation.Sorted = true;

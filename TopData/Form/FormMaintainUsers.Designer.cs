@@ -33,9 +33,9 @@ namespace TopData
             this.GroupBoxUsers = new System.Windows.Forms.GroupBox();
             this.DataGridViewUsers = new System.Windows.Forms.DataGridView();
             this.GroupBoxLoggedInAsUser = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LoggedInAuthenticationLabel = new System.Windows.Forms.Label();
+            this.LoggedInRoleLabel = new System.Windows.Forms.Label();
+            this.LoggedInNameLabel = new System.Windows.Forms.Label();
             this.TextBoxWindowsAuthencation = new System.Windows.Forms.TextBox();
             this.TextBoxLoggedInUserRole = new System.Windows.Forms.TextBox();
             this.TextBoxLoggedInUserName = new System.Windows.Forms.TextBox();
@@ -108,9 +108,9 @@ namespace TopData
             // 
             this.GroupBoxLoggedInAsUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GroupBoxLoggedInAsUser.Controls.Add(this.label3);
-            this.GroupBoxLoggedInAsUser.Controls.Add(this.label2);
-            this.GroupBoxLoggedInAsUser.Controls.Add(this.label1);
+            this.GroupBoxLoggedInAsUser.Controls.Add(this.LoggedInAuthenticationLabel);
+            this.GroupBoxLoggedInAsUser.Controls.Add(this.LoggedInRoleLabel);
+            this.GroupBoxLoggedInAsUser.Controls.Add(this.LoggedInNameLabel);
             this.GroupBoxLoggedInAsUser.Controls.Add(this.TextBoxWindowsAuthencation);
             this.GroupBoxLoggedInAsUser.Controls.Add(this.TextBoxLoggedInUserRole);
             this.GroupBoxLoggedInAsUser.Controls.Add(this.TextBoxLoggedInUserName);
@@ -121,33 +121,33 @@ namespace TopData
             this.GroupBoxLoggedInAsUser.TabStop = false;
             this.GroupBoxLoggedInAsUser.Text = "Ingelogd als";
             // 
-            // label3
+            // LoggedInAuthenticationLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Authencation :";
+            this.LoggedInAuthenticationLabel.AutoSize = true;
+            this.LoggedInAuthenticationLabel.Location = new System.Drawing.Point(15, 83);
+            this.LoggedInAuthenticationLabel.Name = "LoggedInAuthenticationLabel";
+            this.LoggedInAuthenticationLabel.Size = new System.Drawing.Size(85, 15);
+            this.LoggedInAuthenticationLabel.TabIndex = 5;
+            this.LoggedInAuthenticationLabel.Text = "Authencation :";
             // 
-            // label2
+            // LoggedInRoleLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Rol :";
-            this.label2.Visible = false;
+            this.LoggedInRoleLabel.AutoSize = true;
+            this.LoggedInRoleLabel.Location = new System.Drawing.Point(15, 54);
+            this.LoggedInRoleLabel.Name = "LoggedInRoleLabel";
+            this.LoggedInRoleLabel.Size = new System.Drawing.Size(36, 15);
+            this.LoggedInRoleLabel.TabIndex = 4;
+            this.LoggedInRoleLabel.Text = "Role :";
+            this.LoggedInRoleLabel.Visible = false;
             // 
-            // label1
+            // LoggedInNameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Naam :";
+            this.LoggedInNameLabel.AutoSize = true;
+            this.LoggedInNameLabel.Location = new System.Drawing.Point(15, 25);
+            this.LoggedInNameLabel.Name = "LoggedInNameLabel";
+            this.LoggedInNameLabel.Size = new System.Drawing.Size(45, 15);
+            this.LoggedInNameLabel.TabIndex = 3;
+            this.LoggedInNameLabel.Text = "Name :";
             // 
             // TextBoxWindowsAuthencation
             // 
@@ -209,7 +209,7 @@ namespace TopData
             this.GroupBoxUserData.Size = new System.Drawing.Size(350, 306);
             this.GroupBoxUserData.TabIndex = 1;
             this.GroupBoxUserData.TabStop = false;
-            this.GroupBoxUserData.Text = "Gegevens";
+            this.GroupBoxUserData.Text = "User data";
             // 
             // LabelFullName
             // 
@@ -238,7 +238,7 @@ namespace TopData
             this.ButtonCancel.Name = "ButtonCancel";
             this.ButtonCancel.Size = new System.Drawing.Size(75, 23);
             this.ButtonCancel.TabIndex = 17;
-            this.ButtonCancel.Text = "&Opnieuw";
+            this.ButtonCancel.Text = "&Cancel";
             this.ButtonCancel.UseVisualStyleBackColor = true;
             this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
@@ -249,7 +249,7 @@ namespace TopData
             this.ButtonAlterUser.Name = "ButtonAlterUser";
             this.ButtonAlterUser.Size = new System.Drawing.Size(75, 23);
             this.ButtonAlterUser.TabIndex = 16;
-            this.ButtonAlterUser.Text = "&Muteer";
+            this.ButtonAlterUser.Text = "&Update";
             this.ButtonAlterUser.UseVisualStyleBackColor = true;
             this.ButtonAlterUser.Click += new System.EventHandler(this.ButtonAlterUser_Click);
             // 
@@ -260,7 +260,7 @@ namespace TopData
             this.ButtonDeleteUser.Name = "ButtonDeleteUser";
             this.ButtonDeleteUser.Size = new System.Drawing.Size(75, 23);
             this.ButtonDeleteUser.TabIndex = 15;
-            this.ButtonDeleteUser.Text = "&Verwijder";
+            this.ButtonDeleteUser.Text = "&Delete";
             this.ButtonDeleteUser.UseVisualStyleBackColor = true;
             this.ButtonDeleteUser.Click += new System.EventHandler(this.ButtonDeleteUser_Click);
             // 
@@ -271,7 +271,7 @@ namespace TopData
             this.ButtonCreateUser.Name = "ButtonCreateUser";
             this.ButtonCreateUser.Size = new System.Drawing.Size(75, 23);
             this.ButtonCreateUser.TabIndex = 14;
-            this.ButtonCreateUser.Text = "&Nieuw";
+            this.ButtonCreateUser.Text = "&New";
             this.ButtonCreateUser.UseVisualStyleBackColor = true;
             this.ButtonCreateUser.Click += new System.EventHandler(this.ButtonCreateUser_Click);
             // 
@@ -280,9 +280,9 @@ namespace TopData
             this.LabelGroup.AutoSize = true;
             this.LabelGroup.Location = new System.Drawing.Point(15, 228);
             this.LabelGroup.Name = "LabelGroup";
-            this.LabelGroup.Size = new System.Drawing.Size(45, 15);
+            this.LabelGroup.Size = new System.Drawing.Size(46, 15);
             this.LabelGroup.TabIndex = 13;
-            this.LabelGroup.Text = "Groep :";
+            this.LabelGroup.Text = "Group :";
             this.LabelGroup.Visible = false;
             // 
             // LabelAuthencationName
@@ -292,7 +292,7 @@ namespace TopData
             this.LabelAuthencationName.Name = "LabelAuthencationName";
             this.LabelAuthencationName.Size = new System.Drawing.Size(118, 15);
             this.LabelAuthencationName.TabIndex = 12;
-            this.LabelAuthencationName.Text = "Authencation naam :";
+            this.LabelAuthencationName.Text = "Authencation name :";
             // 
             // LabelAuthencation
             // 
@@ -308,27 +308,27 @@ namespace TopData
             this.LabelRole.AutoSize = true;
             this.LabelRole.Location = new System.Drawing.Point(15, 141);
             this.LabelRole.Name = "LabelRole";
-            this.LabelRole.Size = new System.Drawing.Size(30, 15);
+            this.LabelRole.Size = new System.Drawing.Size(36, 15);
             this.LabelRole.TabIndex = 10;
-            this.LabelRole.Text = "Rol :";
+            this.LabelRole.Text = "Role :";
             // 
             // LabelRepeatPassword
             // 
             this.LabelRepeatPassword.AutoSize = true;
             this.LabelRepeatPassword.Location = new System.Drawing.Point(15, 112);
             this.LabelRepeatPassword.Name = "LabelRepeatPassword";
-            this.LabelRepeatPassword.Size = new System.Drawing.Size(123, 15);
+            this.LabelRepeatPassword.Size = new System.Drawing.Size(102, 15);
             this.LabelRepeatPassword.TabIndex = 9;
-            this.LabelRepeatPassword.Text = "Herhaal wachtwoord :";
+            this.LabelRepeatPassword.Text = "Repeat password :";
             // 
             // LabelPassword
             // 
             this.LabelPassword.AutoSize = true;
             this.LabelPassword.Location = new System.Drawing.Point(15, 83);
             this.LabelPassword.Name = "LabelPassword";
-            this.LabelPassword.Size = new System.Drawing.Size(81, 15);
+            this.LabelPassword.Size = new System.Drawing.Size(63, 15);
             this.LabelPassword.TabIndex = 8;
-            this.LabelPassword.Text = "Wachtwoord :";
+            this.LabelPassword.Text = "Password :";
             // 
             // LabelName
             // 
@@ -337,7 +337,7 @@ namespace TopData
             this.LabelName.Name = "LabelName";
             this.LabelName.Size = new System.Drawing.Size(45, 15);
             this.LabelName.TabIndex = 7;
-            this.LabelName.Text = "Naam :";
+            this.LabelName.Text = "Name :";
             // 
             // ComboBoxGroup
             // 
@@ -387,7 +387,7 @@ namespace TopData
             this.ComboBoxAuthentication.Name = "ComboBoxAuthentication";
             this.ComboBoxAuthentication.Size = new System.Drawing.Size(190, 23);
             this.ComboBoxAuthentication.TabIndex = 5;
-            this.ComboBoxAuthentication.Text = "Nee";
+            this.ComboBoxAuthentication.Text = TdResText.No;
             this.ComboBoxAuthentication.SelectedIndexChanged += new System.EventHandler(this.ComboBoxAuthentication_SelectedIndexChanged);
             this.ComboBoxAuthentication.TextChanged += new System.EventHandler(this.ComboBoxAuthentication_TextChanged);
             this.ComboBoxAuthentication.Leave += new System.EventHandler(this.ComboBoxAuthentication_Leave);
@@ -445,7 +445,7 @@ namespace TopData
             this.ButtonClose.Name = "ButtonClose";
             this.ButtonClose.Size = new System.Drawing.Size(75, 23);
             this.ButtonClose.TabIndex = 1;
-            this.ButtonClose.Text = "&Sluiten";
+            this.ButtonClose.Text = "C&lose";
             this.ButtonClose.UseVisualStyleBackColor = true;
             this.ButtonClose.Click += new System.EventHandler(this.ButtonClose_Click);
             // 
@@ -476,14 +476,6 @@ namespace TopData
         #endregion
 
         private System.Windows.Forms.GroupBox GroupBoxUsers;
-        private System.Windows.Forms.GroupBox GroupBoxUserData;
-        private System.Windows.Forms.Label LabelGroup;
-        private System.Windows.Forms.Label LabelAuthencationName;
-        private System.Windows.Forms.Label LabelAuthencation;
-        private System.Windows.Forms.Label LabelRole;
-        private System.Windows.Forms.Label LabelRepeatPassword;
-        private System.Windows.Forms.Label LabelPassword;
-        private System.Windows.Forms.Label LabelName;
         private System.Windows.Forms.ComboBox ComboBoxGroup;
         private System.Windows.Forms.TextBox TextBoxAuthencationName;
         private System.Windows.Forms.ComboBox ComboBoxAuthentication;
@@ -491,15 +483,6 @@ namespace TopData
         private System.Windows.Forms.TextBox TextBoxRepeatPassword;
         private System.Windows.Forms.TextBox TextBoxPassword;
         private System.Windows.Forms.TextBox TextBoxName;
-        private System.Windows.Forms.Button ButtonClose;
-        private System.Windows.Forms.Button ButtonCancel;
-        private System.Windows.Forms.Button ButtonAlterUser;
-        private System.Windows.Forms.Button ButtonDeleteUser;
-        private System.Windows.Forms.Button ButtonCreateUser;
-        private System.Windows.Forms.GroupBox GroupBoxLoggedInAsUser;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TextBoxWindowsAuthencation;
         private System.Windows.Forms.TextBox TextBoxLoggedInUserRole;
         private System.Windows.Forms.TextBox TextBoxLoggedInUserName;
@@ -507,6 +490,23 @@ namespace TopData
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemCurrentUser;
         private System.Windows.Forms.DataGridView DataGridViewUsers;
         private System.Windows.Forms.TextBox TextBoxFullName;
-        private System.Windows.Forms.Label LabelFullName;
+        internal System.Windows.Forms.Label LabelName;
+        internal System.Windows.Forms.GroupBox GroupBoxUserData;
+        internal System.Windows.Forms.Label LabelGroup;
+        internal System.Windows.Forms.Label LabelAuthencationName;
+        internal System.Windows.Forms.Label LabelAuthencation;
+        internal System.Windows.Forms.Label LabelRole;
+        internal System.Windows.Forms.Label LabelRepeatPassword;
+        internal System.Windows.Forms.Label LabelPassword;
+        internal System.Windows.Forms.Button ButtonCancel;
+        internal System.Windows.Forms.Button ButtonAlterUser;
+        internal System.Windows.Forms.Button ButtonDeleteUser;
+        internal System.Windows.Forms.Button ButtonCreateUser;
+        internal System.Windows.Forms.GroupBox GroupBoxLoggedInAsUser;
+        internal System.Windows.Forms.Label LoggedInAuthenticationLabel;
+        internal System.Windows.Forms.Label LoggedInRoleLabel;
+        internal System.Windows.Forms.Label LoggedInNameLabel;
+        internal System.Windows.Forms.Label LabelFullName;
+        internal System.Windows.Forms.Button ButtonClose;
     }
 }

@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutForm_BuildDateLabel" xml:space="preserve">
+    <value>Build date : </value>
+    <comment>Label</comment>
+  </data>
   <data name="AboutForm_VersionLabel" xml:space="preserve">
     <value>Version : </value>
     <comment>Label</comment>
@@ -184,5 +188,63 @@
   <data name="MainForm_Menu_Program_Switch_user" xml:space="preserve">
     <value>Switch &amp;user</value>
     <comment>Menu</comment>
+  </data>
+  <data name="MantainUserForm_AuthenticationLabel" xml:space="preserve">
+    <value>Authentication :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_AuthenticationNameLabel" xml:space="preserve">
+    <value>Authencation name :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_CancelUser" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="MantainUserForm_Close" xml:space="preserve">
+    <value>C&amp;lose</value>
+  </data>
+  <data name="MantainUserForm_DeleteUser" xml:space="preserve">
+    <value>&amp;Delete</value>
+  </data>
+  <data name="MantainUserForm_FullNameLabel" xml:space="preserve">
+    <value>Full name :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_GroupBoxLoggedInAsUser" xml:space="preserve">
+    <value>Logged in as</value>
+    <comment>Groupbox caption</comment>
+  </data>
+  <data name="MantainUserForm_GroupBoxUserData" xml:space="preserve">
+    <value>User data</value>
+    <comment>Groupbox caption</comment>
+  </data>
+  <data name="MantainUserForm_GroupLabel" xml:space="preserve">
+    <value>Group :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_NameLabel" xml:space="preserve">
+    <value>Name :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_NewUser" xml:space="preserve">
+    <value>&amp;New</value>
+  </data>
+  <data name="MantainUserForm_PasswordLabel" xml:space="preserve">
+    <value>Password :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_RepeatPasswordLabel" xml:space="preserve">
+    <value>Repeat password :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_RoleLabel" xml:space="preserve">
+    <value>Role :</value>
+    <comment>Label</comment>
+  </data>
+  <data name="MantainUserForm_Text" xml:space="preserve">
+    <value>User(s) management</value>
+  </data>
+  <data name="MantainUserForm_UpdateUser" xml:space="preserve">
+    <value>&amp;Update</value>
   </data>
 </root>

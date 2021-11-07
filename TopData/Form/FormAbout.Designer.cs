@@ -71,9 +71,9 @@ namespace TopData
             this.LabelBuilddate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LabelBuilddate.Location = new System.Drawing.Point(550, 314);
             this.LabelBuilddate.Name = "LabelBuilddate";
-            this.LabelBuilddate.Size = new System.Drawing.Size(94, 19);
+            this.LabelBuilddate.Size = new System.Drawing.Size(81, 19);
             this.LabelBuilddate.TabIndex = 3;
-            this.LabelBuilddate.Text = "Build datum : ";
+            this.LabelBuilddate.Text = "Build date : ";
             this.LabelBuilddate.Click += new System.EventHandler(this.FormAbout_Click);
             // 
             // LabelVersion
@@ -82,9 +82,9 @@ namespace TopData
             this.LabelVersion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LabelVersion.Location = new System.Drawing.Point(550, 61);
             this.LabelVersion.Name = "LabelVersion";
-            this.LabelVersion.Size = new System.Drawing.Size(58, 19);
+            this.LabelVersion.Size = new System.Drawing.Size(74, 19);
             this.LabelVersion.TabIndex = 2;
-            this.LabelVersion.Text = "Versie 0";
+            this.LabelVersion.Text = "Version : 0";
             this.LabelVersion.Click += new System.EventHandler(this.FormAbout_Click);
             // 
             // LabelAppName
@@ -135,8 +135,8 @@ namespace TopData
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox PictureBox1;
         private System.Windows.Forms.Label LabelCompany;
-        private System.Windows.Forms.Label LabelBuilddate;
         private System.Windows.Forms.Label LabelAppName;
         internal System.Windows.Forms.Label LabelVersion;
+        internal System.Windows.Forms.Label LabelBuilddate;
     }
 }

@@ -10,7 +10,7 @@
         /// <summary>
         /// Holds the selected culture.
         /// </summary>
-        private static CultureInfo cul;
+        private static CultureInfo cul = CultureInfo.CreateSpecificCulture("en-US");  // Default = en-US
 
         /// <summary>
         /// Gets or sets Cul(tureInfo).

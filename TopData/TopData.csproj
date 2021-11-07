@@ -6,8 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <Platforms>AnyCPU;x64</Platforms>
     <ApplicationIcon>Person.ico</ApplicationIcon>
-    <AssemblyVersion>0.0.0.9</AssemblyVersion>
-    <FileVersion>0.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
     <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
     <AnalysisLevel>latest</AnalysisLevel>
     <Configurations>Debug;Release;TopData Debug</Configurations>
@@ -73,6 +73,14 @@
     <EmbeddedResource Update="ResourceText.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ResourceText.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resource\Res_Text.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res_Text_en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resource\Res_Text.nl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Res_Text_nl.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

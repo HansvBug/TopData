@@ -3,6 +3,9 @@
     using System.Globalization;
     using System.Resources;
 
+    /// <summary>
+    /// Messagebox resources.
+    /// </summary>
     public static class MB_Title
     {
         /// <summary>
@@ -517,6 +520,14 @@
         public static string UnderConstruction
         {
             get { return RmMb.GetString("Under construction", Cul); }
+        }
+
+        /// <summary>
+        /// Gets the TextPasswordNotEqualName string.
+        /// </summary>
+        public static string PasswordnotEqualName
+        {
+            get { return RmMb.GetString("TextPasswordNotEqualName", Cul); }
         }
     }
 }
