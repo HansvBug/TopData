@@ -299,9 +299,9 @@
 
                     TdLogging.WriteToLogError("De gegevens van de nieuwe gebruiker zijn niet opgeslagen.");
                     MessageBox.Show(
-                        "Aanmaken nieuwe gebruiker is mislukt." + Environment.NewLine +
+                        MB_Text.TextCreNewUserFailed + Environment.NewLine + // Failed to create new user.
                         Environment.NewLine +
-                        "Controleer het logbestand.", MB_Title.Error,
+                        MB_Text.TextCheckLogFile, MB_Title.Error, // Check the log file.
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
 
@@ -320,13 +320,13 @@
             }
             else
             {
-                TdLogging.WriteToLogError("Muteren gebruikergegevens is mislukt.");
+                TdLogging.WriteToLogError(MB_Text.TextMutateDataFailed);
                 TdLogging.WriteToLogError(string.Format("ID is onjuist: {0}.", this.Id.ToString()));
 
                 MessageBox.Show(
-                    "Het muteren van de gegevens is mislukt." + Environment.NewLine +
+                    MB_Text.TextMutateDataFailed + Environment.NewLine +
                     Environment.NewLine +
-                    "Controleer het logbestand.", MB_Title.Error,
+                    MB_Text.TextCheckLogFile, MB_Title.Error,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
                 succes = false;
@@ -490,9 +490,9 @@
                 }
 
                 MessageBox.Show(
-                    "Het ophalen van alle gebruikersnamen is mislukt." + Environment.NewLine +
+                    MB_Text.TextGetAllUsersNamesFailed + Environment.NewLine + // Retrieving all usernames failed.
                     Environment.NewLine +
-                    "Controleer het logbestand.", MB_Title.Error,
+                    MB_Text.TextCheckLogFile, MB_Title.Error,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
@@ -816,6 +816,9 @@
     /// </summary>
     public class Users
     {
+        /// <summary>
+        /// Gets a list of users.
+        /// </summary>
         public List<User> Items { get; } = new List<User>();
     }
 

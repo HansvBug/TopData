@@ -81,7 +81,7 @@
                     MessageBox.Show(
                         "Het verwijderen van de default query tekt is mislukt." + Environment.NewLine +
                         Environment.NewLine +
-                        "Controleer het logbestand.",
+                        MB_Text.TextCheckLogFile,
                         MB_Title.Error,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
@@ -137,7 +137,7 @@
                     MessageBox.Show(
                         "Het opslaan van de default query tekst is mislukt." + Environment.NewLine +
                         Environment.NewLine +
-                        "Controleer het logbestand.",
+                        MB_Text.TextCheckLogFile,
                         MB_Title.Error,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);

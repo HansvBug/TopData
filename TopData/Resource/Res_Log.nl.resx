@@ -120,6 +120,9 @@
   <data name="AppDbase_Present" xml:space="preserve">
     <value>De applicatie database is aanwezig.</value>
   </data>
+  <data name="CreNewUser" xml:space="preserve">
+    <value>Aanmaken nieuwe gebruiker</value>
+  </data>
   <data name="DatabaseNameDeleted" xml:space="preserve">
     <value>Databasenaam is succesvol verwijderd.</value>
   </data>
@@ -132,11 +135,20 @@
   <data name="DeleteDbOrSChemaName02" xml:space="preserve">
     <value> is niet gelukt.</value>
   </data>
+  <data name="DoYouWantToChangeThePwd" xml:space="preserve">
+    <value>Wilt u de gegevens met uitzondering van het wachtwoord wijzigen?</value>
+  </data>
   <data name="LookInLogFile" xml:space="preserve">
     <value>Kijk in het log bestand voor informatie.</value>
   </data>
   <data name="Notification" xml:space="preserve">
     <value>Melding :</value>
+  </data>
+  <data name="PwdNotEqualRepeatPwd" xml:space="preserve">
+    <value>Het 'Wachtwoord' is ongelijk aan 'Herhaal wachtwoord'.</value>
+  </data>
+  <data name="PwsOrRepeaaPwdIsMissing" xml:space="preserve">
+    <value>Het 'Wachtwoord' of 'Herhaal wachtwoord' is niet ingevuld.</value>
   </data>
   <data name="SchemaNameDeleted" xml:space="preserve">
     <value>Schemanaam is succesvol verwijderd.</value>
@@ -144,5 +156,17 @@
   <data name="TheAppDbWillBeCreated" xml:space="preserve">
     <value>De applicatie database  ontbreekt en wordt aangemaakt.</value>
     <comment>toepassingsdatabase ?</comment>
+  </data>
+  <data name="UserDetailsNotChanged" xml:space="preserve">
+    <value>De gegevens van gebruiker '{0}'  zijn niet gewijzigd.</value>
+  </data>
+  <data name="UserFullDetailsAreChanged" xml:space="preserve">
+    <value>De volledige gegevens van gebruiker '{0}'  zijn gewijzigd.</value>
+  </data>
+  <data name="UserFullDetailsAreChangedExceptPwd" xml:space="preserve">
+    <value>De gegevens van gebruiker '{0}'  zijn gewijzigd (m.u.v. het wachtwoord).</value>
+  </data>
+  <data name="UserFullDetailsAreNotChangedExceptPwd" xml:space="preserve">
+    <value>De gegevens van gebruiker '{0}'  zijn niet gewijzigd. (Wachtwoord niet gelijk aan herhaal wachtwoord).</value>
   </data>
 </root>

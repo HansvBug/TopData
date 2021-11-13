@@ -111,7 +111,7 @@
                     MessageBox.Show(
                         "Het verwijderen van de vorige Treeview Status is mislukt." + Environment.NewLine +
                         Environment.NewLine +
-                        "Controleer het logbestand.",
+                        MB_Text.TextCheckLogFile,
                         MB_Title.Error,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
@@ -170,7 +170,7 @@
                     tr.Rollback();
                     MessageBox.Show(
                         "Het inlezen van de Treeview Status is mislukt." + Environment.NewLine +
-                        Environment.NewLine + "Controleer het logbestand.",
+                        Environment.NewLine + MB_Text.TextCheckLogFile,
                         MB_Title.Error,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);

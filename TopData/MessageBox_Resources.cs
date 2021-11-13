@@ -529,5 +529,79 @@
         {
             get { return RmMb.GetString("TextPasswordNotEqualName", Cul); }
         }
+
+        /// <summary>
+        /// Gets the TextUserAllreadyExistChooseOtherName string.
+        /// </summary>
+        public static string TextUserAllreadyExistChooseOtherName
+        {
+            get { return RmMb.GetString("TextUserAllreadyExistChooseOtherName", Cul); }
+        }
+
+        /// <summary>
+        /// Gets the TextAuthAllReadyExistsChooseOther string.
+        /// </summary>
+        public static string TextAuthAllReadyExistsChooseOther
+        {
+            get { return RmMb.GetString("TextAuthAllReadyExistsChooseOther", Cul); }
+        }
+
+        /// <summary>
+        /// Gets the TextUserAllreadyExistChooseOtherName string.
+        /// </summary>
+        public static string TextUsernameNotEntered
+        {
+            get { return RmMb.GetString("TextUsernameNotEntered", Cul); }
+        }
+
+        /// <summary>
+        /// Gets the TextUserCanNotBeDeleted string.
+        /// </summary>
+        public static string TextUserCanNotBeDeleted
+        {
+            get { return RmMb.GetString("TextUserCanNotBeDeleted", Cul); }
+        }
+
+        /// <summary>
+        /// Gets the TextYouAreLoggedIn string.
+        /// </summary>
+        public static string TextYouAreLoggedIn
+        {
+            get { return RmMb.GetString("TextYouAreLoggedIn", Cul); }
+        }
+
+        /// <summary>
+        /// Gets the TextCreNewUserFailed string.
+        /// </summary>
+        public static string TextCreNewUserFailed
+        {
+            get { return RmMb.GetString("TextCreNewUserFailed", Cul); }
+        }
+
+        /// <summary>
+        /// Gets the TextCheckLogFile string.
+        /// </summary>
+        public static string TextCheckLogFile
+        {
+            get { return RmMb.GetString("TextCheckLogFile", Cul); }
+        }
+
+        /// <summary>
+        /// Gets the TextMutateDataFailed string.
+        /// </summary>
+        public static string TextMutateDataFailed
+        {
+            get { return RmMb.GetString("TextMutateDataFailed", Cul); }
+        }
+
+        /// <summary>
+        /// Gets the TextGetAllUsersNamesFailed string.
+        /// </summary>
+        public static string TextGetAllUsersNamesFailed
+        {
+            get { return RmMb.GetString("TextGetAllUsersNamesFailed", Cul); }
+        }
+
+        
     }
 }

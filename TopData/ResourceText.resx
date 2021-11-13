@@ -121,12 +121,6 @@
     <value>Welkom.</value>
     <comment>MainForm Toolstrip text</comment>
   </data>
-  <data name="1005" xml:space="preserve">
-    <value>Nee</value>
-  </data>
-  <data name="1006" xml:space="preserve">
-    <value>Ja</value>
-  </data>
   <data name="1100" xml:space="preserve">
     <value>Het database bestand is niet gevonden.</value>
     <comment>Exception</comment>

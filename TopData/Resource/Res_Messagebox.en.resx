@@ -117,8 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TextAuthAllReadyExistsChooseOther" xml:space="preserve">
+    <value>The authentication already exists. Choose a different authentication name.</value>
+  </data>
+  <data name="TextCheckLogFile" xml:space="preserve">
+    <value>Check the log file.</value>
+  </data>
+  <data name="TextCreNewUserFailed" xml:space="preserve">
+    <value>Failed to create new user.</value>
+  </data>
+  <data name="TextGetAllUsersNamesFailed" xml:space="preserve">
+    <value>Retrieving all usernames failed.</value>
+  </data>
+  <data name="TextMutateDataFailed" xml:space="preserve">
+    <value>Data muting failed.</value>
+  </data>
   <data name="TextPasswordNotEqualName" xml:space="preserve">
     <value>Password cannot be the same as the name.</value>
+  </data>
+  <data name="TextUserAllreadyExistChooseOtherName" xml:space="preserve">
+    <value>The user already exists. Choose another different name.</value>
+  </data>
+  <data name="TextUserCanNotBeDeleted" xml:space="preserve">
+    <value>The user '{0}' cannot be deleted.</value>
+  </data>
+  <data name="TextUsernameNotEntered" xml:space="preserve">
+    <value>User name has not been entered.</value>
+  </data>
+  <data name="TextYouAreLoggedIn" xml:space="preserve">
+    <value>You're logged in.</value>
+    <comment>Messagebox title</comment>
   </data>
   <data name="Text_App_Database_Changed" xml:space="preserve">
     <value>The Application database has been changed.</value>

@@ -247,7 +247,7 @@
 
             if (this.UserRole == TdRoleTypes.Owner || this.UserRole == TdRoleTypes.System)
             {
-                this.ComboBoxAuthentication.Text = ResourceText._1005;
+                this.ComboBoxAuthentication.Text = TdResText.No;
                 this.ComboBoxAuthentication.Enabled = false;
             }
             else
@@ -421,7 +421,7 @@
         private void ButtonCreateUser_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-            TdLogging.WriteToLogInformation("Aanmaken nieuwe gebruiker.");
+            TdLogging.WriteToLogInformation(TdLogging_Resources.CreNewUser); // Create new user
             this.UserNameOrg = string.Empty;
             this.UserAuthenticationORG = string.Empty;
 
@@ -436,11 +436,11 @@
             {
                 if (this.IsUserUniqueErrorType != "Authentication is not Unique")
                 {
-                    MessageBox.Show("De gebruiker komt reeds voor. Kies een andere andere naam.", "Informatie", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   MessageBox.Show(MB_Text.TextUserAllreadyExistChooseOtherName, MB_Title.Information, MessageBoxButtons.OK, MessageBoxIcon.Information); // The user already exists. Choose another different name.
                 }
                 else
                 {
-                    MessageBox.Show("De authenticatie komt reeds voor. Kies een andere authenticatie naam.", "Informatie", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(MB_Text.TextAuthAllReadyExistsChooseOther,  MB_Title.Information, MessageBoxButtons.OK, MessageBoxIcon.Information); // The authentication already exists. Choose a different authentication name.
                 }
 
                 this.ActiveControl = this.TextBoxName;
@@ -492,7 +492,7 @@
                 }
                 else
                 {
-                    MessageBox.Show("Naam gebruiker is niet ingevuld", MB_Title.Information, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(MB_Text.TextUsernameNotEntered, MB_Title.Information, MessageBoxButtons.OK, MessageBoxIcon.Information); // User name has not been entered.
 
                     if (string.IsNullOrEmpty(this.TextBoxName.Text))
                     {
@@ -805,8 +805,8 @@
                     {
                         Cursor.Current = Cursors.Default;
                         MessageBox.Show(
-                            "De gebruiker '" + curUserName + "' kan niet worden verwijderd. " + Environment.NewLine +
-                            "U bent in gelogd.", MB_Title.Attention,
+                            string.Format(MB_Text.TextUserCanNotBeDeleted, curUserName) + Environment.NewLine + // The user '{0}' cannot be deleted.
+                            MB_Text.TextYouAreLoggedIn, MB_Title.Attention,
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                     }
@@ -868,7 +868,7 @@
                 }
                 else if (TdUserData.UserRole == TdRoleTypes.Administrator)
                 {
-                    if (this.UserRole == "Owner" || this.UserRole == "System")
+                    if (this.UserRole == TdRoleTypes.Owner || this.UserRole == TdRoleTypes.System)
                     {
                         MessageBox.Show(MB_Text.Not_Allowd_Change_Other_User_With_Role_1, MB_Title.Change_data, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -880,7 +880,7 @@
                 }
                 else if (TdUserData.UserRole == TdRoleTypes.Editor)
                 {
-                    if (this.UserRole == "Owner" || this.UserRole == "System" || this.UserRole == "Administrator")
+                    if (this.UserRole == TdRoleTypes.Owner || this.UserRole == TdRoleTypes.System || this.UserRole == TdRoleTypes.Administrator)
                     {
                         MessageBox.Show(MB_Text.Not_Allowd_Change_Other_User_With_Role, MB_Title.Change_data, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -966,7 +966,7 @@
                             // 0 = all, 1 is all without password
                             if (!userMaintain.UpdateUserData(0))
                             {
-                                TdLogging.WriteToLogInformation(string.Format("De volledige gegevens van gebruiker '{0}'  zijn gewijzigd.", userMaintain.UserName));
+                                TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.UserFullDetailsAreChanged, userMaintain.UserName)); // The full details of user '{0}' have been changed
                             }
                         }
                         else
@@ -983,20 +983,20 @@
                                 // 0 = all, 1 is all without password
                                 if (!userMaintain.UpdateUserData(0))
                                 {
-                                    TdLogging.WriteToLogInformation(string.Format("De volledige gegevens van gebruiker '{0}'  zijn gewijzigd (m.u.v. het wachtwoord).", userMaintain.UserName));
+                                    TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.UserFullDetailsAreChangedExceptPwd, userMaintain.UserName)); // The full details of user '{0}' have been changed (except the password).
                                 }
                             }
                             else if (dialogResult == DialogResult.No)
                             {
-                                TdLogging.WriteToLogInformation(string.Format("De gegevens van gebruiker '{0}'  zijn niet gewijzigd.", userMaintain.UserName));
+                                TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.UserDetailsNotChanged, userMaintain.UserName)); // The details of user '{0}' have not changed.
                             }
                         }
                     }
                     else
                     {
                         DialogResult dialogResult = MessageBox.Show(
-                            @"Het ""Wachtwoord"" is ongelijk aan ""Herhaal wachtwoord""." + Environment.NewLine +
-                            "Wilt u de gegevens met uitzondering van het wachtwoord wijzigen?",
+                            TdLogging_Resources.PwdNotEqualRepeatPwd + Environment.NewLine +    // The 'Password' is not the same as 'Repeat password'.
+                            TdLogging_Resources.DoYouWantToChangeThePwd,                        // Do you want to change the data except the password?
                             MB_Title.Continue,
                             MessageBoxButtons.YesNo,
                             MessageBoxIcon.Question);
@@ -1007,12 +1007,14 @@
                             // 0 = all, 1 is all without password
                             if (!userMaintain.UpdateUserData(1))
                             {
-                                TdLogging.WriteToLogInformation(string.Format("De volledige gegevens van gebruiker '{0}'  zijn gewijzigd (m.u.v. het wachtwoord).", userMaintain.UserName));
+                                TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.UserFullDetailsAreChangedExceptPwd, userMaintain.UserName)); // The full details of user '{0}' have been changed (except the password).
                             }
                         }
                         else if (dialogResult == DialogResult.No)
                         {
-                            TdLogging.WriteToLogInformation(string.Format("De gegevens van gebruiker '{0}'  zijn niet gewijzigd. (Wachtwoord niet geliljk aan herhaal wachtwoord).", userMaintain.UserName));
+                            TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.UserFullDetailsAreNotChangedExceptPwd, userMaintain.UserName)); // The details of user '{0}' have not changed. (Password not the same as repeat password).
+
+
                             this.TextBoxPassword.Focus();
                         }
                     }
@@ -1021,8 +1023,8 @@
                 {
                     // Password or repeat pasword are not filled
                     DialogResult dialogResult = MessageBox.Show(
-                        @"Het ""Wachtwoord"" of ""Herhaal wachtwoord"" is niet ingevuld." + Environment.NewLine +
-                        "Wilt u de gegevens met uitzondering van het wachtwoord wijzigen?",
+                        TdLogging_Resources.PwsOrRepeaaPwdIsMissing + Environment.NewLine + // The 'Password' or 'Repeat password' has not been entered.
+                        TdLogging_Resources.DoYouWantToChangeThePwd,                        // Do you want to change the data except the password?
                         MB_Title.Continue,
                         MessageBoxButtons.YesNo,
                         MessageBoxIcon.Question);
@@ -1033,12 +1035,12 @@
                         // 0 = all, 1 is all without password
                         if (!userMaintain.UpdateUserData(1))
                         {
-                            TdLogging.WriteToLogInformation(string.Format("De gegevens van gebruiker '{0}'  zijn gewijzigd (m.u.v. het wachtwoord).", userMaintain.UserName));
+                            TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.UserFullDetailsAreChangedExceptPwd, userMaintain.UserName));
                         }
                     }
                     else if (dialogResult == DialogResult.No)
                     {
-                        TdLogging.WriteToLogInformation(string.Format("De gegevens van gebruiker '{0}'  zijn niet gewijzigd.", userMaintain.UserName));
+                        TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.UserDetailsNotChanged, userMaintain.UserName)); // The details of user '{0}' have not changed.
                         if (string.IsNullOrEmpty(this.UserPassword))
                         {
                             this.TextBoxPassword.Focus();
@@ -1125,14 +1127,14 @@
                     this.TextBoxFullName.Text = this.selectedUser.UserFullName;
                     this.ComboBoxRole.Text = this.selectedUser.RoleName;
 
-                    if (this.Authentication == "False" || this.Authentication == ResourceText._1005)
+                    if (this.Authentication == "False" || this.Authentication == TdResText.No)
                     {
-                        this.ComboBoxAuthentication.Text = ResourceText._1005;
+                        this.ComboBoxAuthentication.Text = TdResText.No;
                     }
 
-                    if (this.Authentication == "True" || this.Authentication == ResourceText._1006)
+                    if (this.Authentication == "True" || this.Authentication == TdResText.Yes)
                     {
-                        this.ComboBoxAuthentication.Text = ResourceText._1006;
+                        this.ComboBoxAuthentication.Text = TdResText.Yes;
                     }
 
                     this.UserAuthentication = row.Cells[10].Value.ToString();

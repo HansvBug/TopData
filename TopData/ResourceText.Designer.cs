@@ -70,24 +70,6 @@ namespace TopData {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nee.
-        /// </summary>
-        internal static string _1005 {
-            get {
-                return ResourceManager.GetString("1005", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ja.
-        /// </summary>
-        internal static string _1006 {
-            get {
-                return ResourceManager.GetString("1006", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Het database bestand is niet gevonden..
         /// </summary>
         internal static string _1100 {

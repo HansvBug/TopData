@@ -100,5 +100,46 @@
         {
             get { return RmLog.GetString("Notification", Cul); }
         }
+
+        public static string CreNewUser
+        {
+            get { return RmLog.GetString("CreNewUser", Cul); }
+        }
+
+        public static string UserFullDetailsAreChanged
+        {
+            get { return RmLog.GetString("UserFullDetailsAreChanged", Cul); }
+        }
+
+        public static string UserFullDetailsAreChangedExceptPwd
+        {
+            get { return RmLog.GetString("UserFullDetailsAreChangedExceptPwd", Cul); }
+        }
+
+        public static string UserDetailsNotChanged
+        {
+            get { return RmLog.GetString("UserDetailsNotChanged", Cul); }
+        }
+
+        public static string PwdNotEqualRepeatPwd
+        {
+            get { return RmLog.GetString("PwdNotEqualRepeatPwd", Cul); }
+        }
+
+        public static string DoYouWantToChangeThePwd
+        {
+            get { return RmLog.GetString("DoYouWantToChangeThePwd", Cul); }
+        }
+
+        public static string UserFullDetailsAreNotChangedExceptPwd
+        {
+            get { return RmLog.GetString("UserFullDetailsAreNotChangedExceptPwd", Cul); }
+        }
+
+        public static string PwsOrRepeaaPwdIsMissing
+        {
+            get { return RmLog.GetString("PwsOrRepeaaPwdIsMissing", Cul); }
+        }
+        
     }
 }

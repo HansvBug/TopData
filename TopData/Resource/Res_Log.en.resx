@@ -120,6 +120,9 @@
   <data name="AppDbase_Present" xml:space="preserve">
     <value>The application database is present.</value>
   </data>
+  <data name="CreNewUser" xml:space="preserve">
+    <value>Create new user</value>
+  </data>
   <data name="DatabaseNameDeleted" xml:space="preserve">
     <value>Database name has been successfully deleted.</value>
   </data>
@@ -132,16 +135,37 @@
   <data name="DeleteDbOrSChemaName02" xml:space="preserve">
     <value> failed.</value>
   </data>
+  <data name="DoYouWantToChangeThePwd" xml:space="preserve">
+    <value>Do you want to change the data except the password?</value>
+  </data>
   <data name="LookInLogFile" xml:space="preserve">
     <value>Look in the log file for information.</value>
   </data>
   <data name="Notification" xml:space="preserve">
     <value>Notification :</value>
   </data>
+  <data name="PwdNotEqualRepeatPwd" xml:space="preserve">
+    <value>The 'Password' is not the same as 'Repeat password'.</value>
+  </data>
+  <data name="PwsOrRepeaaPwdIsMissing" xml:space="preserve">
+    <value>The 'Password' or 'Repeat password' has not been entered.</value>
+  </data>
   <data name="SchemaNameDeleted" xml:space="preserve">
     <value>Schema name has been successfully deleted.</value>
   </data>
   <data name="TheAppDbWillBeCreated" xml:space="preserve">
     <value>The application database is missing and will be created.</value>
+  </data>
+  <data name="UserDetailsNotChanged" xml:space="preserve">
+    <value>The details of user '{0}' have not changed.</value>
+  </data>
+  <data name="UserFullDetailsAreChanged" xml:space="preserve">
+    <value>The full details of user '{0}' have been changed.</value>
+  </data>
+  <data name="UserFullDetailsAreChangedExceptPwd" xml:space="preserve">
+    <value>The details of user '{0}' have been changed (except the password).</value>
+  </data>
+  <data name="UserFullDetailsAreNotChangedExceptPwd" xml:space="preserve">
+    <value>The details of user '{0}' have not changed. (Password not the same as repeat password).</value>
   </data>
 </root>

@@ -312,7 +312,7 @@
         {
             if (ActivateLogging)
             {
-                WriteToLog("INFORMATIE", logMessage);
+                WriteToLog( MB_Title.Information, logMessage);
             }
         }
 
@@ -444,10 +444,10 @@
                 }
                 else
                 {
-                    LogRegulier("INFORMATIE", string.Empty, w);
-                    LogRegulier("INFORMATIE", "Logbestand wordt groter dan 10 Mb.", w);
-                    LogRegulier("INFORMATIE", "Een nieuw log bestand wordt aangemaakt.", w);
-                    LogRegulier("INFORMATIE", string.Empty, w);
+                    LogRegulier( MB_Title.Information, string.Empty, w);
+                    LogRegulier( MB_Title.Information, "Logbestand wordt groter dan 10 Mb.", w);
+                    LogRegulier( MB_Title.Information, "Een nieuw log bestand wordt aangemaakt.", w);
+                    LogRegulier( MB_Title.Information, string.Empty, w);
                     LogStop(w);
 
                     CopyLogFile();    // Make a copy off the logfile
@@ -556,7 +556,7 @@
                 w.WriteLine(string.Empty);
 
                 // regel in Gebeurtenissen logboek wegschrijven
-                // AddMessageToEventLog("De Applicatie is succesvol gestart", "INFORMATIE", 1000);
+                // AddMessageToEventLog("De Applicatie is succesvol gestart",  MB_Title.Information, 1000);
             }
             catch (IOException ioex)
             {
@@ -594,7 +594,7 @@
             {
                 switch (errorType)
                 {
-                    case "INFORMATIE":
+                    case "Informatie":
                         {
                             w.WriteLine(DateTime.Now + " | INFORMATIE   | " + logMessage);
                             break;
@@ -611,7 +611,7 @@
                             w.WriteLine(DateTime.Now + " | FOUT         | " + logMessage);
 
                             // TODO: hier moet de eventlogging komen
-                            // AddMessageToEventLog("De Applicatie is succesvol gestart", "INFORMATIE", 1000);
+                            // AddMessageToEventLog("De Applicatie is succesvol gestart",  MB_Title.Information, 1000);
                             break;
                         }
 
@@ -653,7 +653,7 @@
             {
                 WriteToFile = false; // Stop the writting to the logfile
 
-                // AddMessageToEventLog("De logging van '" + Form_Main.Applicatienaam + "' is gestopt omdat er reeds 5 pogingen zijn mislukt.", "INFORMATIE", 1000);
+                // AddMessageToEventLog("De logging van '" + Form_Main.Applicatienaam + "' is gestopt omdat er reeds 5 pogingen zijn mislukt.",  MB_Title.Information, 1000);
                 WriteToLogError("De logging van '" + ApplicationName + "' is gestopt omdat er reeds 5 pogingen zijn mislukt.");
 
                 MessageBox.Show(
@@ -736,7 +736,7 @@
                         entryType = EventLogEntryType.Error;
                         break;
                     }
-                case "INFORMATIE":
+                case  MB_Title.Information:
                     {
                         entryType = EventLogEntryType.Information;
                         break;

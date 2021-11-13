@@ -172,7 +172,7 @@
                     Cursor.Current = Cursors.Default;
                     MessageBox.Show(
                         "Aanmaken Oracle connectie is mislukt" + Environment.NewLine +
-                        "Controleer het logbestand." + Environment.NewLine + Environment.NewLine +
+                        MB_Text.TextCheckLogFile + Environment.NewLine + Environment.NewLine +
                         "Is de juiste oracle client beschikbaar?", MB_Title.Error,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);

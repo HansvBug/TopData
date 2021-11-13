@@ -117,8 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TextAuthAllReadyExistsChooseOther" xml:space="preserve">
+    <value>De authenticatie komt reeds voor. Kies een andere authenticatie naam.</value>
+  </data>
+  <data name="TextCheckLogFile" xml:space="preserve">
+    <value>Controleer het logbestand.</value>
+  </data>
+  <data name="TextCreNewUserFailed" xml:space="preserve">
+    <value>Aanmaken nieuwe gebruiker is mislukt.</value>
+  </data>
+  <data name="TextGetAllUsersNamesFailed" xml:space="preserve">
+    <value>Het ophalen van alle gebruikersnamen is mislukt.</value>
+  </data>
+  <data name="TextMutateDataFailed" xml:space="preserve">
+    <value>Het muteren van de gegevens is mislukt.</value>
+  </data>
   <data name="TextPasswordNotEqualName" xml:space="preserve">
     <value>Wachtwoord mag niet gelijk zijn aan de naam.</value>
+  </data>
+  <data name="TextUserAllreadyExistChooseOtherName" xml:space="preserve">
+    <value>De gebruiker komt reeds voor. Kies een andere andere naam.</value>
+  </data>
+  <data name="TextUserCanNotBeDeleted" xml:space="preserve">
+    <value>De gebruiker '{0}' kan niet worden verwijderd.</value>
+  </data>
+  <data name="TextUsernameNotEntered" xml:space="preserve">
+    <value>Naam gebruiker is niet ingevuld.</value>
+  </data>
+  <data name="TextYouAreLoggedIn" xml:space="preserve">
+    <value>U bent in gelogd.</value>
+    <comment>Messagebox title</comment>
   </data>
   <data name="Text_App_Database_Changed" xml:space="preserve">
     <value>De Applicatie database is gewijzigd.</value>
