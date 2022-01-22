@@ -117,11 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AlterTableFailed" xml:space="preserve">
+    <value>Changing table {0} failed. (Version {1}).</value>
+  </data>
   <data name="AppDbase_Present" xml:space="preserve">
     <value>The application database is present.</value>
   </data>
+  <data name="ChangeingMetaVersionFailed" xml:space="preserve">
+    <value>Changing the version in table {0} failed. (Version {1}).</value>
+  </data>
+  <data name="ChangeSQLiteUserVersionFailed" xml:space="preserve">
+    <value>Changing the SQlite user_version failed. (Version {0}).</value>
+  </data>
+  <data name="ChangingTableFailed" xml:space="preserve">
+    <value>Changing table {0} was not performed.</value>
+  </data>
+  <data name="CheckForCurVersionAppDb" xml:space="preserve">
+    <value>Check for version of the query database.</value>
+  </data>
+  <data name="CompressAppDbFailed" xml:space="preserve">
+    <value>Compressing the application database failed.</value>
+  </data>
+  <data name="CopyFileAborted" xml:space="preserve">
+    <value>The copying of the file '{0}' has been aborted.</value>
+  </data>
+  <data name="CopyFileReady" xml:space="preserve">
+    <value>The copy of the file '{0}' is ready.</value>
+  </data>
+  <data name="CountRamTotalFailed" xml:space="preserve">
+    <value>No Total Ram count found.</value>
+  </data>
   <data name="CreNewUser" xml:space="preserve">
-    <value>Create new user</value>
+    <value>Create new user.</value>
   </data>
   <data name="DatabaseNameDeleted" xml:space="preserve">
     <value>Database name has been successfully deleted.</value>
@@ -129,17 +156,98 @@
   <data name="Debug_Logging_On" xml:space="preserve">
     <value>Debug logging is on.</value>
   </data>
-  <data name="DeleteDbOrSChemaName01" xml:space="preserve">
-    <value>Deleting the schema name from the table </value>
+  <data name="DefaultUserNotFound" xml:space="preserve">
+    <value>The default user {0} was not found.</value>
   </data>
-  <data name="DeleteDbOrSChemaName02" xml:space="preserve">
-    <value> failed.</value>
+  <data name="DeleteDbOrSChemaName" xml:space="preserve">
+    <value>Failed to enter schema names in table {0}.</value>
   </data>
   <data name="DoYouWantToChangeThePwd" xml:space="preserve">
     <value>Do you want to change the data except the password?</value>
   </data>
+  <data name="ErrorCreatingAppDbase" xml:space="preserve">
+    <value>The database '{0}' has not been created.</value>
+  </data>
+  <data name="ErrorCreatingAppDbaseNoName" xml:space="preserve">
+    <value>The SQlite database was not created because no location or database name was specified.</value>
+  </data>
+  <data name="ErrorDeletingDbName" xml:space="preserve">
+    <value>Deleting database name from table {0} was unsuccessful.</value>
+  </data>
+  <data name="ErrorEnteringUserInTable" xml:space="preserve">
+    <value>Error entering a user in table {0}. (Version {1}).</value>
+  </data>
+  <data name="FailedToCreateTable" xml:space="preserve">
+    <value>Failed to create table {0}. (Version {1}).</value>
+  </data>
+  <data name="FailedToInsertDbVersionNumber" xml:space="preserve">
+    <value>Failed to enter database version number in table {0}. (Version </value>
+  </data>
+  <data name="FailedToInsertDbVersionNumber01" xml:space="preserve">
+    <value>Failed to enter database version number in table {0}.</value>
+  </data>
+  <data name="FailedToSeeIfUserIsUnique" xml:space="preserve">
+    <value>Failed to determine whether user {0} is unique.</value>
+  </data>
+  <data name="FileExists" xml:space="preserve">
+    <value>The file already exists.</value>
+  </data>
+  <data name="FileNotPresent" xml:space="preserve">
+    <value>The file '{0}' to be copied is not present.</value>
+  </data>
+  <data name="FolderNotPresent" xml:space="preserve">
+    <value>The folder '{0}' is not present.</value>
+  </data>
+  <data name="GetApplicationpathFailed" xml:space="preserve">
+    <value>Failed to get application path.</value>
+  </data>
+  <data name="GetBiosIdFailed" xml:space="preserve">
+    <value>No Bios ID found.</value>
+  </data>
+  <data name="GetBiosIdFailed1" xml:space="preserve">
+    <value>Retrieving the Bios ID failed.</value>
+  </data>
+  <data name="GetMachineNameFailed" xml:space="preserve">
+    <value>Machine name retrieval failed.</value>
+  </data>
+  <data name="GetMonitorCountFailed" xml:space="preserve">
+    <value>Failed to determine the number of monitors.</value>
+  </data>
+  <data name="GetMonitorWidthFailed" xml:space="preserve">
+    <value>Failed to determine monitor width.</value>
+  </data>
+  <data name="GetProcessorIdFailed" xml:space="preserve">
+    <value>Failed to retrieve the processor ID.</value>
+  </data>
+  <data name="GetQueryGroupNamesFailed" xml:space="preserve">
+    <value>Failed to get query group names.</value>
+  </data>
+  <data name="GetSqlDbVersion" xml:space="preserve">
+    <value>Get the Sqlite database file version.</value>
+  </data>
+  <data name="GetSqlDbVersionFailed" xml:space="preserve">
+    <value>Failed to query Sqlite database file version.</value>
+  </data>
+  <data name="GetSQLiteVersion" xml:space="preserve">
+    <value>Get SQLite version.</value>
+  </data>
+  <data name="GetSQLiteVersionFailed" xml:space="preserve">
+    <value>Failed to query Sqlite version.</value>
+  </data>
+  <data name="GetTotalRamFailed" xml:space="preserve">
+    <value>Failed to get total amount of RAM.</value>
+  </data>
+  <data name="GetUserNameFailed" xml:space="preserve">
+    <value>Failed to retrieve user name.</value>
+  </data>
+  <data name="GetWinVersionFailed" xml:space="preserve">
+    <value>Failed to get Windows version.</value>
+  </data>
   <data name="LookInLogFile" xml:space="preserve">
     <value>Look in the log file for information.</value>
+  </data>
+  <data name="NoNewAppDbCreated" xml:space="preserve">
+    <value>The database file is present, no new empty database file has been created.</value>
   </data>
   <data name="Notification" xml:space="preserve">
     <value>Notification :</value>
@@ -147,14 +255,53 @@
   <data name="PwdNotEqualRepeatPwd" xml:space="preserve">
     <value>The 'Password' is not the same as 'Repeat password'.</value>
   </data>
-  <data name="PwsOrRepeaaPwdIsMissing" xml:space="preserve">
+  <data name="PwdOrRepeatPwdIsMissing" xml:space="preserve">
     <value>The 'Password' or 'Repeat password' has not been entered.</value>
+  </data>
+  <data name="QuerGetConnNamesFailed" xml:space="preserve">
+    <value>Retrieving the connection names in the table {0} was not successful.</value>
+  </data>
+  <data name="QuerGetSchemaNamesFailed" xml:space="preserve">
+    <value>Retrieving the schema names in the table {0} failed.</value>
+  </data>
+  <data name="QueryGetDbnamesFailed" xml:space="preserve">
+    <value>Querying the database names in the table {0} failed.</value>
+  </data>
+  <data name="RequestMetaVersionFailed" xml:space="preserve">
+    <value>Requesting meta version failed. (Version </value>
+  </data>
+  <data name="ResetAppDbSequenceFailed" xml:space="preserve">
+    <value>Resetting the sequences in the application database failed.</value>
+  </data>
+  <data name="ResetTableSequenceFailed" xml:space="preserve">
+    <value>Resetting the sequences of table {0} failed.</value>
   </data>
   <data name="SchemaNameDeleted" xml:space="preserve">
     <value>Schema name has been successfully deleted.</value>
   </data>
+  <data name="SQLiteUserVersionChanged" xml:space="preserve">
+    <value>The SQlite user_version has been changed. (Version {0}).</value>
+  </data>
+  <data name="TableIsChanged" xml:space="preserve">
+    <value>The table {0} has been changed. (Version {1}).</value>
+  </data>
+  <data name="TableIsCreated" xml:space="preserve">
+    <value>The table {0} has been created. (Version {1}).</value>
+  </data>
+  <data name="TableIsNotCreated" xml:space="preserve">
+    <value>The creation of the table {0} has not been performed.</value>
+  </data>
+  <data name="TableIsUpdated" xml:space="preserve">
+    <value>The table {0} has been updated. (Version {1}).</value>
+  </data>
+  <data name="TheAppDbIsCreated" xml:space="preserve">
+    <value>The database '{0}' has been created.</value>
+  </data>
   <data name="TheAppDbWillBeCreated" xml:space="preserve">
     <value>The application database is missing and will be created.</value>
+  </data>
+  <data name="UpdateTableFailed" xml:space="preserve">
+    <value>Failed to update table {0}. (Version: {1}).</value>
   </data>
   <data name="UserDetailsNotChanged" xml:space="preserve">
     <value>The details of user '{0}' have not changed.</value>
@@ -167,5 +314,8 @@
   </data>
   <data name="UserFullDetailsAreNotChangedExceptPwd" xml:space="preserve">
     <value>The details of user '{0}' have not changed. (Password not the same as repeat password).</value>
+  </data>
+  <data name="WriteInformation" xml:space="preserve">
+    <value>Information.</value>
   </data>
 </root>

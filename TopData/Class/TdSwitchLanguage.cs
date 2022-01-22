@@ -23,13 +23,24 @@
         public FormAbout ParentFormAbout { get; set; }
 
         /// <summary>
+        /// Gets or sets an instance of form splashscreen.
+        /// </summary>
+        public FormSplashScreen ParentFormSplashScreen { get; set; }
+
+        /// <summary>
         /// Gets or sets an instance of form maintain users.
         /// </summary>
         public FormMaintainUsers ParentFormMaintainUsers { get; set; }
 
+        /// <summary>
+        /// Gets or sets an instance of form maintain query groups.
+        /// </summary>
+        public FormMaintainQueryGroups ParentFormMaintainQueryGroups { get; set; }
+
         #endregion Fields
 
         #region Constructor
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TdSwitchLanguage"/> class.
         /// Switch between languages.
@@ -58,7 +69,7 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="TdSwitchLanguage"/> class.
         /// </summary>
-        /// <param name="parent">Instance of of form maintain users.</param>
+        /// <param name="parent">Instance of the form maintain users.</param>
         /// <param name="cul">holds the culture info.</param>
         public TdSwitchLanguage(FormMaintainUsers parent, CultureInfo cul)
         {
@@ -66,9 +77,23 @@
             this.cul = cul;
             this.ParentFormMaintainUsers = parent;
         }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TdSwitchLanguage"/> class.
+        /// </summary>
+        /// <param name="parent">Instance of of form maintain query groups.</param>
+        /// <param name="cul">holds the culture info.</param>
+        public TdSwitchLanguage(FormMaintainQueryGroups parent, CultureInfo cul)
+        {
+            this.resMan = new ResourceManager("TopData.Resource.Res_Controls", typeof(FormMaintainQueryGroups).Assembly);
+            this.cul = cul;
+            this.ParentFormMaintainQueryGroups = parent;
+        }
+
         #endregion Constructor
 
         #region Form main
+
         /// <summary>
         /// Set the language for component texts or labels.
         /// </summary>
@@ -102,6 +127,7 @@
         #endregion Form main
 
         #region Form About
+
         /// <summary>
         /// Set the language for component texts or labels.
         /// </summary>
@@ -111,6 +137,19 @@
             this.ParentFormAbout.LabelBuilddate.Text = this.resMan.GetString("AboutForm_BuildDateLabel", this.cul);
         }
         #endregion Form About
+
+        #region Splash screen
+
+        /// <summary>
+        /// Set the language for component texts or labels.
+        /// </summary>
+        public void SetLanguageSplashScreenForm()
+        {
+            this.ParentFormSplashScreen.LabelVersion.Text = this.resMan.GetString("AboutForm_VersionLabel", this.cul);
+            this.ParentFormSplashScreen.LabelBuilddate.Text = this.resMan.GetString("AboutForm_BuildDateLabel", this.cul);
+        }
+
+        #endregion Splash screen
 
         /// <summary>
         /// Set the language for component texts or labels.
@@ -140,7 +179,16 @@
             this.ParentFormMaintainUsers.ButtonClose.Text = this.resMan.GetString("MantainUserForm_Close", this.cul);
 
             this.ParentFormMaintainUsers.Text = this.resMan.GetString("MantainUserForm_Text", this.cul);
+        }
 
+        /// <summary>
+        /// Set the language for component texts or labels of the form maintain query groups.
+        /// </summary>
+        public void SetLanguageMaintainQueryGroups()
+        {
+            this.ParentFormMaintainQueryGroups.ButtonNewQueryGroup.Text = this.resMan.GetString("MaintainQueryForm_New", this.cul);
+            this.ParentFormMaintainQueryGroups.ButtonSave.Text = this.resMan.GetString("MaintainQueryForm_Save", this.cul);
+            this.ParentFormMaintainQueryGroups.ButtonClose.Text = this.resMan.GetString("MaintainQueryForm_Close", this.cul);
         }
     }
 

@@ -63,9 +63,30 @@ https://docs.microsoft.com/en-us/answers/questions/343466/change-datagridview-ce
 -	Query parameter form onthoud scherm positie														Gereed: 30-10-2021 (new)
 -	Als er geen dbase connecties zijn dan moet het menu dbconnecties grijs zijn						Gereed: 30-10-2021 (new)
 -	Op GITHUB gezet																					Gereed: 31-10-2021
+-	Splash screen																					Gereed: 04-12-2021		
+-	query groepen																					Gereed: 
+-	Keycontainer																					Gereed: bezig...
+		xml in stukken knippen.
+		xml naar key container kunnen opslaan
+		keycontainer in topdata opnemen en sleutel gebruiken.
+		
 -	Engels : maintain user form zichtbare deel is engels. rest mmoet nog.......
 
--	query groepen																					Gereed: 
+ned - engels
+	bezig met: TdDatabaseFilters (starten)
+	gereed:
+		TdAppDb.cs
+		TdAppDbCreate.cs
+		TdAppDbMaintain.cs
+		TdAppDbUpdate
+		TdAppEnvironment		
+		TdAutoComplete.cs
+		TdCulture.cs
+		TdDatabaseFilter.cs
+		
+		
+
+
 -	key container																					Gereed:
 -	SQLite optimize uitzoeken. 																		Gereed:
 -	Splash screen																					Gereed: 
@@ -89,7 +110,8 @@ https://docs.microsoft.com/en-us/answers/questions/343466/change-datagridview-ce
 		loopt vast op sdo geometry. bevat functies die nog niet ondersteund owrden
 
 
-
+UDT: https://medium.com/oracledevs/announcing-odp-net-21-3-user-defined-types-for-managed-odp-net-and-odp-net-core-836fa81da3ba
+op github staan voorbeelden: https://github.com/oracle/dotnet-db-samples/blob/master/samples/udt/Spatial-UDT.cs
 
 -	maak gebruik van een key container voor de encryptie sleutel									Gereed:
 		Nieuwe parameter: UseKeyContainer

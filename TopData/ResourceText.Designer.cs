@@ -241,15 +241,6 @@ namespace TopData {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Raadplegen.
-        /// </summary>
-        internal static string _2082 {
-            get {
-                return ResourceManager.GetString("2082", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Wijzigen connectie gegevens....
         /// </summary>
         internal static string _2100 {

@@ -1,5 +1,5 @@
 ﻿namespace TopData
-{    
+{
     using System;
     using System.Collections.Generic;
     using System.Data;
@@ -76,13 +76,13 @@
                 catch (SQLiteException ex)
                 {
                     MessageBox.Show(
-                        TdLogging_Resources.DeleteDbOrSChemaName01 + TdTableName.ORA_SCHEMA_DATABASE_NAME + TdLogging_Resources.DeleteDbOrSChemaName02 + Environment.NewLine +
+                        string.Format(TdLogging_Resources.DeleteDbOrSChemaName, TdTableName.ORA_SCHEMA_DATABASE_NAME) + Environment.NewLine +
                         Environment.NewLine + TdLogging_Resources.LookInLogFile,
                         MB_Title.Error,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
 
-                    TdLogging.WriteToLogError(TdLogging_Resources.DeleteDbOrSChemaName01 + TdTableName.ORA_SCHEMA_DATABASE_NAME + TdLogging_Resources.DeleteDbOrSChemaName02);
+                    TdLogging.WriteToLogError(string.Format(TdLogging_Resources.DeleteDbOrSChemaName, TdTableName.ORA_SCHEMA_DATABASE_NAME));
                     TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                     TdLogging.WriteToLogError(ex.Message);
                     if (TdDebugMode.DebugMode)
@@ -124,13 +124,13 @@
                 catch (SQLiteException ex)
                 {
                     MessageBox.Show(
-                        "Het verwijderen van de database naam uit de tabel " + TdTableName.ORA_SCHEMA_DATABASE_NAME + " is niet gelukt." + Environment.NewLine +
+                        string.Format(TdLogging_Resources.ErrorDeletingDbName, TdTableName.ORA_SCHEMA_DATABASE_NAME) + Environment.NewLine +
                         Environment.NewLine + TdLogging_Resources.LookInLogFile,
                         MB_Title.Error,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
 
-                    TdLogging.WriteToLogError("Het verwijderen van de database naam uit de tabel " + TdTableName.ORA_SCHEMA_DATABASE_NAME + " is niet gelukt.");
+                    TdLogging.WriteToLogError(string.Format(TdLogging_Resources.ErrorDeletingDbName, TdTableName.ORA_SCHEMA_DATABASE_NAME));
                     TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                     TdLogging.WriteToLogError(ex.Message);
                     if (TdDebugMode.DebugMode)
@@ -180,7 +180,7 @@
                             }
                             catch (SQLiteException ex)
                             {
-                                TdLogging.WriteToLogError("Het invoeren van de schema namen in de tabel " + TdTableName.ORA_SCHEMA_DATABASE_NAME + TdLogging_Resources.DeleteDbOrSChemaName02);
+                                TdLogging.WriteToLogError(string.Format(TdLogging_Resources.DeleteDbOrSChemaName, TdTableName.ORA_SCHEMA_DATABASE_NAME));
                                 TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                                 TdLogging.WriteToLogError(ex.Message);
                                 if (TdDebugMode.DebugMode)
@@ -221,7 +221,7 @@
                         }
                         catch (SQLiteException ex)
                         {
-                            TdLogging.WriteToLogError("Het invoeren van de database namen in de tabel " + TdTableName.ORA_SCHEMA_DATABASE_NAME + TdLogging_Resources.DeleteDbOrSChemaName02);
+                            TdLogging.WriteToLogError(string.Format(TdLogging_Resources.DeleteDbOrSChemaName, TdTableName.ORA_SCHEMA_DATABASE_NAME));
                             TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                             TdLogging.WriteToLogError(ex.Message);
                             if (TdDebugMode.DebugMode)
@@ -311,15 +311,15 @@
                 {
                     if (schemaOrDatabaseName == "DatabaseName")
                     {
-                        TdLogging.WriteToLogError(string.Format("Het opvragen van de database namen in de tabel {0} is niet gelukt.", TdTableName.ORA_SCHEMA_DATABASE_NAME));
+                        TdLogging.WriteToLogError(string.Format(TdLogging_Resources.QueryGetDbnamesFailed, TdTableName.ORA_SCHEMA_DATABASE_NAME));
                     }
                     else if (schemaOrDatabaseName == "SchemaName")
                     {
-                        TdLogging.WriteToLogError(string.Format("Het opvragen van de schema namen in de tabel {0} is niet gelukt.", TdTableName.ORA_SCHEMA_DATABASE_NAME));
+                        TdLogging.WriteToLogError(string.Format(TdLogging_Resources.QuerGetSchemaNamesFailed, TdTableName.ORA_SCHEMA_DATABASE_NAME));
                     }
                     else if (schemaOrDatabaseName == "ConnectionName")
                     {
-                        TdLogging.WriteToLogError(string.Format("Het opvragen van de connectie namen in de tabel {0} is niet gelukt.", TdTableName.CONN_ORACLE));
+                        TdLogging.WriteToLogError(string.Format(TdLogging_Resources.QuerGetConnNamesFailed, TdTableName.CONN_ORACLE));
                     }
 
                     TdLogging.WriteToLogError(TdLogging_Resources.Notification);
@@ -353,7 +353,7 @@
             this.DbConnection.Open();
             if (TdDebugMode.DebugMode)
             {
-                TdLogging.WriteToLogDebug("Haal de Sqlite database bestand version op.");
+                TdLogging.WriteToLogDebug(TdLogging_Resources.GetSqlDbVersion);
             }
 
             SQLiteCommand command = new(selectSql, this.DbConnection);
@@ -370,7 +370,7 @@
             }
             catch (SQLiteException ex)
             {
-                TdLogging.WriteToLogError("Opvragen Sqlite database bestand versie is misukt.");
+                TdLogging.WriteToLogError(TdLogging_Resources.GetSqlDbVersionFailed);
                 TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                 TdLogging.WriteToLogError(ex.Message);
                 if (TdDebugMode.DebugMode)
@@ -402,7 +402,7 @@
 
             if (TdDebugMode.DebugMode)
             {
-                TdLogging.WriteToLogDebug("Ophalen SQLite versie.");
+                TdLogging.WriteToLogDebug(TdLogging_Resources.GetSQLiteVersion);
             }
 
             SQLiteCommand command = new(selectSql, this.DbConnection);
@@ -419,7 +419,7 @@
             }
             catch (SQLiteException ex)
             {
-                TdLogging.WriteToLogError("Opvragen Sqlite versie is misukt.");
+                TdLogging.WriteToLogError(TdLogging_Resources.GetSQLiteVersionFailed);
                 TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                 TdLogging.WriteToLogError(ex.Message);
                 if (TdDebugMode.DebugMode)
@@ -460,7 +460,7 @@
             }
             catch (Exception ex)
             {
-                TdLogging.WriteToLogError("Ophalen van de querygroep namen is mislukt.");
+                TdLogging.WriteToLogError(TdLogging_Resources.GetQueryGroupNamesFailed);
                 TdLogging.WriteToLogError(ex.Message);
                 if (TdDebugMode.DebugMode)
                 {
@@ -487,7 +487,7 @@
             }
             catch (SQLiteException ex)
             {
-                TdLogging.WriteToLogError("Het comprimeren van de applicatie database is mislukt.");
+                TdLogging.WriteToLogError(TdLogging_Resources.CompressAppDbFailed);
                 TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                 TdLogging.WriteToLogError(ex.Message);
                 if (TdDebugMode.DebugMode)
@@ -517,7 +517,7 @@
             }
             catch (SQLiteException ex)
             {
-                TdLogging.WriteToLogError("Het resetten van de sequences in de applicatie database is mislukt.");
+                TdLogging.WriteToLogError(TdLogging_Resources.ResetAppDbSequenceFailed);
                 TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                 TdLogging.WriteToLogError(ex.Message);
                 if (TdDebugMode.DebugMode)
@@ -550,7 +550,7 @@
             }
             catch (SQLiteException ex)
             {
-                TdLogging.WriteToLogError(string.Format("Het resetten van de sequences van de tabel {0} is mislukt.", tableName));
+                TdLogging.WriteToLogError(string.Format(TdLogging_Resources.ResetTableSequenceFailed, tableName));
                 TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                 TdLogging.WriteToLogError(ex.Message);
                 if (TdDebugMode.DebugMode)
@@ -588,7 +588,7 @@
                     if (type == "StartUp")
                     {
                         File.Copy(fileToCopy, newLocation, true);  // Overwrite file = true
-                        TdLogging.WriteToLogInformation("Het kopiëren van het bestand '" + TdSettingsDefault.SqlLiteDatabaseName + "' is gereed.");
+                        TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.CopyFileReady, TdSettingsDefault.SqlLiteDatabaseName));
                         result = true;
                     }
                     else
@@ -599,29 +599,29 @@
                             if (dialogResult == DialogResult.Yes)
                             {
                                 File.Copy(fileToCopy, newLocation, true);  // Overwrite file = true
-                                TdLogging.WriteToLogInformation("Het kopiëren van het bestand '" + TdSettingsDefault.SqlLiteDatabaseName + "' is gereed.");
+                                TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.CopyFileReady, TdSettingsDefault.SqlLiteDatabaseName));
                                 result = true;
                             }
                             else if (dialogResult == DialogResult.No)
                             {
-                                TdLogging.WriteToLogInformation("Het kopiëren van het bestand '" + TdSettingsDefault.SqlLiteDatabaseName + "' is afgebroken.");
-                                TdLogging.WriteToLogInformation("Het bestand komt reeds voor.");
+                                TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.CopyFileAborted, TdSettingsDefault.SqlLiteDatabaseName));
+                                TdLogging.WriteToLogInformation(TdLogging_Resources.FileExists);
                                 result = false;
                             }
                         }
                         else
                         {
                             File.Copy(fileToCopy, newLocation, false);  // Overwrite file = false
-                            TdLogging.WriteToLogInformation("Het kopiëren van het bestand '" + TdSettingsDefault.SqlLiteDatabaseName + "' is gereed.");
+                            TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.CopyFileReady, TdSettingsDefault.SqlLiteDatabaseName));
                             result = true;
                         }
                     }
                 }
                 else
                 {
-                    TdLogging.WriteToLogInformation("Het te kopiëren bestand '" + TdSettingsDefault.SqlLiteDatabaseName + "' is niet aanwezig.");
+                    TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.FileNotPresent, TdSettingsDefault.SqlLiteDatabaseName));
                     MessageBox.Show(
-                        "Het bestand '" + TdSettingsDefault.SqlLiteDatabaseName + "' is niet aanwezig.",
+                        string.Format(TdLogging_Resources.FileNotPresent, TdSettingsDefault.SqlLiteDatabaseName),
                         MB_Title.File_Copy,
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
@@ -631,7 +631,7 @@
             else
             {
                 MessageBox.Show(
-                    "De map '" + TdSettingsDefault.BackUpFolder + "' is niet aanwezig.",
+                    string.Format(TdLogging_Resources.FolderNotPresent, TdSettingsDefault.BackUpFolder),
                     MB_Title.File_Copy,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
@@ -656,14 +656,14 @@
             if (File.Exists(fileToCopy))
             {
                 File.Copy(fileToCopy, newLocation, overWrite);
-                TdLogging.WriteToLogInformation("Het kopiëren van het bestand '" + TdSettingsDefault.SqlLiteDatabaseName + "' is gereed. (Query form).");
+                TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.CopyFileReady, TdSettingsDefault.SqlLiteDatabaseName));
                 result = true;
             }
             else
             {
-                TdLogging.WriteToLogInformation("Het te kopiëren bestand '" + TdSettingsDefault.SqlLiteDatabaseName + "' is niet aanwezig.");
+                TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.FileNotPresent, TdSettingsDefault.SqlLiteDatabaseName));
                 MessageBox.Show(
-                    "Het bestand '" + TdSettingsDefault.SqlLiteDatabaseName + "' is niet aanwezig.",
+                    string.Format(TdLogging_Resources.FileNotPresent, TdSettingsDefault.SqlLiteDatabaseName),
                     MB_Title.File_Copy,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);

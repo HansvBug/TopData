@@ -124,16 +124,16 @@
     <value>Administrator</value>
   </data>
   <data name="UserRoleEditor" xml:space="preserve">
-    <value>Muteren</value>
+    <value>Editor</value>
   </data>
   <data name="UserRoleOwner" xml:space="preserve">
-    <value>Eigenaar</value>
+    <value>Owner</value>
   </data>
   <data name="UserRoleSystem" xml:space="preserve">
     <value>System</value>
   </data>
   <data name="UserRoleViewer" xml:space="preserve">
-    <value>Raadplegen</value>
+    <value>Viewer</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Ja</value>

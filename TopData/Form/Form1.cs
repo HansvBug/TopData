@@ -23,6 +23,14 @@
     {
         #region Properties
 
+        private readonly FormSplashScreen splashForm = null;  // Create an instance of the splashscreen.
+
+        /// <summary>
+        /// Gets or sets the splash screen form.
+        /// For closing splash screen when major errors occurs on startup.
+        /// </summary>
+        public Form Splash { get; set; }
+
         private readonly TdTreeViewSearch tvSearch = new();    // Outside a function otherwise find next doesn't work. (Treeview search).
 
         /// <summary>
@@ -217,15 +225,36 @@
         /// </summary>
         public FormMain()
         {
+            this.splashForm = new FormSplashScreen();
+            this.splashForm.Show();
+
+            this.splashForm.LabelProgress.Text = "Initialize components...";
+            this.splashForm.Refresh();
             this.InitializeComponent();
 
+            this.splashForm.LabelProgress.Text = "Check folders...";
+            this.splashForm.Refresh();
             CheckFolders();              // Create in appdata a new folder Settings and/or Database if needed
+
+            this.splashForm.LabelProgress.Text = "Check settingsfile...";
+            this.splashForm.Refresh();
             CreateSettingsFile();        // Create the settings file if needed
+
+            this.splashForm.LabelProgress.Text = "Read settingsfile...";
+            this.splashForm.Refresh();
             this.GetSettings();          // Get the settings a user saved
+
+            this.splashForm.LabelProgress.Text = "Set Culture...";
+            this.splashForm.Refresh();
             this.SetCulture();
             GetDebugMode();
+
+            this.splashForm.LabelProgress.Text = "Start Logging...";
+            this.splashForm.Refresh();
             this.StartLogging();         // Start the logging
 
+            this.splashForm.LabelProgress.Text = "Apply settings...";
+            this.splashForm.Refresh();
             this.AddItemToSystemMenu();  // Add menu item tot system Menu
             this.BackColor = SystemColors.Window;
             this.Text = TdSettingsDefault.ApplicationName;
@@ -240,13 +269,30 @@
 
                 if (!this.LockProgram)
                 {
+                    this.splashForm.LabelProgress.Text = "Create application tables...";
+                    this.splashForm.Refresh();
                     this.CreateApplicationDatabaseTables();  // Create the tables.
+
+                    this.splashForm.LabelProgress.Text = "Check for updates...";
+                    this.splashForm.Refresh();
                     this.CheckForUpdates(); // Check for updates;
+
+                    this.splashForm.LabelProgress.Text = "Check for arguments...";
+                    this.splashForm.Refresh();
                     this.CheckForArguments();
+
+                    this.splashForm.LabelProgress.Text = string.Empty;
+                    this.splashForm.Refresh();
                 }
             }
             else
             {
+                if (this.splashForm != null)
+                {
+                    this.splashForm.Close();
+                    this.splashForm.Dispose();
+                }
+
                 MessageBox.Show(
                     "Het applicatie database bestand is niet gevonden. De applicatie wordt afgesloten." + Environment.NewLine +
                     Environment.NewLine +
@@ -279,8 +325,17 @@
         #region Load form
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.splashForm.LabelProgress.Text = "Apply settings...";
+            this.splashForm.Refresh();
+
             this.Initialize();
             this.DoubleBuffered = true;
+
+            if (this.splashForm != null)
+            {
+                this.splashForm.Close();
+                this.splashForm.Dispose();
+            }
         }
 
         // called from Form1_Load
@@ -562,7 +617,7 @@
                         MessageBox.Show("De update van de applicatie database is mislukt.", MB_Title.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         this.LockProgram = true;
                     }
-
+                    
                     MessageBox.Show(MB_Text.App_Database_Changed, MB_Title.Error, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -851,7 +906,7 @@
             this.ToolStripStatusLabel1.Text = string.Empty;
             this.ToolStripStatusLabel2.Text = string.Empty;
             this.ToolStripStatusLabel2.Text = string.Empty;
-            this.ToolStripStatusLabel3.Text = string.Format("Database = {0}", TdUserData.ConnectionName) + "          ";
+            this.ToolStripStatusLabel3.Text = string.Format("Schema = {0}", TdUserData.ConnectionName) + "          ";
             this.ToolStripStatusLabel4.Text = string.Format("Gebruiker : {0}", TdUserData.UserName) + "  ";
 
             // when there is no application database LockProgram will be true.
@@ -978,7 +1033,7 @@
         {
             // Clear the export datatable
             this.ToolStripStatusLabel1.Text = string.Empty;
-            this.ToolStripStatusLabel3.Text = "Database = Geen verbinding";
+            this.ToolStripStatusLabel3.Text = "Schema = Geen verbinding";
             TdUserData.ConnectionName = string.Empty;
 
             /*

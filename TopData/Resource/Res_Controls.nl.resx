@@ -189,6 +189,15 @@
     <value>&amp;Wissel van gebruiker</value>
     <comment>Menu</comment>
   </data>
+  <data name="MaintainQueryForm_Close" xml:space="preserve">
+    <value>S&amp;luiten</value>
+  </data>
+  <data name="MaintainQueryForm_New" xml:space="preserve">
+    <value>&amp;Nieuw</value>
+  </data>
+  <data name="MaintainQueryForm_Save" xml:space="preserve">
+    <value>&amp;Op&amp;slaan</value>
+  </data>
   <data name="MantainUserForm_AuthenticationLabel" xml:space="preserve">
     <value>Authenticatie :</value>
     <comment>Label</comment>

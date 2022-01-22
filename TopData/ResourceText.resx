@@ -192,10 +192,6 @@
   <data name="2081" xml:space="preserve">
     <value>Een query kan alleen onder een map worden toegevoegd.</value>
   </data>
-  <data name="2082" xml:space="preserve">
-    <value>Raadplegen</value>
-    <comment>LabelText</comment>
-  </data>
   <data name="2100" xml:space="preserve">
     <value>Wijzigen connectie gegevens...</value>
     <comment>LabelText</comment>

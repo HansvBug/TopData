@@ -43,7 +43,7 @@ namespace TopData
             this.ButtonClose.Name = "ButtonClose";
             this.ButtonClose.Size = new System.Drawing.Size(75, 23);
             this.ButtonClose.TabIndex = 0;
-            this.ButtonClose.Text = "&Sluiten";
+            this.ButtonClose.Text = "C&lose";
             this.ButtonClose.UseVisualStyleBackColor = true;
             this.ButtonClose.Click += new System.EventHandler(this.ButtonClose_Click);
             // 
@@ -71,7 +71,7 @@ namespace TopData
             this.ButtonNewQueryGroup.Name = "ButtonNewQueryGroup";
             this.ButtonNewQueryGroup.Size = new System.Drawing.Size(75, 23);
             this.ButtonNewQueryGroup.TabIndex = 2;
-            this.ButtonNewQueryGroup.Text = "&Nieuw";
+            this.ButtonNewQueryGroup.Text = "&New";
             this.ButtonNewQueryGroup.UseVisualStyleBackColor = true;
             this.ButtonNewQueryGroup.Click += new System.EventHandler(this.ButtonNewQueryGroup_Click);
             // 
@@ -82,7 +82,7 @@ namespace TopData
             this.ButtonSave.Name = "ButtonSave";
             this.ButtonSave.Size = new System.Drawing.Size(75, 23);
             this.ButtonSave.TabIndex = 5;
-            this.ButtonSave.Text = "Opslaan";
+            this.ButtonSave.Text = "&Save";
             this.ButtonSave.UseVisualStyleBackColor = true;
             this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
@@ -106,10 +106,9 @@ namespace TopData
         }
 
         #endregion
-
-        private System.Windows.Forms.Button ButtonClose;
         private System.Windows.Forms.DataGridView DataGridViewQgroups;
-        private System.Windows.Forms.Button ButtonNewQueryGroup;
-        private System.Windows.Forms.Button ButtonSave;
+        public System.Windows.Forms.Button ButtonClose;
+        public System.Windows.Forms.Button ButtonNewQueryGroup;
+        public System.Windows.Forms.Button ButtonSave;
     }
 }

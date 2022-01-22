@@ -60,11 +60,11 @@
                 try
                 {
                     command.ExecuteNonQuery();
-                    TdLogging.WriteToLogInformation("De tabel " + TdTableName.QUERY_LIST + " is gewijzigd. (Versie " + version + ").");
+                    TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.TableIsChanged, TdTableName.QUERY_LIST, version));
                 }
                 catch (SQLiteException ex)
                 {
-                    TdLogging.WriteToLogError("Het wijzigen van de tabel " + TdTableName.QUERY_LIST + " is misukt. (Versie " + Convert.ToString(this.LatestDbVersion, CultureInfo.InvariantCulture) + ").");
+                    TdLogging.WriteToLogError(string.Format(TdLogging_Resources.AlterTableFailed, TdTableName.QUERY_LIST, version));
                     TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                     TdLogging.WriteToLogError(ex.Message);
                     if (TdDebugMode.DebugMode)
@@ -82,7 +82,7 @@
             }
             else
             {
-                TdLogging.WriteToLogError(string.Format("Het wijzigen van de tabel {0} is niet uitgevoerd.", TdTableName.QUERY_LIST));
+                TdLogging.WriteToLogError(string.Format(TdLogging_Resources.ChangingTableFailed, TdTableName.QUERY_LIST));
             }
         }
 
@@ -102,7 +102,7 @@
                 }
                 catch (SQLiteException ex)
                 {
-                    TdLogging.WriteToLogError("Het bijwerken van de tabel " + TdTableName.QUERY_LIST + " is mislukt. (Versie: " + version + ").");
+                    TdLogging.WriteToLogError(string.Format(TdLogging_Resources.UpdateTableFailed, TdTableName.QUERY_LIST, version));
                     TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                     TdLogging.WriteToLogError(ex.Message);
                     if (TdDebugMode.DebugMode)
@@ -122,7 +122,7 @@
                 }
                 catch (SQLiteException ex)
                 {
-                    TdLogging.WriteToLogError("Het bijwerken van de tabel " + TdTableName.QUERY_LIST + " is mislukt.");
+                    TdLogging.WriteToLogError(string.Format(TdLogging_Resources.UpdateTableFailed, TdTableName.QUERY_LIST, version));
                     TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                     TdLogging.WriteToLogError(ex.Message);
                     if (TdDebugMode.DebugMode)
@@ -146,7 +146,7 @@
             }
             else
             {
-                TdLogging.WriteToLogError(string.Format("Het wijzigen van de tabel {0} is niet uitgevoerd.", TdTableName.QUERY_LIST));
+                TdLogging.WriteToLogError(string.Format(TdLogging_Resources.ChangingTableFailed, TdTableName.QUERY_LIST));
             }
         }
 
@@ -160,11 +160,11 @@
                 try
                 {
                     command.ExecuteNonQuery();
-                    TdLogging.WriteToLogInformation("De tabel " + TdTableName.QUERY_LIST + " is gewijzigd. (Versie " + version + ").");
+                    TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.TableIsChanged, TdTableName.QUERY_LIST, version));
                 }
                 catch (SQLiteException ex)
                 {
-                    TdLogging.WriteToLogError("Het wijzigen van de tabel " + TdTableName.QUERY_LIST + " is misukt. (Versie " + Convert.ToString(this.LatestDbVersion, CultureInfo.InvariantCulture) + ").");
+                    TdLogging.WriteToLogError(string.Format(TdLogging_Resources.AlterTableFailed, TdTableName.QUERY_LIST, version));
                     TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                     TdLogging.WriteToLogError(ex.Message);
                     if (TdDebugMode.DebugMode)
@@ -182,7 +182,7 @@
             }
             else
             {
-                TdLogging.WriteToLogError(string.Format("Het wijzigen van de tabel {0} is niet uitgevoerd.", TdTableName.QUERY_LIST));
+                TdLogging.WriteToLogError(string.Format(TdLogging_Resources.ChangingTableFailed, TdTableName.QUERY_LIST));
             }
         }
 

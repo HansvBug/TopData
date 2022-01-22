@@ -117,11 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AlterTableFailed" xml:space="preserve">
+    <value>"Het wijzigen van de tabel {0} is misukt. (Versie {1}).</value>
+  </data>
   <data name="AppDbase_Present" xml:space="preserve">
     <value>De applicatie database is aanwezig.</value>
   </data>
+  <data name="ChangeingMetaVersionFailed" xml:space="preserve">
+    <value>Het wijzigen van de versie in de tabel {0} is misukt. (Versie {1}).</value>
+  </data>
+  <data name="ChangeSQLiteUserVersionFailed" xml:space="preserve">
+    <value>Het wijzigen van de SQlite user_version is misukt. (Versie {0}).</value>
+  </data>
+  <data name="ChangingTableFailed" xml:space="preserve">
+    <value>"Het wijzigen van de tabel {0} is niet uitgevoerd.</value>
+  </data>
+  <data name="CheckForCurVersionAppDb" xml:space="preserve">
+    <value>Controle op versie van de query database.</value>
+  </data>
+  <data name="CompressAppDbFailed" xml:space="preserve">
+    <value>Het comprimeren van de applicatie database is mislukt.</value>
+  </data>
+  <data name="CopyFileAborted" xml:space="preserve">
+    <value>Het kopiëren van het bestand '{0}' is afgebroken.</value>
+  </data>
+  <data name="CopyFileReady" xml:space="preserve">
+    <value>Het kopiëren van het bestand '{0}' is gereed.</value>
+  </data>
+  <data name="CountRamTotalFailed" xml:space="preserve">
+    <value>Geen Totaal telling Ram gevonden.</value>
+  </data>
   <data name="CreNewUser" xml:space="preserve">
-    <value>Aanmaken nieuwe gebruiker</value>
+    <value>Aanmaken nieuwe gebruiker.</value>
   </data>
   <data name="DatabaseNameDeleted" xml:space="preserve">
     <value>Databasenaam is succesvol verwijderd.</value>
@@ -129,17 +156,98 @@
   <data name="Debug_Logging_On" xml:space="preserve">
     <value>Debug logging staat aan.</value>
   </data>
-  <data name="DeleteDbOrSChemaName01" xml:space="preserve">
-    <value>Het verwijderen van de schema naam uit de tabel </value>
+  <data name="DefaultUserNotFound" xml:space="preserve">
+    <value>De default gebruiker {0} is niet gevonden.</value>
   </data>
-  <data name="DeleteDbOrSChemaName02" xml:space="preserve">
-    <value> is niet gelukt.</value>
+  <data name="DeleteDbOrSChemaName" xml:space="preserve">
+    <value>Het invoeren van de schema namen in de tabel {0} is mislukt.</value>
   </data>
   <data name="DoYouWantToChangeThePwd" xml:space="preserve">
     <value>Wilt u de gegevens met uitzondering van het wachtwoord wijzigen?</value>
   </data>
+  <data name="ErrorCreatingAppDbase" xml:space="preserve">
+    <value>De database '{0}' is niet aangemaakt.</value>
+  </data>
+  <data name="ErrorCreatingAppDbaseNoName" xml:space="preserve">
+    <value>De SQlite database is niet aangemaakt omdat er geen locatie of database naam is opgegeven.</value>
+  </data>
+  <data name="ErrorDeletingDbName" xml:space="preserve">
+    <value>Het verwijderen van de database naam uit de tabel {0} is niet gelukt.</value>
+  </data>
+  <data name="ErrorEnteringUserInTable" xml:space="preserve">
+    <value>Fout bij het invoeren van een gebruiker in de tabel {0}. (Versie {1}).</value>
+  </data>
+  <data name="FailedToCreateTable" xml:space="preserve">
+    <value>Aanmaken van de tabel {0} is misukt. (Versie {1}).</value>
+  </data>
+  <data name="FailedToInsertDbVersionNumber" xml:space="preserve">
+    <value>Het invoeren van het database versienummer in de tabel {0} is misukt. (Versie </value>
+  </data>
+  <data name="FailedToInsertDbVersionNumber01" xml:space="preserve">
+    <value>Het invoeren van het database versienummer in de tabel {0} is mislukt.</value>
+  </data>
+  <data name="FailedToSeeIfUserIsUnique" xml:space="preserve">
+    <value>Het bepalen of de gebruiker {0} uniek is, is mislukt.</value>
+  </data>
+  <data name="FileExists" xml:space="preserve">
+    <value>Het bestand komt reeds voor.</value>
+  </data>
+  <data name="FileNotPresent" xml:space="preserve">
+    <value>Het te kopiëren bestand '{0}' is niet aanwezig.</value>
+  </data>
+  <data name="FolderNotPresent" xml:space="preserve">
+    <value>De map '{0}' is niet aanwezig.</value>
+  </data>
+  <data name="GetApplicationpathFailed" xml:space="preserve">
+    <value>Ophalen applicatie pad is mislukt.</value>
+  </data>
+  <data name="GetBiosIdFailed" xml:space="preserve">
+    <value>Geen Bios Id gevonden.</value>
+  </data>
+  <data name="GetBiosIdFailed1" xml:space="preserve">
+    <value>Ophalen van het Bios id is mislukt.</value>
+  </data>
+  <data name="GetMachineNameFailed" xml:space="preserve">
+    <value>Ophalen naam machine is mislukt.</value>
+  </data>
+  <data name="GetMonitorCountFailed" xml:space="preserve">
+    <value>Bepalen van het aantal monitoren is mislukt.</value>
+  </data>
+  <data name="GetMonitorWidthFailed" xml:space="preserve">
+    <value>Bepalen monitor breedte is mislukt.</value>
+  </data>
+  <data name="GetProcessorIdFailed" xml:space="preserve">
+    <value>Ophalen van de processor id is mislukt.</value>
+  </data>
+  <data name="GetQueryGroupNamesFailed" xml:space="preserve">
+    <value>Ophalen van de querygroep namen is mislukt.</value>
+  </data>
+  <data name="GetSqlDbVersion" xml:space="preserve">
+    <value>Haal de Sqlite database bestand versie op.</value>
+  </data>
+  <data name="GetSqlDbVersionFailed" xml:space="preserve">
+    <value>Opvragen Sqlite database bestand versie is misukt.</value>
+  </data>
+  <data name="GetSQLiteVersion" xml:space="preserve">
+    <value>Ophalen SQLite versie.</value>
+  </data>
+  <data name="GetSQLiteVersionFailed" xml:space="preserve">
+    <value>Opvragen Sqlite versie is misukt.</value>
+  </data>
+  <data name="GetTotalRamFailed" xml:space="preserve">
+    <value>Ophalen totale hoeveelheid RAM is mislukt.</value>
+  </data>
+  <data name="GetUserNameFailed" xml:space="preserve">
+    <value>Ophalen naam gebruiker is mislukt.</value>
+  </data>
+  <data name="GetWinVersionFailed" xml:space="preserve">
+    <value>Ophalen Windows versie is mislukt.</value>
+  </data>
   <data name="LookInLogFile" xml:space="preserve">
     <value>Kijk in het log bestand voor informatie.</value>
+  </data>
+  <data name="NoNewAppDbCreated" xml:space="preserve">
+    <value>Het database bestand is aanwezig, er is géén nieuw leeg database bestand aangemaakt.</value>
   </data>
   <data name="Notification" xml:space="preserve">
     <value>Melding :</value>
@@ -147,15 +255,54 @@
   <data name="PwdNotEqualRepeatPwd" xml:space="preserve">
     <value>Het 'Wachtwoord' is ongelijk aan 'Herhaal wachtwoord'.</value>
   </data>
-  <data name="PwsOrRepeaaPwdIsMissing" xml:space="preserve">
+  <data name="PwdOrRepeatPwdIsMissing" xml:space="preserve">
     <value>Het 'Wachtwoord' of 'Herhaal wachtwoord' is niet ingevuld.</value>
+  </data>
+  <data name="QuerGetConnNamesFailed" xml:space="preserve">
+    <value>Het opvragen van de connectie namen in de tabel {0} is niet gelukt.</value>
+  </data>
+  <data name="QuerGetSchemaNamesFailed" xml:space="preserve">
+    <value>Het opvragen van de schema namen in de tabel {0} is niet gelukt.</value>
+  </data>
+  <data name="QueryGetDbnamesFailed" xml:space="preserve">
+    <value>Het opvragen van de database namen in de tabel {0} is niet gelukt.</value>
+  </data>
+  <data name="RequestMetaVersionFailed" xml:space="preserve">
+    <value>Opvragen meta versie is misukt. (Versie </value>
+  </data>
+  <data name="ResetAppDbSequenceFailed" xml:space="preserve">
+    <value>Het resetten van de sequences in de applicatie database is mislukt.</value>
+  </data>
+  <data name="ResetTableSequenceFailed" xml:space="preserve">
+    <value>Het resetten van de sequences van de tabel {0} is mislukt.</value>
   </data>
   <data name="SchemaNameDeleted" xml:space="preserve">
     <value>Schemanaam is succesvol verwijderd.</value>
   </data>
+  <data name="SQLiteUserVersionChanged" xml:space="preserve">
+    <value>De SQlite user_version is gewijzigd. (Versie {0}).</value>
+  </data>
+  <data name="TableIsChanged" xml:space="preserve">
+    <value>De tabel {0} is gewijzigd. (Versie {1}).</value>
+  </data>
+  <data name="TableIsCreated" xml:space="preserve">
+    <value>De tabel {0} is aangemaakt. (Versie {1}).</value>
+  </data>
+  <data name="TableIsNotCreated" xml:space="preserve">
+    <value>Het aanmaken van de tabel {0} is niet uitgevoerd.</value>
+  </data>
+  <data name="TableIsUpdated" xml:space="preserve">
+    <value>De tabel {0} is bijgewerkt. (Versie {1}).</value>
+  </data>
+  <data name="TheAppDbIsCreated" xml:space="preserve">
+    <value>De database '{0}' is aangemaakt.</value>
+  </data>
   <data name="TheAppDbWillBeCreated" xml:space="preserve">
     <value>De applicatie database  ontbreekt en wordt aangemaakt.</value>
     <comment>toepassingsdatabase ?</comment>
+  </data>
+  <data name="UpdateTableFailed" xml:space="preserve">
+    <value>Het bijwerken van de tabel {0} is mislukt. (Versie: {1}).</value>
   </data>
   <data name="UserDetailsNotChanged" xml:space="preserve">
     <value>De gegevens van gebruiker '{0}'  zijn niet gewijzigd.</value>
@@ -168,5 +315,8 @@
   </data>
   <data name="UserFullDetailsAreNotChangedExceptPwd" xml:space="preserve">
     <value>De gegevens van gebruiker '{0}'  zijn niet gewijzigd. (Wachtwoord niet gelijk aan herhaal wachtwoord).</value>
+  </data>
+  <data name="WriteInformation" xml:space="preserve">
+    <value>Informatie.</value>
   </data>
 </root>

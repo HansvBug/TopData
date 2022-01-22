@@ -16,7 +16,7 @@
         /// <summary>
         ///  Declare culture info.
         /// </summary>
-        private static CultureInfo cul;      // Declare culture info
+        private static CultureInfo cul = CultureInfo.CreateSpecificCulture("en-US");      // Declare culture info
 
         /// <summary>
         /// Gets or sets the ResourceManager.
@@ -37,7 +37,7 @@
         }
 
         /// <summary>
-        /// Gets the Error string.
+        /// Gets the string : Error.
         /// </summary>
         public static string Error
         {
@@ -45,7 +45,7 @@
         }
 
         /// <summary>
-        /// Gets the Information string.
+        /// Gets the string: Information.
         /// </summary>
         public static string Information
         {
@@ -53,7 +53,7 @@
         }
 
         /// <summary>
-        /// Gets the Warning string.
+        /// Gets the string: Warning.
         /// </summary>
         public static string Warning
         {
@@ -61,7 +61,7 @@
         }
 
         /// <summary>
-        /// Gets the Attention string.
+        /// Gets the string: Attention.
         /// </summary>
         public static string Attention
         {
@@ -602,6 +602,17 @@
             get { return RmMb.GetString("TextGetAllUsersNamesFailed", Cul); }
         }
 
+        /*------------------------------------------------------------------------------------------------*/
+
+        /// <summary>
+        /// Gets the string: You do not have write permissions on the location: .
+        /// </summary>
+        public static string TextNoWritingPermission
+        {
+            get { return RmMb.GetString("TextNoWritingPermission", Cul); }
+        }
+
         
+
     }
 }

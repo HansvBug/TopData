@@ -44,7 +44,7 @@
             string selectSql = "SELECT VALUE FROM " + TdTableName.SETTINGS_META + " WHERE KEY = 'VERSION'";
 
             this.DbConnection.Open();
-            TdLogging.WriteToLogInformation("Controle op versie van de query database.");
+            TdLogging.WriteToLogInformation(TdLogging_Resources.CheckForCurVersionAppDb);
 
             SQLiteCommand command = new(selectSql, this.DbConnection);
             try
@@ -60,7 +60,7 @@
             }
             catch (SQLiteException ex)
             {
-                TdLogging.WriteToLogError("Opvragen meta versie is misukt. (Versie " + Convert.ToString(this.latestDbVersion, CultureInfo.InvariantCulture) + ").");
+                TdLogging.WriteToLogError(TdLogging_Resources.RequestMetaVersionFailed + Convert.ToString(this.latestDbVersion, CultureInfo.InvariantCulture) + ").");
                 TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                 TdLogging.WriteToLogError(ex.Message);
                 if (TdDebugMode.DebugMode)
@@ -97,11 +97,11 @@
                     command.Parameters.Add(new SQLiteParameter("@VERSION", version));
 
                     command.ExecuteNonQuery();
-                    TdLogging.WriteToLogInformation(string.Format("De tabel {0} is gewijzigd. (Versie ", TdTableName.SETTINGS_META) + version + ").");
+                    TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.TableIsChanged, TdTableName.SETTINGS_META, version));
                 }
                 catch (SQLiteException ex)
                 {
-                    TdLogging.WriteToLogError(string.Format("Het invoeren van het database versienummer in de tabel {0} is misukt. (Versie ", TdTableName.SETTINGS_META) + Convert.ToString(this.latestDbVersion, CultureInfo.InvariantCulture) + ").");
+                    TdLogging.WriteToLogError(string.Format(TdLogging_Resources.FailedToInsertDbVersionNumber, TdTableName.SETTINGS_META) + Convert.ToString(this.latestDbVersion, CultureInfo.InvariantCulture) + ").");
                     TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                     TdLogging.WriteToLogError(ex.Message);
                     if (TdDebugMode.DebugMode)
@@ -119,7 +119,7 @@
             }
             else
             {
-                TdLogging.WriteToLogError(string.Format("Het invoeren van het database versienummer in de tabel {0} is mislukt.", TdTableName.SETTINGS_META));
+                TdLogging.WriteToLogError(string.Format(TdLogging_Resources.FailedToInsertDbVersionNumber, TdTableName.SETTINGS_META));
             }
         }
 
@@ -141,13 +141,13 @@
                 command.Parameters.Add(new SQLiteParameter("@KEY", "VERSION"));
 
                 command.ExecuteNonQuery();
-                TdLogging.WriteToLogInformation("De tabel " + TdTableName.SETTINGS_META + " is gewijzigd. (Versie " + version + ").");
+                TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.TableIsChanged, TdTableName.SETTINGS_META, version));
                 command.Dispose();
                 tr.Commit();
             }
             catch (SQLiteException ex)
             {
-                TdLogging.WriteToLogError("Wijzigen tabel " + TdTableName.SETTINGS_META + " versie is misukt. (Versie " + version + ").");
+                TdLogging.WriteToLogError(string.Format(TdLogging_Resources.ChangeingMetaVersionFailed, TdTableName.SETTINGS_META, version));
                 TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                 TdLogging.WriteToLogError(ex.Message);
                 if (TdDebugMode.DebugMode)
@@ -178,12 +178,12 @@
             try
             {
                 command.ExecuteNonQuery();
-                TdLogging.WriteToLogInformation("De SQlite user_version is gewijzigd. (Versie " + version + ").");
+                TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.SQLiteUserVersionChanged, version));
                 command.Dispose();
             }
             catch (SQLiteException ex)
             {
-                TdLogging.WriteToLogError("Het wijzigen van de SQlite user_version is misukt. (Versie " + version + ").");
+                TdLogging.WriteToLogError(string.Format(TdLogging_Resources.ChangeSQLiteUserVersionFailed, version));
                 TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                 TdLogging.WriteToLogError(ex.Message);
                 if (TdDebugMode.DebugMode)

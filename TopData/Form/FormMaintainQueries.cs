@@ -1865,7 +1865,7 @@
                     this.GetQueryGuideLines();
                 }
 
-                this.ComboBoxQueryAutorisation.Text = ResourceText._2082;
+                this.ComboBoxQueryAutorisation.Text = TdResText.Viewer;
                 this.Checkchanges();
                 this.TreeViewCreateQueries.SelectedNode = this.SelectedNode;
             }

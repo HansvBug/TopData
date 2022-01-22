@@ -995,8 +995,8 @@
                     else
                     {
                         DialogResult dialogResult = MessageBox.Show(
-                            TdLogging_Resources.PwdNotEqualRepeatPwd + Environment.NewLine +    // The 'Password' is not the same as 'Repeat password'.
-                            TdLogging_Resources.DoYouWantToChangeThePwd,                        // Do you want to change the data except the password?
+                            TdLogging_Resources.PwdNotEqualRepeatPwd + Environment.NewLine + // The 'Password' is not the same as 'Repeat password'.
+                            TdLogging_Resources.DoYouWantToChangeThePwd,                     // Do you want to change the data except the password?
                             MB_Title.Continue,
                             MessageBoxButtons.YesNo,
                             MessageBoxIcon.Question);
@@ -1013,8 +1013,6 @@
                         else if (dialogResult == DialogResult.No)
                         {
                             TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.UserFullDetailsAreNotChangedExceptPwd, userMaintain.UserName)); // The details of user '{0}' have not changed. (Password not the same as repeat password).
-
-
                             this.TextBoxPassword.Focus();
                         }
                     }
@@ -1023,7 +1021,7 @@
                 {
                     // Password or repeat pasword are not filled
                     DialogResult dialogResult = MessageBox.Show(
-                        TdLogging_Resources.PwsOrRepeaaPwdIsMissing + Environment.NewLine + // The 'Password' or 'Repeat password' has not been entered.
+                        TdLogging_Resources.PwdOrRepeatPwdIsMissing + Environment.NewLine + // The 'Password' or 'Repeat password' has not been entered.
                         TdLogging_Resources.DoYouWantToChangeThePwd,                        // Do you want to change the data except the password?
                         MB_Title.Continue,
                         MessageBoxButtons.YesNo,

@@ -77,7 +77,7 @@
         #region Constructor
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppEnvironment"/> class.
+        /// Initializes a new instance of the <see cref="TdAppEnvironment"/> class.
         /// Fills the properies.
         /// </summary>
         public TdAppEnvironment()
@@ -116,7 +116,7 @@
                     }
                     catch (AccessViolationException)
                     {
-                        MessageBox.Show("U heeft geen schrijfrechten op de locatie: " + pathString, "Waarschuwing", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(MB_Text.TextNoWritingPermission + pathString, MB_Title.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return false;
                     }
                 }
@@ -153,7 +153,7 @@
             {
                 string appPath;
                 appPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase);
-                appPath += "\\";                                        // add \to the path
+                appPath += "\\";                                  // add \to the path
                 return appPath.Replace("file:\\", string.Empty);  // Remove the text "file:\\" from the path
             }
             catch (ArgumentException aex)
@@ -162,7 +162,7 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("Ophalen applicatie pad is mislukt.");
+                throw new InvalidOperationException(TdLogging_Resources.GetApplicationpathFailed);
             }
         }
 
@@ -174,7 +174,7 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("Ophalen naam gebruiker is mislukt.");
+                throw new InvalidOperationException(TdLogging_Resources.GetUserNameFailed);
             }
         }
 
@@ -186,7 +186,7 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("Ophalen naam machine is mislukt.");
+                throw new InvalidOperationException(TdLogging_Resources.GetMachineNameFailed);
             }
         }
 
@@ -225,7 +225,7 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("Ophalen Windows versie is mislukt.");
+                throw new InvalidOperationException(TdLogging_Resources.GetWinVersionFailed);
             }
         }
 
@@ -262,7 +262,7 @@
                 }
                 catch (Exception)
                 {
-                    throw new InvalidOperationException("Ophalen id van de processor is mislukt.");
+                    throw new InvalidOperationException(TdLogging_Resources.GetProcessorIdFailed);
                 }
             }
             catch (Exception)
@@ -293,12 +293,12 @@
                 }
                 else
                 {
-                    return "Geen BiosId gevonden.";
+                    return TdLogging_Resources.GetBiosIdFailed;
                 }
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("Ophalen id van de Bios is mislukt.");
+                throw new InvalidOperationException(TdLogging_Resources.GetBiosIdFailed1);
             }
         }
 
@@ -314,11 +314,11 @@
                     return Convert.ToString(Math.Round(Convert.ToDouble(item.Properties["TotalPhysicalMemory"].Value, CultureInfo.InvariantCulture) / 1073741824, 2), CultureInfo.InvariantCulture) + " GB";
                 }
 
-                return "Geen Totaal telling Ram gevonden.";
+                return TdLogging_Resources.CountRamTotalFailed;
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("Ophalen totale hoeveelheid RAM is mislukt.");
+                throw new InvalidOperationException(TdLogging_Resources.GetTotalRamFailed);
             }
         }
 
@@ -331,7 +331,7 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("Bepalen monitorbreedte is mislukt.");
+                throw new InvalidOperationException(TdLogging_Resources.GetMonitorWidthFailed);
             }
         }
 
@@ -343,7 +343,7 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("Bepalen van het aantal monitoren is mislukt.");
+                throw new InvalidOperationException(TdLogging_Resources.GetMonitorCountFailed);
             }
         }
 

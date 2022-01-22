@@ -83,6 +83,9 @@
         #region Form load
         private void FormMaintainQueryGroups_Load(object sender, EventArgs e)
         {
+            TdSwitchLanguage sl = new(this, TdCulture.Cul);
+            sl.SetLanguageMaintainQueryGroups();
+
             this.Text = "Query groepen";
             this.LoadFormPosition();
 

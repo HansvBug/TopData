@@ -132,6 +132,9 @@
   <data name="TextMutateDataFailed" xml:space="preserve">
     <value>Het muteren van de gegevens is mislukt.</value>
   </data>
+  <data name="TextNoWritingPermission" xml:space="preserve">
+    <value>U heeft geen schrijfrechten op de locatie: </value>
+  </data>
   <data name="TextPasswordNotEqualName" xml:space="preserve">
     <value>Wachtwoord mag niet gelijk zijn aan de naam.</value>
   </data>

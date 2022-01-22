@@ -508,7 +508,11 @@
         {
             if (File.Exists(this.SettingsFile))
             {
-                TdLogging.WriteToLogInformation("Ophalen settings.");
+                if (TdLogging_Resources.Cul != null && TdLogging_Resources.RmLog != null)
+                {
+                    TdLogging.WriteToLogInformation("Ophalen settings.");
+                }
+
                 string json = File.ReadAllText(this.SettingsFile);
                 this.JsonObjSettings = JsonSerializer.Deserialize<AppSettingsMeta>(json);
 

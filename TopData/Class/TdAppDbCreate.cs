@@ -183,17 +183,17 @@
                     if (!File.Exists(this.DatabaseFileName))
                     {
                         SQLiteConnection.CreateFile(this.DatabaseFileName); // The creation of a new empty database file
-                        TdLogging.WriteToLogInformation("De database '" + this.DatabaseFileName + "' is aangemaakt.");
+                        TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.TheAppDbIsCreated, this.DatabaseFileName));
                     }
                     else
                     {
-                        TdLogging.WriteToLogInformation("Het database bestand is aanwezig, er is géén nieuw leeg database bestand aangemaakt.");
+                        TdLogging.WriteToLogInformation(TdLogging_Resources.NoNewAppDbCreated);
                     }
                 }
                 catch (IOException ex)
                 {
                     this.Error = true;
-                    TdLogging.WriteToLogError("De database '" + this.DbFileName + "' is niet aangemaakt.");
+                    TdLogging.WriteToLogError(string.Format(TdLogging_Resources.ErrorCreatingAppDbase, this.DbFileName));
                     TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                     TdLogging.WriteToLogError(ex.Message);
                     if (TdDebugMode.DebugMode)
@@ -207,7 +207,7 @@
                 catch (Exception ex)
                 {
                     this.Error = true;
-                    TdLogging.WriteToLogError("De database '" + this.DbFileName + "' is niet aangemaakt.");
+                    TdLogging.WriteToLogError(string.Format(TdLogging_Resources.ErrorCreatingAppDbase, this.DbFileName));
                     TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                     TdLogging.WriteToLogError(ex.Message);
                     if (TdDebugMode.DebugMode)
@@ -221,7 +221,7 @@
             }
             else
             {
-                TdLogging.WriteToLogError("De SQlite database is niet aangemaakt omdat er geen locatie of database naam is opgegeven.");
+                TdLogging.WriteToLogError(TdLogging_Resources.ErrorCreatingAppDbaseNoName);
                 Cursor.Current = Cursors.Default;
                 MessageBox.Show(MB_Text.App_Database_Changed_No_Location, MB_Title.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -296,11 +296,11 @@
                 try
                 {
                     command.ExecuteNonQuery();
-                    TdLogging.WriteToLogInformation(string.Format("De tabel {0} is aangemaakt. (Versie {1}).", tableName, version));
+                    TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.TableIsCreated, tableName, version));
                 }
                 catch (SQLiteException ex)
                 {
-                    TdLogging.WriteToLogError(string.Format("Aanmaken van de tabel {0} is misukt. (Versie {1}).", tableName, version));
+                    TdLogging.WriteToLogError(string.Format(TdLogging_Resources.FailedToCreateTable, tableName, version));
                     TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                     TdLogging.WriteToLogError(ex.Message);
                     if (TdDebugMode.DebugMode)
@@ -318,7 +318,7 @@
             }
             else
             {
-                TdLogging.WriteToLogError(string.Format("Het aanmaken van de tabel {0} is niet uitgevoerd.", tableName));
+                TdLogging.WriteToLogError(string.Format(TdLogging_Resources.TableIsNotCreated, tableName));
             }
         }
 
@@ -355,12 +355,12 @@
                 try
                 {
                     command.ExecuteNonQuery();
-                    TdLogging.WriteToLogInformation("De tabel " + TdTableName.USER_LIST + " is bijgewerkt. (Versie " + version + ").");
+                    TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.TableIsUpdated, TdTableName.USER_LIST, version));
                 }
                 catch (SQLiteException ex)
                 {
                     this.Error = true;
-                    TdLogging.WriteToLogError("Fout bij het invoeren van een gebruiker in de tabel " + TdTableName.USER_LIST + ". (Versie " + version + ").");
+                    TdLogging.WriteToLogError(string.Format(TdLogging_Resources.ErrorEnteringUserInTable, TdTableName.USER_LIST, version));
                     TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                     TdLogging.WriteToLogError(ex.Message);
                     if (TdDebugMode.DebugMode)
@@ -404,7 +404,7 @@
                 {
                     if (TdDebugMode.DebugMode)
                     {
-                        TdLogging.WriteToLogInformation("De default user " + TdRoleTypes.System + " is niet gevonden.");
+                        TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.DefaultUserNotFound, TdRoleTypes.System));
                     }
 
                     command.Dispose();
@@ -413,7 +413,7 @@
             }
             catch (SQLiteException ex)
             {
-                TdLogging.WriteToLogError("Het bepalen of de user " + TdRoleTypes.System + " uniek is, is mislukt.");
+                TdLogging.WriteToLogError(string.Format(TdLogging_Resources.FailedToSeeIfUserIsUnique, TdRoleTypes.System));
                 TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                 TdLogging.WriteToLogError(ex.Message);
                 if (TdDebugMode.DebugMode)
@@ -461,12 +461,12 @@
                 try
                 {
                     command.ExecuteNonQuery();
-                    TdLogging.WriteToLogInformation("De tabel " + TdTableName.USER_LIST + " is bijgewerkt. (Versie " + version + ").");
+                    TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.TableIsUpdated, TdTableName.USER_LIST, version));
                 }
                 catch (SQLiteException ex)
                 {
                     this.Error = true;
-                    TdLogging.WriteToLogError("Fout bij het invoeren van een gebruiker in de tabel " + TdTableName.USER_LIST + ". (Versie " + version + ").");
+                    TdLogging.WriteToLogError(string.Format(TdLogging_Resources.ErrorEnteringUserInTable, TdTableName.USER_LIST, version));
                     TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                     TdLogging.WriteToLogError(ex.Message);
                     if (TdDebugMode.DebugMode)
@@ -484,7 +484,7 @@
             {
                 if (TdDebugMode.DebugMode)
                 {
-                    TdLogging.WriteToLogInformation("The Default user Exists");
+                    TdLogging.WriteToLogInformation("The Default user Exists.");
                 }
             }
         }
@@ -514,7 +514,7 @@
                 {
                     if (TdDebugMode.DebugMode)
                     {
-                        TdLogging.WriteToLogInformation("De default user " + TdRoleTypes.Owner + " is niet gevonden.");
+                        TdLogging.WriteToLogInformation(string.Format(TdLogging_Resources.DefaultUserNotFound, TdRoleTypes.Owner));
                     }
 
                     command.Dispose();
@@ -523,7 +523,7 @@
             }
             catch (SQLiteException ex)
             {
-                TdLogging.WriteToLogError("Het bepalen of de user " + TdRoleTypes.Owner + " uniek is, is mislukt.");
+                TdLogging.WriteToLogError(string.Format(TdLogging_Resources.FailedToSeeIfUserIsUnique, TdRoleTypes.Owner));
                 TdLogging.WriteToLogError(TdLogging_Resources.Notification);
                 TdLogging.WriteToLogError(ex.Message);
                 if (TdDebugMode.DebugMode)

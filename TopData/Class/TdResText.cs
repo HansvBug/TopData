@@ -37,7 +37,7 @@
         }
 
         /// <summary>
-        /// Gets the Yes string.
+        /// Gets the string: Yes.
         /// </summary>
         public static string Yes
         {
@@ -45,20 +45,22 @@
         }
 
         /// <summary>
-        /// Gets the No string.
+        /// Gets the string: No.
         /// </summary>
         public static string No
         {
             get { return RmText.GetString("No", cul); }
         }
 
+        /// <summary>
+        /// Gets the string: Owner.
         public static string Owner
         {
             get { return RmText.GetString("UserRoleOwner", cul); }
         }
 
         /// <summary>
-        /// Gets the System string.
+        /// Gets the string: System.
         /// </summary>
         public static string System
         {
@@ -66,7 +68,7 @@
         }
 
         /// <summary>
-        /// Gets the Administrator string.
+        /// Gets the string: Administrator.
         /// </summary>
         public static string Administrator
         {
@@ -74,7 +76,7 @@
         }
 
         /// <summary>
-        /// Gets the Editor string.
+        /// Gets the string: Editor.
         /// </summary>
         public static string Editor
         {
@@ -82,7 +84,7 @@
         }
 
         /// <summary>
-        /// Gets the Viewer string.
+        /// Gets the string : Viewer.
         /// </summary>
         public static string Viewer
         {

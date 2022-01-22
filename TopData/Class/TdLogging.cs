@@ -312,7 +312,7 @@
         {
             if (ActivateLogging)
             {
-                WriteToLog( MB_Title.Information, logMessage);
+                WriteToLog(TdLogging_Resources.WriteInformation, logMessage);
             }
         }
 
@@ -444,10 +444,10 @@
                 }
                 else
                 {
-                    LogRegulier( MB_Title.Information, string.Empty, w);
-                    LogRegulier( MB_Title.Information, "Logbestand wordt groter dan 10 Mb.", w);
-                    LogRegulier( MB_Title.Information, "Een nieuw log bestand wordt aangemaakt.", w);
-                    LogRegulier( MB_Title.Information, string.Empty, w);
+                    LogRegulier(MB_Title.Information, string.Empty, w);
+                    LogRegulier(MB_Title.Information, "Logbestand wordt groter dan 10 Mb.", w);
+                    LogRegulier(MB_Title.Information, "Een nieuw log bestand wordt aangemaakt.", w);
+                    LogRegulier(MB_Title.Information, string.Empty, w);
                     LogStop(w);
 
                     CopyLogFile();    // Make a copy off the logfile

@@ -132,6 +132,9 @@
   <data name="TextMutateDataFailed" xml:space="preserve">
     <value>Data muting failed.</value>
   </data>
+  <data name="TextNoWritingPermission" xml:space="preserve">
+    <value>You do not have write permissions on the location:</value>
+  </data>
   <data name="TextPasswordNotEqualName" xml:space="preserve">
     <value>Password cannot be the same as the name.</value>
   </data>
